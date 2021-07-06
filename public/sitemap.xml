@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://example.org/archetypes/</loc>
+    <lastmod>2018-05-31T18:47:29+08:00</lastmod>
+  </url><url>
+    <loc>http://example.org/tags/first/</loc>
+    <lastmod>2018-05-31T18:47:29+08:00</lastmod>
+  </url><url>
+    <loc>http://example.org/</loc>
+    <lastmod>2018-05-31T18:47:29+08:00</lastmod>
+  </url><url>
+    <loc>http://example.org/tags/</loc>
+    <lastmod>2018-05-31T18:47:29+08:00</lastmod>
+  </url><url>
+    <loc>http://example.org/archetypes/blog-%E5%95%86%E5%93%81%E9%A1%B5%E9%9D%A2%E6%98%BE%E7%A4%BA%E5%BC%80%E5%8F%91/</loc>
+    <lastmod>2018-05-31T18:47:29+08:00</lastmod>
+  </url><url>
+    <loc>http://example.org/categories/</loc>
+  </url>
+</urlset>
