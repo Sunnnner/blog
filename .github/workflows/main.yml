@@ -28,5 +28,5 @@ jobs:
         with:
           personal_token: ${{ secrets.personal_token }}
           external_repository: Sunnnner/Sunnnner.github.io
-          publish_dir: /
+          publish_dir: ./public
           publish_branch: master
