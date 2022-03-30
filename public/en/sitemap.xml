@@ -342,5 +342,9 @@
                 hreflang="en"
                 href="https://sunnnner.github.io/categories/"
                 />
+  </url><url>
+    <loc>https://sunnnner.github.io/links/</loc>
+  </url><url>
+    <loc>https://sunnnner.github.io/search/</loc>
   </url>
 </urlset>
