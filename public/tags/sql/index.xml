@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>sql on whiteKBlog</title>
-    <link>https://sunnnner.github.io/tags/sql/</link>
-    <description>Recent content in sql on whiteKBlog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 10 Sep 2019 11:41:14 +0800</lastBuildDate><atom:link href="https://sunnnner.github.io/tags/sql/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Sql修改字段长度</title>
-      <link>https://sunnnner.github.io/archetypes/sql%E4%BF%AE%E6%94%B9%E5%AD%97%E6%AE%B5%E9%95%BF%E5%BA%A6/</link>
-      <pubDate>Tue, 10 Sep 2019 11:41:14 +0800</pubDate>
-      
-      <guid>https://sunnnner.github.io/archetypes/sql%E4%BF%AE%E6%94%B9%E5%AD%97%E6%AE%B5%E9%95%BF%E5%BA%A6/</guid>
-      <description>Desc Text.</description>
-    </item>
-    
-  </channel>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>sql on whiteKBlog</title>
+        <link>https://sunnnner.github.io/tags/sql/</link>
+        <description>Recent content in sql on whiteKBlog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Tue, 10 Sep 2019 11:41:14 +0800</lastBuildDate><atom:link href="https://sunnnner.github.io/tags/sql/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Sql修改字段长度</title>
+        <link>https://sunnnner.github.io/archetypes/sql%E4%BF%AE%E6%94%B9%E5%AD%97%E6%AE%B5%E9%95%BF%E5%BA%A6/</link>
+        <pubDate>Tue, 10 Sep 2019 11:41:14 +0800</pubDate>
+        
+        <guid>https://sunnnner.github.io/archetypes/sql%E4%BF%AE%E6%94%B9%E5%AD%97%E6%AE%B5%E9%95%BF%E5%BA%A6/</guid>
+        <description>&lt;p&gt;sql修改字段长度的语法
+&lt;code&gt;alter table 表名 modify 字段名 字段类型;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;标准sql所有都适用
+&lt;code&gt;alter table 数据库.表名 modify 字段名 字段类型;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;修改字段名名称
+&lt;code&gt;alter table 数据库名 表名 column col1 to col2;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;添加字段
+&lt;code&gt;alter table 数据库名.表名 add 字段名 类型;&lt;/code&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

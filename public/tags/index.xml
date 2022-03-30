@@ -1,191 +1,171 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Tags on whiteKBlog</title>
-    <link>https://sunnnner.github.io/tags/</link>
-    <description>Recent content in Tags on whiteKBlog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 10 Mar 2022 15:46:40 +0800</lastBuildDate><atom:link href="https://sunnnner.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>first</title>
-      <link>https://sunnnner.github.io/tags/first/</link>
-      <pubDate>Thu, 10 Mar 2022 15:46:40 +0800</pubDate>
-      
-      <guid>https://sunnnner.github.io/tags/first/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>go</title>
-      <link>https://sunnnner.github.io/tags/go/</link>
-      <pubDate>Sun, 02 Feb 2020 15:52:00 +0800</pubDate>
-      
-      <guid>https://sunnnner.github.io/tags/go/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>shell</title>
-      <link>https://sunnnner.github.io/tags/shell/</link>
-      <pubDate>Wed, 01 Jan 2020 15:45:01 +0800</pubDate>
-      
-      <guid>https://sunnnner.github.io/tags/shell/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>python</title>
-      <link>https://sunnnner.github.io/tags/python/</link>
-      <pubDate>Tue, 10 Dec 2019 15:43:08 +0800</pubDate>
-      
-      <guid>https://sunnnner.github.io/tags/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>kubernete</title>
-      <link>https://sunnnner.github.io/tags/kubernete/</link>
-      <pubDate>Mon, 11 Nov 2019 15:38:29 +0800</pubDate>
-      
-      <guid>https://sunnnner.github.io/tags/kubernete/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>postgres</title>
-      <link>https://sunnnner.github.io/tags/postgres/</link>
-      <pubDate>Mon, 04 Nov 2019 15:37:26 +0800</pubDate>
-      
-      <guid>https://sunnnner.github.io/tags/postgres/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>git</title>
-      <link>https://sunnnner.github.io/tags/git/</link>
-      <pubDate>Sun, 03 Nov 2019 15:36:46 +0800</pubDate>
-      
-      <guid>https://sunnnner.github.io/tags/git/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>docker</title>
-      <link>https://sunnnner.github.io/tags/docker/</link>
-      <pubDate>Fri, 01 Nov 2019 15:35:30 +0800</pubDate>
-      
-      <guid>https://sunnnner.github.io/tags/docker/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>django</title>
-      <link>https://sunnnner.github.io/tags/django/</link>
-      <pubDate>Fri, 11 Oct 2019 15:28:02 +0800</pubDate>
-      
-      <guid>https://sunnnner.github.io/tags/django/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>system</title>
-      <link>https://sunnnner.github.io/tags/system/</link>
-      <pubDate>Thu, 10 Oct 2019 14:20:46 +0800</pubDate>
-      
-      <guid>https://sunnnner.github.io/tags/system/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>mysql</title>
-      <link>https://sunnnner.github.io/tags/mysql/</link>
-      <pubDate>Thu, 03 Oct 2019 14:13:04 +0800</pubDate>
-      
-      <guid>https://sunnnner.github.io/tags/mysql/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>drf</title>
-      <link>https://sunnnner.github.io/tags/drf/</link>
-      <pubDate>Thu, 12 Sep 2019 11:43:08 +0800</pubDate>
-      
-      <guid>https://sunnnner.github.io/tags/drf/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>sql</title>
-      <link>https://sunnnner.github.io/tags/sql/</link>
-      <pubDate>Tue, 10 Sep 2019 11:41:14 +0800</pubDate>
-      
-      <guid>https://sunnnner.github.io/tags/sql/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>linux</title>
-      <link>https://sunnnner.github.io/tags/linux/</link>
-      <pubDate>Mon, 09 Sep 2019 11:39:55 +0800</pubDate>
-      
-      <guid>https://sunnnner.github.io/tags/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>rest</title>
-      <link>https://sunnnner.github.io/tags/rest/</link>
-      <pubDate>Fri, 06 Sep 2019 11:36:12 +0800</pubDate>
-      
-      <guid>https://sunnnner.github.io/tags/rest/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>pyhton</title>
-      <link>https://sunnnner.github.io/tags/pyhton/</link>
-      <pubDate>Wed, 04 Sep 2019 11:30:51 +0800</pubDate>
-      
-      <guid>https://sunnnner.github.io/tags/pyhton/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>html</title>
-      <link>https://sunnnner.github.io/tags/html/</link>
-      <pubDate>Fri, 01 Mar 2019 11:16:46 +0800</pubDate>
-      
-      <guid>https://sunnnner.github.io/tags/html/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>hexo</title>
-      <link>https://sunnnner.github.io/tags/hexo/</link>
-      <pubDate>Mon, 04 Jun 2018 10:25:30 +0800</pubDate>
-      
-      <guid>https://sunnnner.github.io/tags/hexo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>js</title>
-      <link>https://sunnnner.github.io/tags/js/</link>
-      <pubDate>Sat, 02 Jun 2018 10:21:32 +0800</pubDate>
-      
-      <guid>https://sunnnner.github.io/tags/js/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>redis</title>
-      <link>https://sunnnner.github.io/tags/redis/</link>
-      <pubDate>Fri, 01 Jun 2018 10:20:47 +0800</pubDate>
-      
-      <guid>https://sunnnner.github.io/tags/redis/</guid>
-      <description></description>
-    </item>
-    
-  </channel>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Tags on whiteKBlog</title>
+        <link>https://sunnnner.github.io/tags/</link>
+        <description>Recent content in Tags on whiteKBlog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Thu, 10 Mar 2022 15:46:40 +0800</lastBuildDate><atom:link href="https://sunnnner.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>first</title>
+        <link>https://sunnnner.github.io/tags/first/</link>
+        <pubDate>Thu, 10 Mar 2022 15:46:40 +0800</pubDate>
+        
+        <guid>https://sunnnner.github.io/tags/first/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>go</title>
+        <link>https://sunnnner.github.io/tags/go/</link>
+        <pubDate>Sun, 02 Feb 2020 15:52:00 +0800</pubDate>
+        
+        <guid>https://sunnnner.github.io/tags/go/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>shell</title>
+        <link>https://sunnnner.github.io/tags/shell/</link>
+        <pubDate>Wed, 01 Jan 2020 15:45:01 +0800</pubDate>
+        
+        <guid>https://sunnnner.github.io/tags/shell/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>python</title>
+        <link>https://sunnnner.github.io/tags/python/</link>
+        <pubDate>Tue, 10 Dec 2019 15:43:08 +0800</pubDate>
+        
+        <guid>https://sunnnner.github.io/tags/python/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>kubernete</title>
+        <link>https://sunnnner.github.io/tags/kubernete/</link>
+        <pubDate>Mon, 11 Nov 2019 15:38:29 +0800</pubDate>
+        
+        <guid>https://sunnnner.github.io/tags/kubernete/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>postgres</title>
+        <link>https://sunnnner.github.io/tags/postgres/</link>
+        <pubDate>Mon, 04 Nov 2019 15:37:26 +0800</pubDate>
+        
+        <guid>https://sunnnner.github.io/tags/postgres/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>git</title>
+        <link>https://sunnnner.github.io/tags/git/</link>
+        <pubDate>Sun, 03 Nov 2019 15:36:46 +0800</pubDate>
+        
+        <guid>https://sunnnner.github.io/tags/git/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>docker</title>
+        <link>https://sunnnner.github.io/tags/docker/</link>
+        <pubDate>Fri, 01 Nov 2019 15:35:30 +0800</pubDate>
+        
+        <guid>https://sunnnner.github.io/tags/docker/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>django</title>
+        <link>https://sunnnner.github.io/tags/django/</link>
+        <pubDate>Fri, 11 Oct 2019 15:28:02 +0800</pubDate>
+        
+        <guid>https://sunnnner.github.io/tags/django/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>system</title>
+        <link>https://sunnnner.github.io/tags/system/</link>
+        <pubDate>Thu, 10 Oct 2019 14:20:46 +0800</pubDate>
+        
+        <guid>https://sunnnner.github.io/tags/system/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>mysql</title>
+        <link>https://sunnnner.github.io/tags/mysql/</link>
+        <pubDate>Thu, 03 Oct 2019 14:13:04 +0800</pubDate>
+        
+        <guid>https://sunnnner.github.io/tags/mysql/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>drf</title>
+        <link>https://sunnnner.github.io/tags/drf/</link>
+        <pubDate>Thu, 12 Sep 2019 11:43:08 +0800</pubDate>
+        
+        <guid>https://sunnnner.github.io/tags/drf/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>sql</title>
+        <link>https://sunnnner.github.io/tags/sql/</link>
+        <pubDate>Tue, 10 Sep 2019 11:41:14 +0800</pubDate>
+        
+        <guid>https://sunnnner.github.io/tags/sql/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>linux</title>
+        <link>https://sunnnner.github.io/tags/linux/</link>
+        <pubDate>Mon, 09 Sep 2019 11:39:55 +0800</pubDate>
+        
+        <guid>https://sunnnner.github.io/tags/linux/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>rest</title>
+        <link>https://sunnnner.github.io/tags/rest/</link>
+        <pubDate>Fri, 06 Sep 2019 11:36:12 +0800</pubDate>
+        
+        <guid>https://sunnnner.github.io/tags/rest/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>pyhton</title>
+        <link>https://sunnnner.github.io/tags/pyhton/</link>
+        <pubDate>Wed, 04 Sep 2019 11:30:51 +0800</pubDate>
+        
+        <guid>https://sunnnner.github.io/tags/pyhton/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>html</title>
+        <link>https://sunnnner.github.io/tags/html/</link>
+        <pubDate>Fri, 01 Mar 2019 11:16:46 +0800</pubDate>
+        
+        <guid>https://sunnnner.github.io/tags/html/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>hexo</title>
+        <link>https://sunnnner.github.io/tags/hexo/</link>
+        <pubDate>Mon, 04 Jun 2018 10:25:30 +0800</pubDate>
+        
+        <guid>https://sunnnner.github.io/tags/hexo/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>js</title>
+        <link>https://sunnnner.github.io/tags/js/</link>
+        <pubDate>Sat, 02 Jun 2018 10:21:32 +0800</pubDate>
+        
+        <guid>https://sunnnner.github.io/tags/js/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>redis</title>
+        <link>https://sunnnner.github.io/tags/redis/</link>
+        <pubDate>Fri, 01 Jun 2018 10:20:47 +0800</pubDate>
+        
+        <guid>https://sunnnner.github.io/tags/redis/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
 </rss>

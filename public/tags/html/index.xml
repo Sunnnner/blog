@@ -1,20 +1,57 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>html on whiteKBlog</title>
-    <link>https://sunnnner.github.io/tags/html/</link>
-    <description>Recent content in html on whiteKBlog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 01 Mar 2019 11:16:46 +0800</lastBuildDate><atom:link href="https://sunnnner.github.io/tags/html/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>框架</title>
-      <link>https://sunnnner.github.io/archetypes/%E6%A1%86%E6%9E%B6/</link>
-      <pubDate>Fri, 01 Mar 2019 11:16:46 +0800</pubDate>
-      
-      <guid>https://sunnnner.github.io/archetypes/%E6%A1%86%E6%9E%B6/</guid>
-      <description>Desc Text.</description>
-    </item>
-    
-  </channel>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>html on whiteKBlog</title>
+        <link>https://sunnnner.github.io/tags/html/</link>
+        <description>Recent content in html on whiteKBlog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Fri, 01 Mar 2019 11:16:46 +0800</lastBuildDate><atom:link href="https://sunnnner.github.io/tags/html/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>框架</title>
+        <link>https://sunnnner.github.io/archetypes/%E6%A1%86%E6%9E%B6/</link>
+        <pubDate>Fri, 01 Mar 2019 11:16:46 +0800</pubDate>
+        
+        <guid>https://sunnnner.github.io/archetypes/%E6%A1%86%E6%9E%B6/</guid>
+        <description>&lt;p&gt;CSS常用框架&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1、Scooter CSS
+2、Leaf CSS
+3、Fox CSS
+4、Miligram CSS
+5、Layers CSS
+6、Baseguide CSS
+7、Mimic CSS
+8、Cascade CSS
+9、Emastic CSS
+10、Neutron CSS
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;HTML框架&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;frame
+iframe
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;JS框架&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1.Zepto.js
+2.SUI Mobile
+3.Node.Js
+4.angular.Js
+5.JQuery Mobile
+6.requirejs
+7.Vue.js
+8.backbone.js
+9.React
+10.Ionic
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;前端UI框架&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1.Pure
+2.bootstrap
+3.EasyUI
+4.Ant Design
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;可视化组件&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1.Echarts
+2.tableau(收费)
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>
