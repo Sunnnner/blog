@@ -8,10 +8,10 @@
         <language>en-us</language>
         <lastBuildDate>Thu, 10 Mar 2022 15:46:40 +0800</lastBuildDate><atom:link href="https://sunnnner.github.io/tags/first/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Pysocket</title>
-        <link>https://sunnnner.github.io/archetypes/pysocket/</link>
+        <link>https://sunnnner.github.io/pysocket/</link>
         <pubDate>Thu, 10 Mar 2022 15:46:40 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/pysocket/</guid>
+        <guid>https://sunnnner.github.io/pysocket/</guid>
         <description>&lt;p&gt;2-1 套接字。面向连接的套接字和无连接套接字之间的区别是什么？&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -140,10 +140,10 @@ Tornado、 Diesel、 Concurrence、 Eventlet、 Gevent 等中选择。描述它�
         </item>
         <item>
         <title>Djangoupgrade</title>
-        <link>https://sunnnner.github.io/archetypes/django_upgrade3.2/</link>
+        <link>https://sunnnner.github.io/djangoupgrade/</link>
         <pubDate>Tue, 08 Mar 2022 11:06:40 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/django_upgrade3.2/</guid>
+        <guid>https://sunnnner.github.io/djangoupgrade/</guid>
         <description>&lt;ul&gt;
 &lt;li&gt;python3 中迭代器方法&lt;code&gt;next()&lt;/code&gt;已经改变为&lt;code&gt;__next__()&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -151,10 +151,10 @@ Tornado、 Diesel、 Concurrence、 Eventlet、 Gevent 等中选择。描述它�
         </item>
         <item>
         <title>Go导入外部包失效问题</title>
-        <link>https://sunnnner.github.io/archetypes/go%E5%AF%BC%E5%85%A5%E5%A4%96%E9%83%A8%E5%8C%85%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98/</link>
+        <link>https://sunnnner.github.io/go%E5%AF%BC%E5%85%A5%E5%A4%96%E9%83%A8%E5%8C%85%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98/</link>
         <pubDate>Thu, 26 Aug 2021 10:48:36 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/go%E5%AF%BC%E5%85%A5%E5%A4%96%E9%83%A8%E5%8C%85%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98/</guid>
+        <guid>https://sunnnner.github.io/go%E5%AF%BC%E5%85%A5%E5%A4%96%E9%83%A8%E5%8C%85%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98/</guid>
         <description>&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;小记在mac上使用vscode导入redis包失效问题&lt;/p&gt;
@@ -199,10 +199,10 @@ Tornado、 Diesel、 Concurrence、 Eventlet、 Gevent 等中选择。描述它�
         </item>
         <item>
         <title>Django Admin Permissions控制</title>
-        <link>https://sunnnner.github.io/archetypes/django-admin-permissions%E6%8E%A7%E5%88%B6/</link>
+        <link>https://sunnnner.github.io/django-admin-permissions%E6%8E%A7%E5%88%B6/</link>
         <pubDate>Tue, 24 Aug 2021 09:26:52 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/django-admin-permissions%E6%8E%A7%E5%88%B6/</guid>
+        <guid>https://sunnnner.github.io/django-admin-permissions%E6%8E%A7%E5%88%B6/</guid>
         <description>&lt;ul&gt;
 &lt;li&gt;&lt;code&gt;is_staff&lt;/code&gt; bool 指定此用户是否可以访问管理站点&lt;/li&gt;
 &lt;li&gt;控制用户操作admin的权限由 &lt;code&gt;django.contrib.auth.backends.ModelBackend&lt;/code&gt; 进行控制，它也进行控制用户的登录认证行为&lt;/li&gt;
@@ -477,10 +477,10 @@ Tornado、 Diesel、 Concurrence、 Eventlet、 Gevent 等中选择。描述它�
         </item>
         <item>
         <title>Go词法单元</title>
-        <link>https://sunnnner.github.io/archetypes/go%E8%AF%8D%E6%B3%95%E5%8D%95%E5%85%83/</link>
+        <link>https://sunnnner.github.io/go%E8%AF%8D%E6%B3%95%E5%8D%95%E5%85%83/</link>
         <pubDate>Tue, 17 Aug 2021 10:10:49 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/go%E8%AF%8D%E6%B3%95%E5%8D%95%E5%85%83/</guid>
+        <guid>https://sunnnner.github.io/go%E8%AF%8D%E6%B3%95%E5%8D%95%E5%85%83/</guid>
         <description>&lt;h2 id=&#34;高级语言源程序内部的几个概念&#34;&gt;高级语言源程序内部的几个概念&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;token、关键字、标识符、操作符、分隔符和字面量&lt;/li&gt;
@@ -498,10 +498,10 @@ Tornado、 Diesel、 Concurrence、 Eventlet、 Gevent 等中选择。描述它�
         </item>
         <item>
         <title>Django Orm聚合分组知识</title>
-        <link>https://sunnnner.github.io/archetypes/django-orm%E8%81%9A%E5%90%88%E5%88%86%E7%BB%84%E7%9F%A5%E8%AF%86/</link>
+        <link>https://sunnnner.github.io/django-orm%E8%81%9A%E5%90%88%E5%88%86%E7%BB%84%E7%9F%A5%E8%AF%86/</link>
         <pubDate>Thu, 12 Aug 2021 16:19:36 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/django-orm%E8%81%9A%E5%90%88%E5%88%86%E7%BB%84%E7%9F%A5%E8%AF%86/</guid>
+        <guid>https://sunnnner.github.io/django-orm%E8%81%9A%E5%90%88%E5%88%86%E7%BB%84%E7%9F%A5%E8%AF%86/</guid>
         <description>&lt;ul&gt;
 &lt;li&gt;&lt;code&gt;annotate&lt;/code&gt; 聚合操作 有 Max Sum Count一些参数使用 &lt;code&gt;=&lt;/code&gt;相当于sql中的&lt;code&gt;as&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;如果想要查询的时候更换变量名称使用&lt;code&gt;extra(select={&amp;quot;change_file&amp;quot;: &amp;quot;model_file&amp;quot;})&lt;/code&gt; 相当于 sql 中的&lt;code&gt;as&lt;/code&gt;&lt;/li&gt;
@@ -524,10 +524,10 @@ Tornado、 Diesel、 Concurrence、 Eventlet、 Gevent 等中选择。描述它�
         </item>
         <item>
         <title>Ubuntu20.04 LTS编译python3.7</title>
-        <link>https://sunnnner.github.io/archetypes/ubuntu-install-python3.7/</link>
+        <link>https://sunnnner.github.io/ubuntu20.04-lts%E7%BC%96%E8%AF%91python3.7/</link>
         <pubDate>Fri, 06 Aug 2021 19:29:05 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/ubuntu-install-python3.7/</guid>
+        <guid>https://sunnnner.github.io/ubuntu20.04-lts%E7%BC%96%E8%AF%91python3.7/</guid>
         <description>&lt;h1 id=&#34;ubuntu2004-lts编译-python371httpswwwpythonorgdownloadsreleasepython-371&#34;&gt;ubuntu20.04 LTS编译 &lt;a class=&#34;link&#34; href=&#34;https://www.python.org/downloads/release/python-371/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;python3.7.1&lt;/a&gt;&lt;/h1&gt;
 &lt;h2 id=&#34;安装编译前依赖包&#34;&gt;安装编译前依赖包&lt;/h2&gt;
@@ -585,18 +585,18 @@ Tornado、 Diesel、 Concurrence、 Eventlet、 Gevent 等中选择。描述它�
         </item>
         <item>
         <title>K8s Install</title>
-        <link>https://sunnnner.github.io/archetypes/k8s-install/</link>
+        <link>https://sunnnner.github.io/k8s-install/</link>
         <pubDate>Tue, 08 Oct 2019 14:57:24 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/k8s-install/</guid>
+        <guid>https://sunnnner.github.io/k8s-install/</guid>
         <description></description>
         </item>
         <item>
         <title>缺少的知识</title>
-        <link>https://sunnnner.github.io/archetypes/%E7%BC%BA%E5%B0%91%E7%9A%84%E7%9F%A5%E8%AF%86/</link>
+        <link>https://sunnnner.github.io/%E7%BC%BA%E5%B0%91%E7%9A%84%E7%9F%A5%E8%AF%86/</link>
         <pubDate>Sat, 01 Sep 2018 10:28:49 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/%E7%BC%BA%E5%B0%91%E7%9A%84%E7%9F%A5%E8%AF%86/</guid>
+        <guid>https://sunnnner.github.io/%E7%BC%BA%E5%B0%91%E7%9A%84%E7%9F%A5%E8%AF%86/</guid>
         <description>&lt;ul&gt;
 &lt;li&gt;ISCSI相关操作&lt;/li&gt;
 &lt;li&gt;熟悉MVC，熟悉OOP，熟悉Python之外的其他OOP语言，Java者优先&lt;/li&gt;
@@ -608,10 +608,10 @@ Tornado、 Diesel、 Concurrence、 Eventlet、 Gevent 等中选择。描述它�
         </item>
         <item>
         <title>Python基础</title>
-        <link>https://sunnnner.github.io/archetypes/python%E5%9F%BA%E7%A1%80/</link>
+        <link>https://sunnnner.github.io/python%E5%9F%BA%E7%A1%80/</link>
         <pubDate>Sun, 03 Jun 2018 10:22:36 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/python%E5%9F%BA%E7%A1%80/</guid>
+        <guid>https://sunnnner.github.io/python%E5%9F%BA%E7%A1%80/</guid>
         <description>&lt;h2 id=&#34;让python2支持中文&#34;&gt;让python2支持中文&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;

@@ -8,10 +8,10 @@
         <language>en-us</language>
         <lastBuildDate>Fri, 11 Oct 2019 15:28:02 +0800</lastBuildDate><atom:link href="https://sunnnner.github.io/tags/django/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Django文件压缩</title>
-        <link>https://sunnnner.github.io/archetypes/django%E6%96%87%E4%BB%B6%E5%8E%8B%E7%BC%A9/</link>
+        <link>https://sunnnner.github.io/django%E6%96%87%E4%BB%B6%E5%8E%8B%E7%BC%A9/</link>
         <pubDate>Fri, 11 Oct 2019 15:28:02 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/django%E6%96%87%E4%BB%B6%E5%8E%8B%E7%BC%A9/</guid>
+        <guid>https://sunnnner.github.io/django%E6%96%87%E4%BB%B6%E5%8E%8B%E7%BC%A9/</guid>
         <description>&lt;p&gt;类型和方法数据压缩分为两种类型。&lt;/p&gt;
 &lt;p&gt;有损：在这种类型的压缩中，压缩时会降低数据质量（在这种情况下为图像和视频）。这被广泛用于压缩多媒体。&lt;/p&gt;
 &lt;p&gt;无损：在这种类型的压缩中，数据质量（在这种情况下为图像）不会丢失。它广泛用于压缩无法承受数据丢失的敏感数据。&lt;/p&gt;
@@ -88,10 +88,10 @@
         </item>
         <item>
         <title>静态文件的含义以及配置</title>
-        <link>https://sunnnner.github.io/archetypes/%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6%E7%9A%84%E5%90%AB%E4%B9%89%E4%BB%A5%E5%8F%8A%E9%85%8D%E7%BD%AE/</link>
+        <link>https://sunnnner.github.io/%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6%E7%9A%84%E5%90%AB%E4%B9%89%E4%BB%A5%E5%8F%8A%E9%85%8D%E7%BD%AE/</link>
         <pubDate>Thu, 10 Oct 2019 15:27:14 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6%E7%9A%84%E5%90%AB%E4%B9%89%E4%BB%A5%E5%8F%8A%E9%85%8D%E7%BD%AE/</guid>
+        <guid>https://sunnnner.github.io/%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6%E7%9A%84%E5%90%AB%E4%B9%89%E4%BB%A5%E5%8F%8A%E9%85%8D%E7%BD%AE/</guid>
         <description>&lt;h1 id=&#34;django-staticfile-的配置&#34;&gt;Django staticfile 的配置&lt;/h1&gt;
 &lt;p&gt;起初以为是我dockerfile写错了的问题，的确不是dockerfile的问题是我没有理解static_url与static_root的含义&lt;/p&gt;
 &lt;p&gt;👍 如果不是前后端分离项目在每个APP下都应该有static与templates文件夹存在不然django收集静态文件收集不到&lt;/p&gt;
@@ -104,10 +104,10 @@
         </item>
         <item>
         <title>Django Minio开发过程</title>
-        <link>https://sunnnner.github.io/archetypes/django-minio%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B/</link>
+        <link>https://sunnnner.github.io/django-minio%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B/</link>
         <pubDate>Sun, 06 Oct 2019 14:17:12 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/django-minio%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B/</guid>
+        <guid>https://sunnnner.github.io/django-minio%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;使用Django-minio-storage进行开发minio的静态文件存储功能，本来寻思用minio直接进行开发，既然django有这个包我们就拿来用一下&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -167,10 +167,10 @@
         </item>
         <item>
         <title>JWT</title>
-        <link>https://sunnnner.github.io/archetypes/jwt/</link>
+        <link>https://sunnnner.github.io/jwt/</link>
         <pubDate>Wed, 02 Oct 2019 14:08:17 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/jwt/</guid>
+        <guid>https://sunnnner.github.io/jwt/</guid>
         <description>&lt;h1 id=&#34;jwtjson-web-token&#34;&gt;JWT——Json web token&lt;/h1&gt;
 &lt;pre&gt;&lt;code&gt;是为了在网络应用环境间传递声明而执行的一种基于JSON的开放标准，可实现无状态、分布式的Web应用授权。
 &lt;/code&gt;&lt;/pre&gt;
@@ -305,10 +305,10 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU3ZmVmMTY0ZTU0YWY2NGZmYzUzZGJkNSI
         </item>
         <item>
         <title>TOKEN验证详解</title>
-        <link>https://sunnnner.github.io/archetypes/token%E9%AA%8C%E8%AF%81%E8%AF%A6%E8%A7%A3/</link>
+        <link>https://sunnnner.github.io/token%E9%AA%8C%E8%AF%81%E8%AF%A6%E8%A7%A3/</link>
         <pubDate>Tue, 01 Oct 2019 14:03:37 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/token%E9%AA%8C%E8%AF%81%E8%AF%A6%E8%A7%A3/</guid>
+        <guid>https://sunnnner.github.io/token%E9%AA%8C%E8%AF%81%E8%AF%A6%E8%A7%A3/</guid>
         <description>&lt;h1 id=&#34;为什么使用token验证&#34;&gt;为什么使用token验证&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;在web领域基于token的身份验证随处可变，在大多说使用web API的互联网公司中，tokens是多用户下处理认证的最佳方式&lt;/li&gt;
@@ -475,10 +475,10 @@ Having our API just serve data, we can also make the design choice to serve asse
         </item>
         <item>
         <title>Django中的FBV和CBV</title>
-        <link>https://sunnnner.github.io/archetypes/django%E4%B8%AD%E7%9A%84fbv%E5%92%8Ccbv/</link>
+        <link>https://sunnnner.github.io/django%E4%B8%AD%E7%9A%84fbv%E5%92%8Ccbv/</link>
         <pubDate>Thu, 05 Sep 2019 11:34:25 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/django%E4%B8%AD%E7%9A%84fbv%E5%92%8Ccbv/</guid>
+        <guid>https://sunnnner.github.io/django%E4%B8%AD%E7%9A%84fbv%E5%92%8Ccbv/</guid>
         <description>&lt;h2 id=&#34;fbv&#34;&gt;FBV&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;fbv就是在url中一个路径对应一个函数&lt;/p&gt;
@@ -563,10 +563,10 @@ restful规范：’get’获取数据, ‘post’创建新数据, ‘put’更�
         </item>
         <item>
         <title>Django定义USER四中方式</title>
-        <link>https://sunnnner.github.io/archetypes/django%E5%AE%9A%E4%B9%89user%E5%9B%9B%E4%B8%AD%E6%96%B9%E5%BC%8F/</link>
+        <link>https://sunnnner.github.io/django%E5%AE%9A%E4%B9%89user%E5%9B%9B%E4%B8%AD%E6%96%B9%E5%BC%8F/</link>
         <pubDate>Mon, 03 Sep 2018 10:30:05 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/django%E5%AE%9A%E4%B9%89user%E5%9B%9B%E4%B8%AD%E6%96%B9%E5%BC%8F/</guid>
+        <guid>https://sunnnner.github.io/django%E5%AE%9A%E4%B9%89user%E5%9B%9B%E4%B8%AD%E6%96%B9%E5%BC%8F/</guid>
         <description>&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;设计user models&lt;/p&gt;
@@ -594,10 +594,10 @@ restful规范：’get’获取数据, ‘post’创建新数据, ‘put’更�
         </item>
         <item>
         <title>Django用户模块</title>
-        <link>https://sunnnner.github.io/archetypes/django%E7%94%A8%E6%88%B7%E6%A8%A1%E5%9D%97/</link>
+        <link>https://sunnnner.github.io/django%E7%94%A8%E6%88%B7%E6%A8%A1%E5%9D%97/</link>
         <pubDate>Fri, 01 Jun 2018 10:15:16 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/django%E7%94%A8%E6%88%B7%E6%A8%A1%E5%9D%97/</guid>
+        <guid>https://sunnnner.github.io/django%E7%94%A8%E6%88%B7%E6%A8%A1%E5%9D%97/</guid>
         <description>&lt;h1 id=&#34;第一步创建django项目&#34;&gt;第一步创建Django项目&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;django-admin startproject blog&lt;/code&gt;&lt;/li&gt;
@@ -1144,10 +1144,10 @@ restful规范：’get’获取数据, ‘post’创建新数据, ‘put’更�
         </item>
         <item>
         <title>页面开发</title>
-        <link>https://sunnnner.github.io/archetypes/blog-%E5%95%86%E5%93%81%E9%A1%B5%E9%9D%A2%E6%98%BE%E7%A4%BA%E5%BC%80%E5%8F%91/</link>
+        <link>https://sunnnner.github.io/%E9%A1%B5%E9%9D%A2%E5%BC%80%E5%8F%91/</link>
         <pubDate>Thu, 31 May 2018 18:47:29 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/blog-%E5%95%86%E5%93%81%E9%A1%B5%E9%9D%A2%E6%98%BE%E7%A4%BA%E5%BC%80%E5%8F%91/</guid>
+        <guid>https://sunnnner.github.io/%E9%A1%B5%E9%9D%A2%E5%BC%80%E5%8F%91/</guid>
         <description>&lt;ul&gt;
 &lt;li&gt;首先新建app—&amp;gt;books并添加settings里面&lt;/li&gt;
 &lt;li&gt;因为我们需要在后台admin上传数据所以我们要创建富文本管理器并在setting设置他的选项&lt;/li&gt;

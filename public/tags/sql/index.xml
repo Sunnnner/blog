@@ -8,10 +8,10 @@
         <language>en-us</language>
         <lastBuildDate>Tue, 10 Sep 2019 11:41:14 +0800</lastBuildDate><atom:link href="https://sunnnner.github.io/tags/sql/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Sql修改字段长度</title>
-        <link>https://sunnnner.github.io/archetypes/sql%E4%BF%AE%E6%94%B9%E5%AD%97%E6%AE%B5%E9%95%BF%E5%BA%A6/</link>
+        <link>https://sunnnner.github.io/sql%E4%BF%AE%E6%94%B9%E5%AD%97%E6%AE%B5%E9%95%BF%E5%BA%A6/</link>
         <pubDate>Tue, 10 Sep 2019 11:41:14 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/sql%E4%BF%AE%E6%94%B9%E5%AD%97%E6%AE%B5%E9%95%BF%E5%BA%A6/</guid>
+        <guid>https://sunnnner.github.io/sql%E4%BF%AE%E6%94%B9%E5%AD%97%E6%AE%B5%E9%95%BF%E5%BA%A6/</guid>
         <description>&lt;p&gt;sql修改字段长度的语法
 &lt;code&gt;alter table 表名 modify 字段名 字段类型;&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;标准sql所有都适用

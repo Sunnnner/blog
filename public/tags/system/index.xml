@@ -8,10 +8,10 @@
         <language>en-us</language>
         <lastBuildDate>Thu, 10 Oct 2019 14:20:46 +0800</lastBuildDate><atom:link href="https://sunnnner.github.io/tags/system/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Os模块</title>
-        <link>https://sunnnner.github.io/archetypes/os%E6%A8%A1%E5%9D%97/</link>
+        <link>https://sunnnner.github.io/os%E6%A8%A1%E5%9D%97/</link>
         <pubDate>Thu, 10 Oct 2019 14:20:46 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/os%E6%A8%A1%E5%9D%97/</guid>
+        <guid>https://sunnnner.github.io/os%E6%A8%A1%E5%9D%97/</guid>
         <description>&lt;p&gt;&lt;code&gt;os .path.dirname(path)&lt;/code&gt; 获取路径名&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;os.path.basename(path)&lt;/code&gt; 获取文件名&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;os.path.join(path1[,path2[,….]])&lt;/code&gt; 将路径与文件名拼接成一个完整的路径&lt;/p&gt;

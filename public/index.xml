@@ -8,10 +8,10 @@
         <language>en-us</language>
         <lastBuildDate>Thu, 10 Mar 2022 15:46:40 +0800</lastBuildDate><atom:link href="https://sunnnner.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Pysocket</title>
-        <link>https://sunnnner.github.io/archetypes/pysocket/</link>
+        <link>https://sunnnner.github.io/pysocket/</link>
         <pubDate>Thu, 10 Mar 2022 15:46:40 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/pysocket/</guid>
+        <guid>https://sunnnner.github.io/pysocket/</guid>
         <description>&lt;p&gt;2-1 套接字。面向连接的套接字和无连接套接字之间的区别是什么？&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -140,10 +140,10 @@ Tornado、 Diesel、 Concurrence、 Eventlet、 Gevent 等中选择。描述它�
         </item>
         <item>
         <title>Djangoupgrade</title>
-        <link>https://sunnnner.github.io/archetypes/django_upgrade3.2/</link>
+        <link>https://sunnnner.github.io/djangoupgrade/</link>
         <pubDate>Tue, 08 Mar 2022 11:06:40 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/django_upgrade3.2/</guid>
+        <guid>https://sunnnner.github.io/djangoupgrade/</guid>
         <description>&lt;ul&gt;
 &lt;li&gt;python3 中迭代器方法&lt;code&gt;next()&lt;/code&gt;已经改变为&lt;code&gt;__next__()&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -151,10 +151,10 @@ Tornado、 Diesel、 Concurrence、 Eventlet、 Gevent 等中选择。描述它�
         </item>
         <item>
         <title>Go导入外部包失效问题</title>
-        <link>https://sunnnner.github.io/archetypes/go%E5%AF%BC%E5%85%A5%E5%A4%96%E9%83%A8%E5%8C%85%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98/</link>
+        <link>https://sunnnner.github.io/go%E5%AF%BC%E5%85%A5%E5%A4%96%E9%83%A8%E5%8C%85%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98/</link>
         <pubDate>Thu, 26 Aug 2021 10:48:36 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/go%E5%AF%BC%E5%85%A5%E5%A4%96%E9%83%A8%E5%8C%85%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98/</guid>
+        <guid>https://sunnnner.github.io/go%E5%AF%BC%E5%85%A5%E5%A4%96%E9%83%A8%E5%8C%85%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98/</guid>
         <description>&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;小记在mac上使用vscode导入redis包失效问题&lt;/p&gt;
@@ -199,10 +199,10 @@ Tornado、 Diesel、 Concurrence、 Eventlet、 Gevent 等中选择。描述它�
         </item>
         <item>
         <title>Django Admin Permissions控制</title>
-        <link>https://sunnnner.github.io/archetypes/django-admin-permissions%E6%8E%A7%E5%88%B6/</link>
+        <link>https://sunnnner.github.io/django-admin-permissions%E6%8E%A7%E5%88%B6/</link>
         <pubDate>Tue, 24 Aug 2021 09:26:52 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/django-admin-permissions%E6%8E%A7%E5%88%B6/</guid>
+        <guid>https://sunnnner.github.io/django-admin-permissions%E6%8E%A7%E5%88%B6/</guid>
         <description>&lt;ul&gt;
 &lt;li&gt;&lt;code&gt;is_staff&lt;/code&gt; bool 指定此用户是否可以访问管理站点&lt;/li&gt;
 &lt;li&gt;控制用户操作admin的权限由 &lt;code&gt;django.contrib.auth.backends.ModelBackend&lt;/code&gt; 进行控制，它也进行控制用户的登录认证行为&lt;/li&gt;
@@ -477,10 +477,10 @@ Tornado、 Diesel、 Concurrence、 Eventlet、 Gevent 等中选择。描述它�
         </item>
         <item>
         <title>Go词法单元</title>
-        <link>https://sunnnner.github.io/archetypes/go%E8%AF%8D%E6%B3%95%E5%8D%95%E5%85%83/</link>
+        <link>https://sunnnner.github.io/go%E8%AF%8D%E6%B3%95%E5%8D%95%E5%85%83/</link>
         <pubDate>Tue, 17 Aug 2021 10:10:49 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/go%E8%AF%8D%E6%B3%95%E5%8D%95%E5%85%83/</guid>
+        <guid>https://sunnnner.github.io/go%E8%AF%8D%E6%B3%95%E5%8D%95%E5%85%83/</guid>
         <description>&lt;h2 id=&#34;高级语言源程序内部的几个概念&#34;&gt;高级语言源程序内部的几个概念&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;token、关键字、标识符、操作符、分隔符和字面量&lt;/li&gt;
@@ -498,10 +498,10 @@ Tornado、 Diesel、 Concurrence、 Eventlet、 Gevent 等中选择。描述它�
         </item>
         <item>
         <title>Django Orm聚合分组知识</title>
-        <link>https://sunnnner.github.io/archetypes/django-orm%E8%81%9A%E5%90%88%E5%88%86%E7%BB%84%E7%9F%A5%E8%AF%86/</link>
+        <link>https://sunnnner.github.io/django-orm%E8%81%9A%E5%90%88%E5%88%86%E7%BB%84%E7%9F%A5%E8%AF%86/</link>
         <pubDate>Thu, 12 Aug 2021 16:19:36 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/django-orm%E8%81%9A%E5%90%88%E5%88%86%E7%BB%84%E7%9F%A5%E8%AF%86/</guid>
+        <guid>https://sunnnner.github.io/django-orm%E8%81%9A%E5%90%88%E5%88%86%E7%BB%84%E7%9F%A5%E8%AF%86/</guid>
         <description>&lt;ul&gt;
 &lt;li&gt;&lt;code&gt;annotate&lt;/code&gt; 聚合操作 有 Max Sum Count一些参数使用 &lt;code&gt;=&lt;/code&gt;相当于sql中的&lt;code&gt;as&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;如果想要查询的时候更换变量名称使用&lt;code&gt;extra(select={&amp;quot;change_file&amp;quot;: &amp;quot;model_file&amp;quot;})&lt;/code&gt; 相当于 sql 中的&lt;code&gt;as&lt;/code&gt;&lt;/li&gt;
@@ -524,10 +524,10 @@ Tornado、 Diesel、 Concurrence、 Eventlet、 Gevent 等中选择。描述它�
         </item>
         <item>
         <title>Ubuntu20.04 LTS编译python3.7</title>
-        <link>https://sunnnner.github.io/archetypes/ubuntu-install-python3.7/</link>
+        <link>https://sunnnner.github.io/ubuntu20.04-lts%E7%BC%96%E8%AF%91python3.7/</link>
         <pubDate>Fri, 06 Aug 2021 19:29:05 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/ubuntu-install-python3.7/</guid>
+        <guid>https://sunnnner.github.io/ubuntu20.04-lts%E7%BC%96%E8%AF%91python3.7/</guid>
         <description>&lt;h1 id=&#34;ubuntu2004-lts编译-python371httpswwwpythonorgdownloadsreleasepython-371&#34;&gt;ubuntu20.04 LTS编译 &lt;a class=&#34;link&#34; href=&#34;https://www.python.org/downloads/release/python-371/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;python3.7.1&lt;/a&gt;&lt;/h1&gt;
 &lt;h2 id=&#34;安装编译前依赖包&#34;&gt;安装编译前依赖包&lt;/h2&gt;
@@ -594,10 +594,10 @@ Tornado、 Diesel、 Concurrence、 Eventlet、 Gevent 等中选择。描述它�
         </item>
         <item>
         <title>Go语言数据类型</title>
-        <link>https://sunnnner.github.io/archetypes/go%E8%AF%AD%E8%A8%80%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</link>
+        <link>https://sunnnner.github.io/go%E8%AF%AD%E8%A8%80%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</link>
         <pubDate>Sun, 02 Feb 2020 15:52:00 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/go%E8%AF%AD%E8%A8%80%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</guid>
+        <guid>https://sunnnner.github.io/go%E8%AF%AD%E8%A8%80%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</guid>
         <description>&lt;h2 id=&#34;派生&#34;&gt;派生&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;包括：
     指针类型(Pointer)
@@ -624,10 +624,10 @@ uintptr 无符号整型，用于存放一个指针&lt;/code&gt;&lt;/pre&gt;
         </item>
         <item>
         <title>Go学习</title>
-        <link>https://sunnnner.github.io/archetypes/go%E5%AD%A6%E4%B9%A0/</link>
+        <link>https://sunnnner.github.io/go%E5%AD%A6%E4%B9%A0/</link>
         <pubDate>Sat, 01 Feb 2020 15:45:32 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/go%E5%AD%A6%E4%B9%A0/</guid>
+        <guid>https://sunnnner.github.io/go%E5%AD%A6%E4%B9%A0/</guid>
         <description>&lt;h1 id=&#34;go关键字&#34;&gt;Go关键字&lt;/h1&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -865,10 +865,10 @@ uintptr 无符号整型，用于存放一个指针&lt;/code&gt;&lt;/pre&gt;
         </item>
         <item>
         <title>Shell 判断文件中是否存在字符串</title>
-        <link>https://sunnnner.github.io/archetypes/shell-%E5%88%A4%E6%96%AD%E6%96%87%E4%BB%B6%E4%B8%AD%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+        <link>https://sunnnner.github.io/shell-%E5%88%A4%E6%96%AD%E6%96%87%E4%BB%B6%E4%B8%AD%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
         <pubDate>Wed, 01 Jan 2020 15:45:01 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/shell-%E5%88%A4%E6%96%AD%E6%96%87%E4%BB%B6%E4%B8%AD%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
+        <guid>https://sunnnner.github.io/shell-%E5%88%A4%E6%96%AD%E6%96%87%E4%BB%B6%E4%B8%AD%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
         <description>&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -903,10 +903,10 @@ uintptr 无符号整型，用于存放一个指针&lt;/code&gt;&lt;/pre&gt;
         </item>
         <item>
         <title>Python日期转换</title>
-        <link>https://sunnnner.github.io/archetypes/python%E6%97%A5%E6%9C%9F%E8%BD%AC%E6%8D%A2/</link>
+        <link>https://sunnnner.github.io/python%E6%97%A5%E6%9C%9F%E8%BD%AC%E6%8D%A2/</link>
         <pubDate>Tue, 10 Dec 2019 15:43:08 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/python%E6%97%A5%E6%9C%9F%E8%BD%AC%E6%8D%A2/</guid>
+        <guid>https://sunnnner.github.io/python%E6%97%A5%E6%9C%9F%E8%BD%AC%E6%8D%A2/</guid>
         <description>&lt;ul&gt;
 &lt;li&gt;秒数是相对于1970.1.1号的秒数&lt;/li&gt;
 &lt;li&gt;日期的模块有time、datetime&lt;/li&gt;
@@ -983,10 +983,10 @@ uintptr 无符号整型，用于存放一个指针&lt;/code&gt;&lt;/pre&gt;
         </item>
         <item>
         <title>Log BasicConfig函数</title>
-        <link>https://sunnnner.github.io/archetypes/log-basicconfig%E5%87%BD%E6%95%B0/</link>
+        <link>https://sunnnner.github.io/log-basicconfig%E5%87%BD%E6%95%B0/</link>
         <pubDate>Thu, 05 Dec 2019 15:40:17 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/log-basicconfig%E5%87%BD%E6%95%B0/</guid>
+        <guid>https://sunnnner.github.io/log-basicconfig%E5%87%BD%E6%95%B0/</guid>
         <description>&lt;h1 id=&#34;loggingbasicconfig函数&#34;&gt;logging.basicConfig函数&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;logging模块是Python内置标准模块，主要用于输出运行日志，可以设置输出日志的等级、日志保存路径，日志文件回滚等&lt;/li&gt;
@@ -1197,10 +1197,10 @@ uintptr 无符号整型，用于存放一个指针&lt;/code&gt;&lt;/pre&gt;
         </item>
         <item>
         <title>Divmod函数</title>
-        <link>https://sunnnner.github.io/archetypes/divmod%E5%87%BD%E6%95%B0/</link>
+        <link>https://sunnnner.github.io/divmod%E5%87%BD%E6%95%B0/</link>
         <pubDate>Sun, 01 Dec 2019 15:39:29 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/divmod%E5%87%BD%E6%95%B0/</guid>
+        <guid>https://sunnnner.github.io/divmod%E5%87%BD%E6%95%B0/</guid>
         <description>&lt;ul&gt;
 &lt;li&gt;python divmod()把除数和余数运算结果结合起来，返回一个包含商和余数的元组(a // b, a % b)。&lt;/li&gt;
 &lt;/ul&gt;
@@ -1222,10 +1222,10 @@ uintptr 无符号整型，用于存放一个指针&lt;/code&gt;&lt;/pre&gt;
         </item>
         <item>
         <title>使用minikube创建集群</title>
-        <link>https://sunnnner.github.io/archetypes/%E4%BD%BF%E7%94%A8minikube%E5%88%9B%E5%BB%BA%E9%9B%86%E7%BE%A4/</link>
+        <link>https://sunnnner.github.io/%E4%BD%BF%E7%94%A8minikube%E5%88%9B%E5%BB%BA%E9%9B%86%E7%BE%A4/</link>
         <pubDate>Mon, 11 Nov 2019 15:38:29 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/%E4%BD%BF%E7%94%A8minikube%E5%88%9B%E5%BB%BA%E9%9B%86%E7%BE%A4/</guid>
+        <guid>https://sunnnner.github.io/%E4%BD%BF%E7%94%A8minikube%E5%88%9B%E5%BB%BA%E9%9B%86%E7%BE%A4/</guid>
         <description>&lt;p&gt;curl -LO &lt;a class=&#34;link&#34; href=&#34;https://storage.googleapis.com/minikube/releases/latest/minikube_1.5.2.deb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://storage.googleapis.com/minikube/releases/latest/minikube_1.5.2.deb&lt;/a&gt; \ &amp;amp;&amp;amp; sudo dpkg -i minikube_1.5.2.deb&lt;/p&gt;
 &lt;p&gt;系统管理程序设置验证系统是否启用虚拟化 egrep -q &amp;lsquo;vmx|svm&amp;rsquo; /proc/cpuinfo &amp;amp;&amp;amp; echo yes || echo no 如果启用则需要关闭虚拟化&lt;/p&gt;
@@ -1236,10 +1236,10 @@ uintptr 无符号整型，用于存放一个指针&lt;/code&gt;&lt;/pre&gt;
         </item>
         <item>
         <title>Install Postgresql</title>
-        <link>https://sunnnner.github.io/archetypes/install-postgresql/</link>
+        <link>https://sunnnner.github.io/install-postgresql/</link>
         <pubDate>Mon, 04 Nov 2019 15:37:26 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/install-postgresql/</guid>
+        <guid>https://sunnnner.github.io/install-postgresql/</guid>
         <description>&lt;p&gt;安装postgres sudo apt install postgresql postgresql-contrib&lt;/p&gt;
 &lt;p&gt;安装完成后，PostgreSQL服务将自动启动。 要验证安装，我们将使用psql实用程序连接到PostgreSQL数据库服务器并打印服务器版本：sudo -u postgres
 psql -c &amp;ldquo;SELECT version();&amp;rdquo;&lt;/p&gt;
@@ -1253,10 +1253,10 @@ psql -c &amp;ldquo;SELECT version();&amp;rdquo;&lt;/p&gt;
         </item>
         <item>
         <title>Github Page自定义域名开启https</title>
-        <link>https://sunnnner.github.io/archetypes/github-page%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E5%BC%80%E5%90%AFhttps/</link>
+        <link>https://sunnnner.github.io/github-page%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E5%BC%80%E5%90%AFhttps/</link>
         <pubDate>Sun, 03 Nov 2019 15:36:46 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/github-page%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E5%BC%80%E5%90%AFhttps/</guid>
+        <guid>https://sunnnner.github.io/github-page%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E5%BC%80%E5%90%AFhttps/</guid>
         <description>&lt;p&gt;博主使用的cloudflare的cdn之前查了很久不清楚怎么使用github-page的https，
 因github与Let’s Encrypt 合作提供自带cdn所以我们来配置一下，
 首先关闭自定义域名的cdn服务其实就是关了他的域名解析&lt;/p&gt;
@@ -1269,10 +1269,10 @@ psql -c &amp;ldquo;SELECT version();&amp;rdquo;&lt;/p&gt;
         </item>
         <item>
         <title>K8s基础操作</title>
-        <link>https://sunnnner.github.io/archetypes/k8s%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</link>
+        <link>https://sunnnner.github.io/k8s%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</link>
         <pubDate>Sat, 02 Nov 2019 15:36:16 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/k8s%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</guid>
+        <guid>https://sunnnner.github.io/k8s%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</guid>
         <description>&lt;p&gt;k8s获取所有运行的podskubectl get pods &amp;ndash;all-namespaces -o wide&lt;/p&gt;
 &lt;p&gt;获取当前集群名称kubectl get pods -o wide&lt;/p&gt;
 &lt;p&gt;当前etcd中的注册的宿主机的pod地址网段信息etcdctl ls /kube-centos/network/subnets&lt;/p&gt;
@@ -1281,10 +1281,10 @@ psql -c &amp;ldquo;SELECT version();&amp;rdquo;&lt;/p&gt;
         </item>
         <item>
         <title>Docker添加root权限省去sudo</title>
-        <link>https://sunnnner.github.io/archetypes/docker%E6%B7%BB%E5%8A%A0root%E6%9D%83%E9%99%90%E7%9C%81%E5%8E%BBsudo/</link>
+        <link>https://sunnnner.github.io/docker%E6%B7%BB%E5%8A%A0root%E6%9D%83%E9%99%90%E7%9C%81%E5%8E%BBsudo/</link>
         <pubDate>Fri, 01 Nov 2019 15:35:30 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/docker%E6%B7%BB%E5%8A%A0root%E6%9D%83%E9%99%90%E7%9C%81%E5%8E%BBsudo/</guid>
+        <guid>https://sunnnner.github.io/docker%E6%B7%BB%E5%8A%A0root%E6%9D%83%E9%99%90%E7%9C%81%E5%8E%BBsudo/</guid>
         <description>&lt;ul&gt;
 &lt;li&gt;首先使用root权限账户登录系统&lt;/li&gt;
 &lt;li&gt;首先查看用户组中有没有docker组sudo cat /etc/group | grep docker&lt;/li&gt;
@@ -1304,10 +1304,10 @@ psql -c &amp;ldquo;SELECT version();&amp;rdquo;&lt;/p&gt;
         </item>
         <item>
         <title>Python Collections Duque函数演示</title>
-        <link>https://sunnnner.github.io/archetypes/python-collections-duque%E5%87%BD%E6%95%B0%E6%BC%94%E7%A4%BA/</link>
+        <link>https://sunnnner.github.io/python-collections-duque%E5%87%BD%E6%95%B0%E6%BC%94%E7%A4%BA/</link>
         <pubDate>Tue, 15 Oct 2019 15:33:37 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/python-collections-duque%E5%87%BD%E6%95%B0%E6%BC%94%E7%A4%BA/</guid>
+        <guid>https://sunnnner.github.io/python-collections-duque%E5%87%BD%E6%95%B0%E6%BC%94%E7%A4%BA/</guid>
         <description>&lt;ul&gt;
 &lt;li&gt;duque函数有一个maxlen参数，当append的时候，如果超过，那么最前面的就会被挤出队列&lt;/li&gt;
 &lt;/ul&gt;
@@ -1351,10 +1351,10 @@ psql -c &amp;ldquo;SELECT version();&amp;rdquo;&lt;/p&gt;
         </item>
         <item>
         <title>Getattr函数</title>
-        <link>https://sunnnner.github.io/archetypes/getattr%E5%87%BD%E6%95%B0/</link>
+        <link>https://sunnnner.github.io/getattr%E5%87%BD%E6%95%B0/</link>
         <pubDate>Mon, 14 Oct 2019 15:31:31 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/getattr%E5%87%BD%E6%95%B0/</guid>
+        <guid>https://sunnnner.github.io/getattr%E5%87%BD%E6%95%B0/</guid>
         <description>&lt;p&gt;##描述&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;getattr()&lt;/code&gt; 函数用于返回一个对象属性值。&lt;/p&gt;
 &lt;h2 id=&#34;语法&#34;&gt;语法&lt;/h2&gt;
@@ -1371,10 +1371,10 @@ psql -c &amp;ldquo;SELECT version();&amp;rdquo;&lt;/p&gt;
         </item>
         <item>
         <title>Hasattr函数</title>
-        <link>https://sunnnner.github.io/archetypes/hasattr%E5%87%BD%E6%95%B0/</link>
+        <link>https://sunnnner.github.io/hasattr%E5%87%BD%E6%95%B0/</link>
         <pubDate>Sun, 13 Oct 2019 15:30:12 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/hasattr%E5%87%BD%E6%95%B0/</guid>
+        <guid>https://sunnnner.github.io/hasattr%E5%87%BD%E6%95%B0/</guid>
         <description>&lt;h1 id=&#34;描述&#34;&gt;描述&lt;/h1&gt;
 &lt;p&gt;&lt;code&gt;hasattr()&lt;/code&gt; 函数用于判断对象是否包含对应的属性。&lt;/p&gt;
 &lt;h2 id=&#34;语法&#34;&gt;语法&lt;/h2&gt;
@@ -1390,10 +1390,10 @@ psql -c &amp;ldquo;SELECT version();&amp;rdquo;&lt;/p&gt;
         </item>
         <item>
         <title>Git加速</title>
-        <link>https://sunnnner.github.io/archetypes/git%E5%8A%A0%E9%80%9F/</link>
+        <link>https://sunnnner.github.io/git%E5%8A%A0%E9%80%9F/</link>
         <pubDate>Sat, 12 Oct 2019 15:29:07 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/git%E5%8A%A0%E9%80%9F/</guid>
+        <guid>https://sunnnner.github.io/git%E5%8A%A0%E9%80%9F/</guid>
         <description>&lt;h2 id=&#34;全局代理写入配置&#34;&gt;全局代理，写入配置&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;git config --global http.proxy &#39;socks5://127.0.0.1:1080&#39;
 git config --global https.proxy &#39;socks5://127.0.0.1:1080&#39;
@@ -1408,10 +1408,10 @@ git config --global --unset https.proxy
         </item>
         <item>
         <title>Django文件压缩</title>
-        <link>https://sunnnner.github.io/archetypes/django%E6%96%87%E4%BB%B6%E5%8E%8B%E7%BC%A9/</link>
+        <link>https://sunnnner.github.io/django%E6%96%87%E4%BB%B6%E5%8E%8B%E7%BC%A9/</link>
         <pubDate>Fri, 11 Oct 2019 15:28:02 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/django%E6%96%87%E4%BB%B6%E5%8E%8B%E7%BC%A9/</guid>
+        <guid>https://sunnnner.github.io/django%E6%96%87%E4%BB%B6%E5%8E%8B%E7%BC%A9/</guid>
         <description>&lt;p&gt;类型和方法数据压缩分为两种类型。&lt;/p&gt;
 &lt;p&gt;有损：在这种类型的压缩中，压缩时会降低数据质量（在这种情况下为图像和视频）。这被广泛用于压缩多媒体。&lt;/p&gt;
 &lt;p&gt;无损：在这种类型的压缩中，数据质量（在这种情况下为图像）不会丢失。它广泛用于压缩无法承受数据丢失的敏感数据。&lt;/p&gt;
@@ -1488,10 +1488,10 @@ git config --global --unset https.proxy
         </item>
         <item>
         <title>静态文件的含义以及配置</title>
-        <link>https://sunnnner.github.io/archetypes/%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6%E7%9A%84%E5%90%AB%E4%B9%89%E4%BB%A5%E5%8F%8A%E9%85%8D%E7%BD%AE/</link>
+        <link>https://sunnnner.github.io/%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6%E7%9A%84%E5%90%AB%E4%B9%89%E4%BB%A5%E5%8F%8A%E9%85%8D%E7%BD%AE/</link>
         <pubDate>Thu, 10 Oct 2019 15:27:14 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6%E7%9A%84%E5%90%AB%E4%B9%89%E4%BB%A5%E5%8F%8A%E9%85%8D%E7%BD%AE/</guid>
+        <guid>https://sunnnner.github.io/%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6%E7%9A%84%E5%90%AB%E4%B9%89%E4%BB%A5%E5%8F%8A%E9%85%8D%E7%BD%AE/</guid>
         <description>&lt;h1 id=&#34;django-staticfile-的配置&#34;&gt;Django staticfile 的配置&lt;/h1&gt;
 &lt;p&gt;起初以为是我dockerfile写错了的问题，的确不是dockerfile的问题是我没有理解static_url与static_root的含义&lt;/p&gt;
 &lt;p&gt;👍 如果不是前后端分离项目在每个APP下都应该有static与templates文件夹存在不然django收集静态文件收集不到&lt;/p&gt;
@@ -1504,10 +1504,10 @@ git config --global --unset https.proxy
         </item>
         <item>
         <title>Os模块</title>
-        <link>https://sunnnner.github.io/archetypes/os%E6%A8%A1%E5%9D%97/</link>
+        <link>https://sunnnner.github.io/os%E6%A8%A1%E5%9D%97/</link>
         <pubDate>Thu, 10 Oct 2019 14:20:46 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/os%E6%A8%A1%E5%9D%97/</guid>
+        <guid>https://sunnnner.github.io/os%E6%A8%A1%E5%9D%97/</guid>
         <description>&lt;p&gt;&lt;code&gt;os .path.dirname(path)&lt;/code&gt; 获取路径名&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;os.path.basename(path)&lt;/code&gt; 获取文件名&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;os.path.join(path1[,path2[,….]])&lt;/code&gt; 将路径与文件名拼接成一个完整的路径&lt;/p&gt;
@@ -1528,18 +1528,18 @@ git config --global --unset https.proxy
         </item>
         <item>
         <title>K8s Install</title>
-        <link>https://sunnnner.github.io/archetypes/k8s-install/</link>
+        <link>https://sunnnner.github.io/k8s-install/</link>
         <pubDate>Tue, 08 Oct 2019 14:57:24 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/k8s-install/</guid>
+        <guid>https://sunnnner.github.io/k8s-install/</guid>
         <description></description>
         </item>
         <item>
         <title>Docker操作</title>
-        <link>https://sunnnner.github.io/archetypes/docker%E6%93%8D%E4%BD%9C/</link>
+        <link>https://sunnnner.github.io/docker%E6%93%8D%E4%BD%9C/</link>
         <pubDate>Tue, 08 Oct 2019 14:19:00 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/docker%E6%93%8D%E4%BD%9C/</guid>
+        <guid>https://sunnnner.github.io/docker%E6%93%8D%E4%BD%9C/</guid>
         <description>&lt;p&gt;&lt;code&gt;docker build&lt;/code&gt; 打包docker 项目&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;docker-compose up&lt;/code&gt; 启动整体项目(docker-compose.yml文件)&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;docker-compose down&lt;/code&gt; 强制停止docker运行的所有项目&lt;/p&gt;
@@ -1561,10 +1561,10 @@ git config --global --unset https.proxy
         </item>
         <item>
         <title>Django Minio开发过程</title>
-        <link>https://sunnnner.github.io/archetypes/django-minio%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B/</link>
+        <link>https://sunnnner.github.io/django-minio%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B/</link>
         <pubDate>Sun, 06 Oct 2019 14:17:12 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/django-minio%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B/</guid>
+        <guid>https://sunnnner.github.io/django-minio%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;使用Django-minio-storage进行开发minio的静态文件存储功能，本来寻思用minio直接进行开发，既然django有这个包我们就拿来用一下&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1624,10 +1624,10 @@ git config --global --unset https.proxy
         </item>
         <item>
         <title>Python实现AES加密</title>
-        <link>https://sunnnner.github.io/archetypes/python%E5%AE%9E%E7%8E%B0aes%E5%8A%A0%E5%AF%86/</link>
+        <link>https://sunnnner.github.io/python%E5%AE%9E%E7%8E%B0aes%E5%8A%A0%E5%AF%86/</link>
         <pubDate>Sat, 05 Oct 2019 14:14:41 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/python%E5%AE%9E%E7%8E%B0aes%E5%8A%A0%E5%AF%86/</guid>
+        <guid>https://sunnnner.github.io/python%E5%AE%9E%E7%8E%B0aes%E5%8A%A0%E5%AF%86/</guid>
         <description>&lt;h2 id=&#34;环境&#34;&gt;环境&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;python3.6&lt;/li&gt;
@@ -1977,10 +1977,10 @@ git config --global --unset https.proxy
         </item>
         <item>
         <title>Mysql查询结果输出到文件</title>
-        <link>https://sunnnner.github.io/archetypes/mysql%E6%9F%A5%E8%AF%A2%E7%BB%93%E6%9E%9C%E8%BE%93%E5%87%BA%E5%88%B0%E6%96%87%E4%BB%B6/</link>
+        <link>https://sunnnner.github.io/mysql%E6%9F%A5%E8%AF%A2%E7%BB%93%E6%9E%9C%E8%BE%93%E5%87%BA%E5%88%B0%E6%96%87%E4%BB%B6/</link>
         <pubDate>Thu, 03 Oct 2019 14:13:04 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/mysql%E6%9F%A5%E8%AF%A2%E7%BB%93%E6%9E%9C%E8%BE%93%E5%87%BA%E5%88%B0%E6%96%87%E4%BB%B6/</guid>
+        <guid>https://sunnnner.github.io/mysql%E6%9F%A5%E8%AF%A2%E7%BB%93%E6%9E%9C%E8%BE%93%E5%87%BA%E5%88%B0%E6%96%87%E4%BB%B6/</guid>
         <description>&lt;h1 id=&#34;方法一&#34;&gt;方法一：&lt;/h1&gt;
 &lt;pre&gt;&lt;code&gt;直接执行命令：
 `mysql&amp;gt; select count(1) from table into outfile &#39;/tmp/test.xls&#39;;`
@@ -2010,10 +2010,10 @@ mysql&amp;gt; select * from table ;
         </item>
         <item>
         <title>JWT</title>
-        <link>https://sunnnner.github.io/archetypes/jwt/</link>
+        <link>https://sunnnner.github.io/jwt/</link>
         <pubDate>Wed, 02 Oct 2019 14:08:17 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/jwt/</guid>
+        <guid>https://sunnnner.github.io/jwt/</guid>
         <description>&lt;h1 id=&#34;jwtjson-web-token&#34;&gt;JWT——Json web token&lt;/h1&gt;
 &lt;pre&gt;&lt;code&gt;是为了在网络应用环境间传递声明而执行的一种基于JSON的开放标准，可实现无状态、分布式的Web应用授权。
 &lt;/code&gt;&lt;/pre&gt;
@@ -2148,10 +2148,10 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU3ZmVmMTY0ZTU0YWY2NGZmYzUzZGJkNSI
         </item>
         <item>
         <title>TOKEN验证详解</title>
-        <link>https://sunnnner.github.io/archetypes/token%E9%AA%8C%E8%AF%81%E8%AF%A6%E8%A7%A3/</link>
+        <link>https://sunnnner.github.io/token%E9%AA%8C%E8%AF%81%E8%AF%A6%E8%A7%A3/</link>
         <pubDate>Tue, 01 Oct 2019 14:03:37 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/token%E9%AA%8C%E8%AF%81%E8%AF%A6%E8%A7%A3/</guid>
+        <guid>https://sunnnner.github.io/token%E9%AA%8C%E8%AF%81%E8%AF%A6%E8%A7%A3/</guid>
         <description>&lt;h1 id=&#34;为什么使用token验证&#34;&gt;为什么使用token验证&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;在web领域基于token的身份验证随处可变，在大多说使用web API的互联网公司中，tokens是多用户下处理认证的最佳方式&lt;/li&gt;
@@ -2318,10 +2318,10 @@ Having our API just serve data, we can also make the design choice to serve asse
         </item>
         <item>
         <title>RESTful_API设计指南</title>
-        <link>https://sunnnner.github.io/archetypes/restful_api%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97/</link>
+        <link>https://sunnnner.github.io/restful_api%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97/</link>
         <pubDate>Thu, 12 Sep 2019 11:43:08 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/restful_api%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97/</guid>
+        <guid>https://sunnnner.github.io/restful_api%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;网络应用程序，分为前端和后端两个部分， 当前的发展趋势， 就是前段设备层出不穷
 因此，必须有一种统一的机制，方便不同的前端设备与后端进行通信， 这导致API架构的流行， &amp;gt; 甚至出现APIfirst的设计思想。&lt;/p&gt;
@@ -2476,10 +2476,10 @@ Hypermedia API的设计被称为HATEOAS。Github的API就是这种设计，访�
         </item>
         <item>
         <title>动态网页爬取</title>
-        <link>https://sunnnner.github.io/archetypes/%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%88%AC%E5%8F%96/</link>
+        <link>https://sunnnner.github.io/%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%88%AC%E5%8F%96/</link>
         <pubDate>Wed, 11 Sep 2019 11:42:10 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%88%AC%E5%8F%96/</guid>
+        <guid>https://sunnnner.github.io/%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%88%AC%E5%8F%96/</guid>
         <description>&lt;p&gt;我们使用自动化测试工具selenium
 &lt;code&gt;pip install selenium&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;PhantomJS
@@ -2496,10 +2496,10 @@ mac安装xvfb(可选) pip install xvfbwrapper&lt;/p&gt;
         </item>
         <item>
         <title>Sql修改字段长度</title>
-        <link>https://sunnnner.github.io/archetypes/sql%E4%BF%AE%E6%94%B9%E5%AD%97%E6%AE%B5%E9%95%BF%E5%BA%A6/</link>
+        <link>https://sunnnner.github.io/sql%E4%BF%AE%E6%94%B9%E5%AD%97%E6%AE%B5%E9%95%BF%E5%BA%A6/</link>
         <pubDate>Tue, 10 Sep 2019 11:41:14 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/sql%E4%BF%AE%E6%94%B9%E5%AD%97%E6%AE%B5%E9%95%BF%E5%BA%A6/</guid>
+        <guid>https://sunnnner.github.io/sql%E4%BF%AE%E6%94%B9%E5%AD%97%E6%AE%B5%E9%95%BF%E5%BA%A6/</guid>
         <description>&lt;p&gt;sql修改字段长度的语法
 &lt;code&gt;alter table 表名 modify 字段名 字段类型;&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;标准sql所有都适用
@@ -2512,10 +2512,10 @@ mac安装xvfb(可选) pip install xvfbwrapper&lt;/p&gt;
         </item>
         <item>
         <title>什么是跨域及解决办法</title>
-        <link>https://sunnnner.github.io/archetypes/%E4%BB%80%E4%B9%88%E6%98%AF%E8%B7%A8%E5%9F%9F%E5%8F%8A%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</link>
+        <link>https://sunnnner.github.io/%E4%BB%80%E4%B9%88%E6%98%AF%E8%B7%A8%E5%9F%9F%E5%8F%8A%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</link>
         <pubDate>Mon, 09 Sep 2019 11:39:55 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/%E4%BB%80%E4%B9%88%E6%98%AF%E8%B7%A8%E5%9F%9F%E5%8F%8A%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</guid>
+        <guid>https://sunnnner.github.io/%E4%BB%80%E4%B9%88%E6%98%AF%E8%B7%A8%E5%9F%9F%E5%8F%8A%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</guid>
         <description>&lt;pre&gt;&lt;code&gt;跨域
 
 浏览器从一个域名的网页去请求另一个域名的资源时,浏览器处于安全的考虑,不允许不同源的请求
@@ -2594,10 +2594,10 @@ response[‘Access-Control-Allow-Origin‘] = “*”
         </item>
         <item>
         <title>Django_rest_framework</title>
-        <link>https://sunnnner.github.io/archetypes/django_rest_framework/</link>
+        <link>https://sunnnner.github.io/django_rest_framework/</link>
         <pubDate>Sun, 08 Sep 2019 11:37:47 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/django_rest_framework/</guid>
+        <guid>https://sunnnner.github.io/django_rest_framework/</guid>
         <description>&lt;p&gt;为什么要使用Django_rest_framework
 能自动生成restful规范的API&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;代码简介 并且开发速度快
@@ -2663,10 +2663,10 @@ uv ： 独立访问数， 一台电脑算一个访客
         </item>
         <item>
         <title>什么是RPC</title>
-        <link>https://sunnnner.github.io/archetypes/%E4%BB%80%E4%B9%88%E6%98%AFrpc/</link>
+        <link>https://sunnnner.github.io/%E4%BB%80%E4%B9%88%E6%98%AFrpc/</link>
         <pubDate>Sat, 07 Sep 2019 11:36:55 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/%E4%BB%80%E4%B9%88%E6%98%AFrpc/</guid>
+        <guid>https://sunnnner.github.io/%E4%BB%80%E4%B9%88%E6%98%AFrpc/</guid>
         <description>&lt;p&gt;RPC&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;远程过程中调用(RPC) 是一种协议， 程序可使用这种协议向网络中的另一台计算机上的程序请求服务
 
@@ -2686,10 +2686,10 @@ next 客户端调用进程接受答复信息， 或得进程结果， 然后调�
         </item>
         <item>
         <title>Restful规范</title>
-        <link>https://sunnnner.github.io/archetypes/restful%E8%A7%84%E8%8C%83/</link>
+        <link>https://sunnnner.github.io/restful%E8%A7%84%E8%8C%83/</link>
         <pubDate>Fri, 06 Sep 2019 11:36:12 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/restful%E8%A7%84%E8%8C%83/</guid>
+        <guid>https://sunnnner.github.io/restful%E8%A7%84%E8%8C%83/</guid>
         <description>&lt;p&gt;restful 只是一种软件架构风格或者说是一种设计风格，它只是给我们提供了一个设计的原则和约束的条件，主要用于客户端与服务端的交互&lt;/p&gt;
 &lt;p&gt;我们可以根据自己的需求做的更加简洁， 更有层次&lt;/p&gt;
 &lt;p&gt;它里面提供了一些规范，比如restful提倡面向资源编程， 在URL接口中尽量使用名词， 不要使用动词&lt;/p&gt;
@@ -2703,10 +2703,10 @@ next 客户端调用进程接受答复信息， 或得进程结果， 然后调�
         </item>
         <item>
         <title>Django中的FBV和CBV</title>
-        <link>https://sunnnner.github.io/archetypes/django%E4%B8%AD%E7%9A%84fbv%E5%92%8Ccbv/</link>
+        <link>https://sunnnner.github.io/django%E4%B8%AD%E7%9A%84fbv%E5%92%8Ccbv/</link>
         <pubDate>Thu, 05 Sep 2019 11:34:25 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/django%E4%B8%AD%E7%9A%84fbv%E5%92%8Ccbv/</guid>
+        <guid>https://sunnnner.github.io/django%E4%B8%AD%E7%9A%84fbv%E5%92%8Ccbv/</guid>
         <description>&lt;h2 id=&#34;fbv&#34;&gt;FBV&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;fbv就是在url中一个路径对应一个函数&lt;/p&gt;
@@ -2791,10 +2791,10 @@ restful规范：’get’获取数据, ‘post’创建新数据, ‘put’更�
         </item>
         <item>
         <title>Rclone挂载googleDrive</title>
-        <link>https://sunnnner.github.io/archetypes/rclone%E6%8C%82%E8%BD%BDgoogledrive/</link>
+        <link>https://sunnnner.github.io/rclone%E6%8C%82%E8%BD%BDgoogledrive/</link>
         <pubDate>Wed, 04 Sep 2019 11:30:51 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/rclone%E6%8C%82%E8%BD%BDgoogledrive/</guid>
+        <guid>https://sunnnner.github.io/rclone%E6%8C%82%E8%BD%BDgoogledrive/</guid>
         <description>&lt;ul&gt;
 &lt;li&gt;最近查找大容量存储工具，想到了免费版的Google云盘，询问了一下有一个无限空间的云盘，话不多说开始搞，在淘宝买了个账号开始配在自己的服务器上，但是发现并不是这么好配，查找了很多资料，到最后朋友给我说rclone可以挂在Google云盘，查了一下果然可以，把教程贴出来为以后查看方便&lt;/li&gt;
 &lt;/ul&gt;
@@ -3058,10 +3058,10 @@ rclone lsd gdrive:test&lt;/p&gt;
         </item>
         <item>
         <title>Python字符串操作</title>
-        <link>https://sunnnner.github.io/archetypes/python%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%93%8D%E4%BD%9C/</link>
+        <link>https://sunnnner.github.io/python%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%93%8D%E4%BD%9C/</link>
         <pubDate>Tue, 03 Sep 2019 11:25:09 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/python%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%93%8D%E4%BD%9C/</guid>
+        <guid>https://sunnnner.github.io/python%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%93%8D%E4%BD%9C/</guid>
         <description>&lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -3212,10 +3212,10 @@ rclone lsd gdrive:test&lt;/p&gt;
         </item>
         <item>
         <title>修改macos自带Python版本（尽量不要修改）</title>
-        <link>https://sunnnner.github.io/archetypes/%E4%BF%AE%E6%94%B9macos%E8%87%AA%E5%B8%A6python%E7%89%88%E6%9C%AC%E5%B0%BD%E9%87%8F%E4%B8%8D%E8%A6%81%E4%BF%AE%E6%94%B9/</link>
+        <link>https://sunnnner.github.io/%E4%BF%AE%E6%94%B9macos%E8%87%AA%E5%B8%A6python%E7%89%88%E6%9C%AC%E5%B0%BD%E9%87%8F%E4%B8%8D%E8%A6%81%E4%BF%AE%E6%94%B9/</link>
         <pubDate>Mon, 02 Sep 2019 11:24:14 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/%E4%BF%AE%E6%94%B9macos%E8%87%AA%E5%B8%A6python%E7%89%88%E6%9C%AC%E5%B0%BD%E9%87%8F%E4%B8%8D%E8%A6%81%E4%BF%AE%E6%94%B9/</guid>
+        <guid>https://sunnnner.github.io/%E4%BF%AE%E6%94%B9macos%E8%87%AA%E5%B8%A6python%E7%89%88%E6%9C%AC%E5%B0%BD%E9%87%8F%E4%B8%8D%E8%A6%81%E4%BF%AE%E6%94%B9/</guid>
         <description>&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -3318,10 +3318,10 @@ rclone lsd gdrive:test&lt;/p&gt;
         </item>
         <item>
         <title>Python版本控制以及虚拟环境的安装</title>
-        <link>https://sunnnner.github.io/archetypes/python%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E4%BB%A5%E5%8F%8A%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E7%9A%84%E5%AE%89%E8%A3%85/</link>
+        <link>https://sunnnner.github.io/python%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E4%BB%A5%E5%8F%8A%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E7%9A%84%E5%AE%89%E8%A3%85/</link>
         <pubDate>Sun, 01 Sep 2019 11:22:47 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/python%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E4%BB%A5%E5%8F%8A%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E7%9A%84%E5%AE%89%E8%A3%85/</guid>
+        <guid>https://sunnnner.github.io/python%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E4%BB%A5%E5%8F%8A%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E7%9A%84%E5%AE%89%E8%A3%85/</guid>
         <description>&lt;h2 id=&#34;虚拟环境安装&#34;&gt;虚拟环境安装&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;当然首先你先去官网下载Python3.6 注意不是3.7 它现在还不兼容
 下载好了之后安装这是Mac的路径包
@@ -3354,10 +3354,10 @@ mkdir workspace
         </item>
         <item>
         <title>Shell 文件测试操作</title>
-        <link>https://sunnnner.github.io/archetypes/shell-%E6%96%87%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%93%8D%E4%BD%9C/</link>
+        <link>https://sunnnner.github.io/shell-%E6%96%87%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%93%8D%E4%BD%9C/</link>
         <pubDate>Tue, 20 Aug 2019 11:22:13 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/shell-%E6%96%87%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%93%8D%E4%BD%9C/</guid>
+        <guid>https://sunnnner.github.io/shell-%E6%96%87%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%93%8D%E4%BD%9C/</guid>
         <description>&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -3434,10 +3434,10 @@ mkdir workspace
         </item>
         <item>
         <title>Shell if Then语句</title>
-        <link>https://sunnnner.github.io/archetypes/shell-if-then%E8%AF%AD%E5%8F%A5/</link>
+        <link>https://sunnnner.github.io/shell-if-then%E8%AF%AD%E5%8F%A5/</link>
         <pubDate>Mon, 19 Aug 2019 11:21:38 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/shell-if-then%E8%AF%AD%E5%8F%A5/</guid>
+        <guid>https://sunnnner.github.io/shell-if-then%E8%AF%AD%E5%8F%A5/</guid>
         <description>&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -3588,10 +3588,10 @@ mkdir workspace
         </item>
         <item>
         <title>Shell 如何传参</title>
-        <link>https://sunnnner.github.io/archetypes/shell-%E5%A6%82%E4%BD%95%E4%BC%A0%E5%8F%82/</link>
+        <link>https://sunnnner.github.io/shell-%E5%A6%82%E4%BD%95%E4%BC%A0%E5%8F%82/</link>
         <pubDate>Sun, 18 Aug 2019 11:21:09 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/shell-%E5%A6%82%E4%BD%95%E4%BC%A0%E5%8F%82/</guid>
+        <guid>https://sunnnner.github.io/shell-%E5%A6%82%E4%BD%95%E4%BC%A0%E5%8F%82/</guid>
         <description>&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -3638,10 +3638,10 @@ mkdir workspace
         </item>
         <item>
         <title>Shell 获取用户输入</title>
-        <link>https://sunnnner.github.io/archetypes/shell-%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7%E8%BE%93%E5%85%A5/</link>
+        <link>https://sunnnner.github.io/shell-%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7%E8%BE%93%E5%85%A5/</link>
         <pubDate>Sat, 17 Aug 2019 11:20:41 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/shell-%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7%E8%BE%93%E5%85%A5/</guid>
+        <guid>https://sunnnner.github.io/shell-%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7%E8%BE%93%E5%85%A5/</guid>
         <description>&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -3694,10 +3694,10 @@ mkdir workspace
         </item>
         <item>
         <title>Shell 2</title>
-        <link>https://sunnnner.github.io/archetypes/shell-2/</link>
+        <link>https://sunnnner.github.io/shell-2/</link>
         <pubDate>Fri, 16 Aug 2019 11:19:55 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/shell-2/</guid>
+        <guid>https://sunnnner.github.io/shell-2/</guid>
         <description>&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -3733,10 +3733,10 @@ mkdir workspace
         </item>
         <item>
         <title>Shell 1</title>
-        <link>https://sunnnner.github.io/archetypes/shell-1/</link>
+        <link>https://sunnnner.github.io/shell-1/</link>
         <pubDate>Thu, 15 Aug 2019 11:18:47 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/shell-1/</guid>
+        <guid>https://sunnnner.github.io/shell-1/</guid>
         <description>&lt;p&gt;什么是shell&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;最早期运行在unix上的shell是Bourne shell（sh），其实shell我们都知道是一个内核，里面集成了很多命令，shell负责和底层硬件打交道。前面我们介绍的这些命令，可以说是shell命令。shell程序的入口一般是在终端输入一些相关命令，然后不需要编译，直接去解释和运行命令的结果，给出相关反馈到终端上面。所以，一句话来理解，shell是一个很多命令的集合，一个内核
 &lt;/code&gt;&lt;/pre&gt;
@@ -3773,10 +3773,10 @@ mkdir workspace
         </item>
         <item>
         <title>框架</title>
-        <link>https://sunnnner.github.io/archetypes/%E6%A1%86%E6%9E%B6/</link>
+        <link>https://sunnnner.github.io/%E6%A1%86%E6%9E%B6/</link>
         <pubDate>Fri, 01 Mar 2019 11:16:46 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/%E6%A1%86%E6%9E%B6/</guid>
+        <guid>https://sunnnner.github.io/%E6%A1%86%E6%9E%B6/</guid>
         <description>&lt;p&gt;CSS常用框架&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;1、Scooter CSS
 2、Leaf CSS
@@ -3819,10 +3819,10 @@ iframe
         </item>
         <item>
         <title>数据库优化</title>
-        <link>https://sunnnner.github.io/archetypes/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BC%98%E5%8C%96/</link>
+        <link>https://sunnnner.github.io/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BC%98%E5%8C%96/</link>
         <pubDate>Tue, 05 Feb 2019 11:15:10 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BC%98%E5%8C%96/</guid>
+        <guid>https://sunnnner.github.io/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BC%98%E5%8C%96/</guid>
         <description>&lt;h2 id=&#34;redis-数据库优化&#34;&gt;redis 数据库优化&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -3878,10 +3878,10 @@ iframe
         </item>
         <item>
         <title>数据库如何优化</title>
-        <link>https://sunnnner.github.io/archetypes/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A6%82%E4%BD%95%E4%BC%98%E5%8C%96/</link>
+        <link>https://sunnnner.github.io/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A6%82%E4%BD%95%E4%BC%98%E5%8C%96/</link>
         <pubDate>Mon, 04 Feb 2019 10:52:21 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A6%82%E4%BD%95%E4%BC%98%E5%8C%96/</guid>
+        <guid>https://sunnnner.github.io/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A6%82%E4%BD%95%E4%BC%98%E5%8C%96/</guid>
         <description>&lt;p&gt;优化SQL语句&lt;/p&gt;
 &lt;p&gt;通过添加索引进行优化&lt;/p&gt;
 &lt;p&gt;优化Order by&lt;/p&gt;
@@ -4037,10 +4037,10 @@ iframe
         </item>
         <item>
         <title>Session&#43;cookie和使用tocken有什么区别</title>
-        <link>https://sunnnner.github.io/archetypes/session&#43;cookie%E5%92%8C%E4%BD%BF%E7%94%A8tocken%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB/</link>
+        <link>https://sunnnner.github.io/session-cookie%E5%92%8C%E4%BD%BF%E7%94%A8tocken%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB/</link>
         <pubDate>Sun, 03 Feb 2019 10:51:26 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/session&#43;cookie%E5%92%8C%E4%BD%BF%E7%94%A8tocken%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB/</guid>
+        <guid>https://sunnnner.github.io/session-cookie%E5%92%8C%E4%BD%BF%E7%94%A8tocken%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB/</guid>
         <description>&lt;p&gt;cookie数据存放在客户的浏览器上，session数据放在服务器上。&lt;/p&gt;
 &lt;p&gt;cookie不是很安全，别人可以分析存放在本地的COOKIE并进行COOKIE欺骗&lt;/p&gt;
 &lt;p&gt;考虑到安全应当使用session。&lt;/p&gt;
@@ -4053,10 +4053,10 @@ iframe
         </item>
         <item>
         <title>线程进程协程</title>
-        <link>https://sunnnner.github.io/archetypes/%E7%BA%BF%E7%A8%8B%E8%BF%9B%E7%A8%8B%E5%8D%8F%E7%A8%8B/</link>
+        <link>https://sunnnner.github.io/%E7%BA%BF%E7%A8%8B%E8%BF%9B%E7%A8%8B%E5%8D%8F%E7%A8%8B/</link>
         <pubDate>Sat, 02 Feb 2019 10:46:49 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/%E7%BA%BF%E7%A8%8B%E8%BF%9B%E7%A8%8B%E5%8D%8F%E7%A8%8B/</guid>
+        <guid>https://sunnnner.github.io/%E7%BA%BF%E7%A8%8B%E8%BF%9B%E7%A8%8B%E5%8D%8F%E7%A8%8B/</guid>
         <description>&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;进程是系统进行资源分配和调度的一个独立单位，进程是资源分配的单位，线程是cpu调度的单位。&lt;/p&gt;
@@ -4120,10 +4120,10 @@ iframe
         </item>
         <item>
         <title>广度优先遍历二叉树</title>
-        <link>https://sunnnner.github.io/archetypes/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86%E4%BA%8C%E5%8F%89%E6%A0%91/</link>
+        <link>https://sunnnner.github.io/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86%E4%BA%8C%E5%8F%89%E6%A0%91/</link>
         <pubDate>Fri, 01 Feb 2019 10:44:14 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86%E4%BA%8C%E5%8F%89%E6%A0%91/</guid>
+        <guid>https://sunnnner.github.io/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86%E4%BA%8C%E5%8F%89%E6%A0%91/</guid>
         <description>&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -4196,10 +4196,10 @@ iframe
         </item>
         <item>
         <title>深度优先遍历二叉树</title>
-        <link>https://sunnnner.github.io/archetypes/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86%E4%BA%8C%E5%8F%89%E6%A0%91/</link>
+        <link>https://sunnnner.github.io/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86%E4%BA%8C%E5%8F%89%E6%A0%91/</link>
         <pubDate>Tue, 01 Jan 2019 10:41:11 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86%E4%BA%8C%E5%8F%89%E6%A0%91/</guid>
+        <guid>https://sunnnner.github.io/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86%E4%BA%8C%E5%8F%89%E6%A0%91/</guid>
         <description>&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -4298,10 +4298,10 @@ iframe
         </item>
         <item>
         <title>Python字典按值排序</title>
-        <link>https://sunnnner.github.io/archetypes/python%E5%AD%97%E5%85%B8%E6%8C%89%E5%80%BC%E6%8E%92%E5%BA%8F/</link>
+        <link>https://sunnnner.github.io/python%E5%AD%97%E5%85%B8%E6%8C%89%E5%80%BC%E6%8E%92%E5%BA%8F/</link>
         <pubDate>Sun, 02 Dec 2018 10:39:55 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/python%E5%AD%97%E5%85%B8%E6%8C%89%E5%80%BC%E6%8E%92%E5%BA%8F/</guid>
+        <guid>https://sunnnner.github.io/python%E5%AD%97%E5%85%B8%E6%8C%89%E5%80%BC%E6%8E%92%E5%BA%8F/</guid>
         <description>&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -4332,10 +4332,10 @@ iframe
         </item>
         <item>
         <title>Python上楼梯问题</title>
-        <link>https://sunnnner.github.io/archetypes/python%E4%B8%8A%E6%A5%BC%E6%A2%AF%E9%97%AE%E9%A2%98/</link>
+        <link>https://sunnnner.github.io/python%E4%B8%8A%E6%A5%BC%E6%A2%AF%E9%97%AE%E9%A2%98/</link>
         <pubDate>Sat, 01 Dec 2018 10:39:04 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/python%E4%B8%8A%E6%A5%BC%E6%A2%AF%E9%97%AE%E9%A2%98/</guid>
+        <guid>https://sunnnner.github.io/python%E4%B8%8A%E6%A5%BC%E6%A2%AF%E9%97%AE%E9%A2%98/</guid>
         <description>&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -4392,10 +4392,10 @@ iframe
         </item>
         <item>
         <title>Python快速排序</title>
-        <link>https://sunnnner.github.io/archetypes/python%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/</link>
+        <link>https://sunnnner.github.io/python%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/</link>
         <pubDate>Thu, 01 Nov 2018 10:38:06 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/python%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/</guid>
+        <guid>https://sunnnner.github.io/python%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/</guid>
         <description>&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -4444,10 +4444,10 @@ iframe
         </item>
         <item>
         <title>Python链表</title>
-        <link>https://sunnnner.github.io/archetypes/python%E9%93%BE%E8%A1%A8/</link>
+        <link>https://sunnnner.github.io/python%E9%93%BE%E8%A1%A8/</link>
         <pubDate>Tue, 02 Oct 2018 10:37:28 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/python%E9%93%BE%E8%A1%A8/</guid>
+        <guid>https://sunnnner.github.io/python%E9%93%BE%E8%A1%A8/</guid>
         <description>&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -4524,10 +4524,10 @@ iframe
         </item>
         <item>
         <title>Python二分查找</title>
-        <link>https://sunnnner.github.io/archetypes/python%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/</link>
+        <link>https://sunnnner.github.io/python%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/</link>
         <pubDate>Mon, 01 Oct 2018 10:36:53 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/python%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/</guid>
+        <guid>https://sunnnner.github.io/python%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/</guid>
         <description>&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -4598,10 +4598,10 @@ iframe
         </item>
         <item>
         <title>Python冒泡算法</title>
-        <link>https://sunnnner.github.io/archetypes/python%E5%86%92%E6%B3%A1%E7%AE%97%E6%B3%95/</link>
+        <link>https://sunnnner.github.io/python%E5%86%92%E6%B3%A1%E7%AE%97%E6%B3%95/</link>
         <pubDate>Sat, 08 Sep 2018 10:36:08 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/python%E5%86%92%E6%B3%A1%E7%AE%97%E6%B3%95/</guid>
+        <guid>https://sunnnner.github.io/python%E5%86%92%E6%B3%A1%E7%AE%97%E6%B3%95/</guid>
         <description>&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -4626,10 +4626,10 @@ iframe
         </item>
         <item>
         <title>Python装饰器</title>
-        <link>https://sunnnner.github.io/archetypes/python%E8%A3%85%E9%A5%B0%E5%99%A8/</link>
+        <link>https://sunnnner.github.io/python%E8%A3%85%E9%A5%B0%E5%99%A8/</link>
         <pubDate>Fri, 07 Sep 2018 10:35:21 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/python%E8%A3%85%E9%A5%B0%E5%99%A8/</guid>
+        <guid>https://sunnnner.github.io/python%E8%A3%85%E9%A5%B0%E5%99%A8/</guid>
         <description>&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -4668,10 +4668,10 @@ iframe
         </item>
         <item>
         <title>Python工厂模式</title>
-        <link>https://sunnnner.github.io/archetypes/python%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</link>
+        <link>https://sunnnner.github.io/python%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</link>
         <pubDate>Thu, 06 Sep 2018 10:34:03 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/python%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</guid>
+        <guid>https://sunnnner.github.io/python%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</guid>
         <description>&lt;h2 id=&#34;介绍一下工厂模式&#34;&gt;介绍一下工厂模式&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -4706,10 +4706,10 @@ iframe
         </item>
         <item>
         <title>Python单例</title>
-        <link>https://sunnnner.github.io/archetypes/python%E5%8D%95%E4%BE%8B/</link>
+        <link>https://sunnnner.github.io/python%E5%8D%95%E4%BE%8B/</link>
         <pubDate>Wed, 05 Sep 2018 10:32:39 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/python%E5%8D%95%E4%BE%8B/</guid>
+        <guid>https://sunnnner.github.io/python%E5%8D%95%E4%BE%8B/</guid>
         <description>&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;举个常见的单例模式例子，我们日常使用的电脑上都有一个回收站，在整个操作系统中，回收站只能有一个实例，整个系统都使用这个唯一的实例，而且回收站自行提供自己的实例。因此回收站是单例模式的应用。&lt;/p&gt;
@@ -4836,10 +4836,10 @@ iframe
         </item>
         <item>
         <title>Python多态</title>
-        <link>https://sunnnner.github.io/archetypes/python%E5%A4%9A%E6%80%81/</link>
+        <link>https://sunnnner.github.io/python%E5%A4%9A%E6%80%81/</link>
         <pubDate>Tue, 04 Sep 2018 10:32:01 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/python%E5%A4%9A%E6%80%81/</guid>
+        <guid>https://sunnnner.github.io/python%E5%A4%9A%E6%80%81/</guid>
         <description>&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -4926,10 +4926,10 @@ iframe
         </item>
         <item>
         <title>Django定义USER四中方式</title>
-        <link>https://sunnnner.github.io/archetypes/django%E5%AE%9A%E4%B9%89user%E5%9B%9B%E4%B8%AD%E6%96%B9%E5%BC%8F/</link>
+        <link>https://sunnnner.github.io/django%E5%AE%9A%E4%B9%89user%E5%9B%9B%E4%B8%AD%E6%96%B9%E5%BC%8F/</link>
         <pubDate>Mon, 03 Sep 2018 10:30:05 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/django%E5%AE%9A%E4%B9%89user%E5%9B%9B%E4%B8%AD%E6%96%B9%E5%BC%8F/</guid>
+        <guid>https://sunnnner.github.io/django%E5%AE%9A%E4%B9%89user%E5%9B%9B%E4%B8%AD%E6%96%B9%E5%BC%8F/</guid>
         <description>&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;设计user models&lt;/p&gt;
@@ -4957,10 +4957,10 @@ iframe
         </item>
         <item>
         <title>Celery任务队列</title>
-        <link>https://sunnnner.github.io/archetypes/celery%E4%BB%BB%E5%8A%A1%E9%98%9F%E5%88%97/</link>
+        <link>https://sunnnner.github.io/celery%E4%BB%BB%E5%8A%A1%E9%98%9F%E5%88%97/</link>
         <pubDate>Sun, 02 Sep 2018 10:29:21 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/celery%E4%BB%BB%E5%8A%A1%E9%98%9F%E5%88%97/</guid>
+        <guid>https://sunnnner.github.io/celery%E4%BB%BB%E5%8A%A1%E9%98%9F%E5%88%97/</guid>
         <description>&lt;h1 id=&#34;celery-简介&#34;&gt;celery 简介&lt;/h1&gt;
 &lt;h2 id=&#34;任务队列&#34;&gt;任务队列&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -4981,10 +4981,10 @@ iframe
         </item>
         <item>
         <title>缺少的知识</title>
-        <link>https://sunnnner.github.io/archetypes/%E7%BC%BA%E5%B0%91%E7%9A%84%E7%9F%A5%E8%AF%86/</link>
+        <link>https://sunnnner.github.io/%E7%BC%BA%E5%B0%91%E7%9A%84%E7%9F%A5%E8%AF%86/</link>
         <pubDate>Sat, 01 Sep 2018 10:28:49 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/%E7%BC%BA%E5%B0%91%E7%9A%84%E7%9F%A5%E8%AF%86/</guid>
+        <guid>https://sunnnner.github.io/%E7%BC%BA%E5%B0%91%E7%9A%84%E7%9F%A5%E8%AF%86/</guid>
         <description>&lt;ul&gt;
 &lt;li&gt;ISCSI相关操作&lt;/li&gt;
 &lt;li&gt;熟悉MVC，熟悉OOP，熟悉Python之外的其他OOP语言，Java者优先&lt;/li&gt;
@@ -4996,10 +4996,10 @@ iframe
         </item>
         <item>
         <title>支付宝生成密匙步骤</title>
-        <link>https://sunnnner.github.io/archetypes/%E6%94%AF%E4%BB%98%E5%AE%9D%E7%94%9F%E6%88%90%E5%AF%86%E5%8C%99%E6%AD%A5%E9%AA%A4/</link>
+        <link>https://sunnnner.github.io/%E6%94%AF%E4%BB%98%E5%AE%9D%E7%94%9F%E6%88%90%E5%AF%86%E5%8C%99%E6%AD%A5%E9%AA%A4/</link>
         <pubDate>Tue, 05 Jun 2018 10:26:17 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/%E6%94%AF%E4%BB%98%E5%AE%9D%E7%94%9F%E6%88%90%E5%AF%86%E5%8C%99%E6%AD%A5%E9%AA%A4/</guid>
+        <guid>https://sunnnner.github.io/%E6%94%AF%E4%BB%98%E5%AE%9D%E7%94%9F%E6%88%90%E5%AF%86%E5%8C%99%E6%AD%A5%E9%AA%A4/</guid>
         <description>&lt;h1 id=&#34;生成秘钥文件&#34;&gt;生成秘钥文件&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -5069,10 +5069,10 @@ iframe
         </item>
         <item>
         <title>修改hexo默认端口启动</title>
-        <link>https://sunnnner.github.io/archetypes/%E4%BF%AE%E6%94%B9hexo%E9%BB%98%E8%AE%A4%E7%AB%AF%E5%8F%A3%E5%90%AF%E5%8A%A8/</link>
+        <link>https://sunnnner.github.io/%E4%BF%AE%E6%94%B9hexo%E9%BB%98%E8%AE%A4%E7%AB%AF%E5%8F%A3%E5%90%AF%E5%8A%A8/</link>
         <pubDate>Mon, 04 Jun 2018 10:25:30 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/%E4%BF%AE%E6%94%B9hexo%E9%BB%98%E8%AE%A4%E7%AB%AF%E5%8F%A3%E5%90%AF%E5%8A%A8/</guid>
+        <guid>https://sunnnner.github.io/%E4%BF%AE%E6%94%B9hexo%E9%BB%98%E8%AE%A4%E7%AB%AF%E5%8F%A3%E5%90%AF%E5%8A%A8/</guid>
         <description>&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;默认使用4000端口，用&lt;code&gt;hexo s -p 80&lt;/code&gt;，可以暂时修改启动端口。&lt;/p&gt;
@@ -5089,10 +5089,10 @@ iframe
         </item>
         <item>
         <title>Python基础</title>
-        <link>https://sunnnner.github.io/archetypes/python%E5%9F%BA%E7%A1%80/</link>
+        <link>https://sunnnner.github.io/python%E5%9F%BA%E7%A1%80/</link>
         <pubDate>Sun, 03 Jun 2018 10:22:36 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/python%E5%9F%BA%E7%A1%80/</guid>
+        <guid>https://sunnnner.github.io/python%E5%9F%BA%E7%A1%80/</guid>
         <description>&lt;h2 id=&#34;让python2支持中文&#34;&gt;让python2支持中文&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -5232,10 +5232,10 @@ iframe
         </item>
         <item>
         <title>Ajax语法</title>
-        <link>https://sunnnner.github.io/archetypes/ajax%E8%AF%AD%E6%B3%95/</link>
+        <link>https://sunnnner.github.io/ajax%E8%AF%AD%E6%B3%95/</link>
         <pubDate>Sat, 02 Jun 2018 10:21:32 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/ajax%E8%AF%AD%E6%B3%95/</guid>
+        <guid>https://sunnnner.github.io/ajax%E8%AF%AD%E6%B3%95/</guid>
         <description>&lt;h1 id=&#34;ajax语法&#34;&gt;Ajax语法&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;现在写ajax写的我很难受下面就是我在搜索的时候遇到的标签的意思&lt;/li&gt;
@@ -5349,10 +5349,10 @@ iframe
         </item>
         <item>
         <title>Django Redis配置</title>
-        <link>https://sunnnner.github.io/archetypes/django-redis%E9%85%8D%E7%BD%AE/</link>
+        <link>https://sunnnner.github.io/django-redis%E9%85%8D%E7%BD%AE/</link>
         <pubDate>Fri, 01 Jun 2018 10:20:47 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/django-redis%E9%85%8D%E7%BD%AE/</guid>
+        <guid>https://sunnnner.github.io/django-redis%E9%85%8D%E7%BD%AE/</guid>
         <description>&lt;h1 id=&#34;django-setting配置redis储存session&#34;&gt;Django-setting配置Redis储存session&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -5394,10 +5394,10 @@ iframe
         </item>
         <item>
         <title>Django用户模块</title>
-        <link>https://sunnnner.github.io/archetypes/django%E7%94%A8%E6%88%B7%E6%A8%A1%E5%9D%97/</link>
+        <link>https://sunnnner.github.io/django%E7%94%A8%E6%88%B7%E6%A8%A1%E5%9D%97/</link>
         <pubDate>Fri, 01 Jun 2018 10:15:16 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/django%E7%94%A8%E6%88%B7%E6%A8%A1%E5%9D%97/</guid>
+        <guid>https://sunnnner.github.io/django%E7%94%A8%E6%88%B7%E6%A8%A1%E5%9D%97/</guid>
         <description>&lt;h1 id=&#34;第一步创建django项目&#34;&gt;第一步创建Django项目&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;django-admin startproject blog&lt;/code&gt;&lt;/li&gt;
@@ -5944,10 +5944,10 @@ iframe
         </item>
         <item>
         <title>Redis配置</title>
-        <link>https://sunnnner.github.io/archetypes/redis%E9%85%8D%E7%BD%AE/</link>
+        <link>https://sunnnner.github.io/redis%E9%85%8D%E7%BD%AE/</link>
         <pubDate>Thu, 31 May 2018 18:53:17 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/redis%E9%85%8D%E7%BD%AE/</guid>
+        <guid>https://sunnnner.github.io/redis%E9%85%8D%E7%BD%AE/</guid>
         <description>&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -5990,20 +5990,20 @@ iframe
         </item>
         <item>
         <title>怎么加快页面的访问速度</title>
-        <link>https://sunnnner.github.io/archetypes/%E6%80%8E%E4%B9%88%E5%8A%A0%E5%BF%AB%E9%A1%B5%E9%9D%A2%E7%9A%84%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6/</link>
+        <link>https://sunnnner.github.io/%E6%80%8E%E4%B9%88%E5%8A%A0%E5%BF%AB%E9%A1%B5%E9%9D%A2%E7%9A%84%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6/</link>
         <pubDate>Thu, 31 May 2018 18:47:29 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/%E6%80%8E%E4%B9%88%E5%8A%A0%E5%BF%AB%E9%A1%B5%E9%9D%A2%E7%9A%84%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6/</guid>
+        <guid>https://sunnnner.github.io/%E6%80%8E%E4%B9%88%E5%8A%A0%E5%BF%AB%E9%A1%B5%E9%9D%A2%E7%9A%84%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6/</guid>
         <description>&lt;p&gt;··· 我理解是压缩代码然后减少请求，多使用ajax 图片存第三方资源库&lt;/p&gt;
 &lt;p&gt;全静态，读写分离，加带宽 再开cdn&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>页面开发</title>
-        <link>https://sunnnner.github.io/archetypes/blog-%E5%95%86%E5%93%81%E9%A1%B5%E9%9D%A2%E6%98%BE%E7%A4%BA%E5%BC%80%E5%8F%91/</link>
+        <link>https://sunnnner.github.io/%E9%A1%B5%E9%9D%A2%E5%BC%80%E5%8F%91/</link>
         <pubDate>Thu, 31 May 2018 18:47:29 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/blog-%E5%95%86%E5%93%81%E9%A1%B5%E9%9D%A2%E6%98%BE%E7%A4%BA%E5%BC%80%E5%8F%91/</guid>
+        <guid>https://sunnnner.github.io/%E9%A1%B5%E9%9D%A2%E5%BC%80%E5%8F%91/</guid>
         <description>&lt;ul&gt;
 &lt;li&gt;首先新建app—&amp;gt;books并添加settings里面&lt;/li&gt;
 &lt;li&gt;因为我们需要在后台admin上传数据所以我们要创建富文本管理器并在setting设置他的选项&lt;/li&gt;

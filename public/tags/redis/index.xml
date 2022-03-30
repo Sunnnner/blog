@@ -8,10 +8,10 @@
         <language>en-us</language>
         <lastBuildDate>Fri, 01 Jun 2018 10:20:47 +0800</lastBuildDate><atom:link href="https://sunnnner.github.io/tags/redis/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Django Redis配置</title>
-        <link>https://sunnnner.github.io/archetypes/django-redis%E9%85%8D%E7%BD%AE/</link>
+        <link>https://sunnnner.github.io/django-redis%E9%85%8D%E7%BD%AE/</link>
         <pubDate>Fri, 01 Jun 2018 10:20:47 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/django-redis%E9%85%8D%E7%BD%AE/</guid>
+        <guid>https://sunnnner.github.io/django-redis%E9%85%8D%E7%BD%AE/</guid>
         <description>&lt;h1 id=&#34;django-setting配置redis储存session&#34;&gt;Django-setting配置Redis储存session&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -53,10 +53,10 @@
         </item>
         <item>
         <title>Redis配置</title>
-        <link>https://sunnnner.github.io/archetypes/redis%E9%85%8D%E7%BD%AE/</link>
+        <link>https://sunnnner.github.io/redis%E9%85%8D%E7%BD%AE/</link>
         <pubDate>Thu, 31 May 2018 18:53:17 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/redis%E9%85%8D%E7%BD%AE/</guid>
+        <guid>https://sunnnner.github.io/redis%E9%85%8D%E7%BD%AE/</guid>
         <description>&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1

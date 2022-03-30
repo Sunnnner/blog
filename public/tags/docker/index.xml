@@ -8,10 +8,10 @@
         <language>en-us</language>
         <lastBuildDate>Fri, 01 Nov 2019 15:35:30 +0800</lastBuildDate><atom:link href="https://sunnnner.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Docker添加root权限省去sudo</title>
-        <link>https://sunnnner.github.io/archetypes/docker%E6%B7%BB%E5%8A%A0root%E6%9D%83%E9%99%90%E7%9C%81%E5%8E%BBsudo/</link>
+        <link>https://sunnnner.github.io/docker%E6%B7%BB%E5%8A%A0root%E6%9D%83%E9%99%90%E7%9C%81%E5%8E%BBsudo/</link>
         <pubDate>Fri, 01 Nov 2019 15:35:30 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/docker%E6%B7%BB%E5%8A%A0root%E6%9D%83%E9%99%90%E7%9C%81%E5%8E%BBsudo/</guid>
+        <guid>https://sunnnner.github.io/docker%E6%B7%BB%E5%8A%A0root%E6%9D%83%E9%99%90%E7%9C%81%E5%8E%BBsudo/</guid>
         <description>&lt;ul&gt;
 &lt;li&gt;首先使用root权限账户登录系统&lt;/li&gt;
 &lt;li&gt;首先查看用户组中有没有docker组sudo cat /etc/group | grep docker&lt;/li&gt;
@@ -31,10 +31,10 @@
         </item>
         <item>
         <title>Docker操作</title>
-        <link>https://sunnnner.github.io/archetypes/docker%E6%93%8D%E4%BD%9C/</link>
+        <link>https://sunnnner.github.io/docker%E6%93%8D%E4%BD%9C/</link>
         <pubDate>Tue, 08 Oct 2019 14:19:00 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/docker%E6%93%8D%E4%BD%9C/</guid>
+        <guid>https://sunnnner.github.io/docker%E6%93%8D%E4%BD%9C/</guid>
         <description>&lt;p&gt;&lt;code&gt;docker build&lt;/code&gt; 打包docker 项目&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;docker-compose up&lt;/code&gt; 启动整体项目(docker-compose.yml文件)&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;docker-compose down&lt;/code&gt; 强制停止docker运行的所有项目&lt;/p&gt;

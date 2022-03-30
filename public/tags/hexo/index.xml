@@ -8,10 +8,10 @@
         <language>en-us</language>
         <lastBuildDate>Mon, 04 Jun 2018 10:25:30 +0800</lastBuildDate><atom:link href="https://sunnnner.github.io/tags/hexo/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>修改hexo默认端口启动</title>
-        <link>https://sunnnner.github.io/archetypes/%E4%BF%AE%E6%94%B9hexo%E9%BB%98%E8%AE%A4%E7%AB%AF%E5%8F%A3%E5%90%AF%E5%8A%A8/</link>
+        <link>https://sunnnner.github.io/%E4%BF%AE%E6%94%B9hexo%E9%BB%98%E8%AE%A4%E7%AB%AF%E5%8F%A3%E5%90%AF%E5%8A%A8/</link>
         <pubDate>Mon, 04 Jun 2018 10:25:30 +0800</pubDate>
         
-        <guid>https://sunnnner.github.io/archetypes/%E4%BF%AE%E6%94%B9hexo%E9%BB%98%E8%AE%A4%E7%AB%AF%E5%8F%A3%E5%90%AF%E5%8A%A8/</guid>
+        <guid>https://sunnnner.github.io/%E4%BF%AE%E6%94%B9hexo%E9%BB%98%E8%AE%A4%E7%AB%AF%E5%8F%A3%E5%90%AF%E5%8A%A8/</guid>
         <description>&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;默认使用4000端口，用&lt;code&gt;hexo s -p 80&lt;/code&gt;，可以暂时修改启动端口。&lt;/p&gt;
