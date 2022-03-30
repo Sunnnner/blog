@@ -37,11 +37,282 @@ uintptr 无符号整型，用于存放一个指针&lt;/code&gt;&lt;/pre&gt;
 </description>
         </item>
         <item>
+        <title>Go语言数据类型</title>
+        <link>https://sunnnner.github.io/p/go%E8%AF%AD%E8%A8%80%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</link>
+        <pubDate>Sun, 02 Feb 2020 15:52:00 +0800</pubDate>
+        
+        <guid>https://sunnnner.github.io/p/go%E8%AF%AD%E8%A8%80%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</guid>
+        <description>&lt;h2 id=&#34;派生&#34;&gt;派生&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;包括：
+    指针类型(Pointer)
+    数组类型
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;结构化类型struct&#34;&gt;结构化类型(struct)&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;Channel类型
+函数类型
+切片类型
+接口类型(interface)
+Map类型
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;浮点型&#34;&gt;浮点型&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;float32与float64
+complex64与complex128 64位的实数与虚数
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;其他数字类型&#34;&gt;其他数字类型&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;byte 类似uint8
+rune 类似int32
+uint 32或者64位
+int 与uint一样大
+uintptr 无符号整型，用于存放一个指针&lt;/code&gt;&lt;/pre&gt;
+</description>
+        </item>
+        <item>
         <title>Go学习</title>
         <link>https://sunnnner.github.io/go%E5%AD%A6%E4%B9%A0/</link>
         <pubDate>Sat, 01 Feb 2020 15:45:32 +0800</pubDate>
         
         <guid>https://sunnnner.github.io/go%E5%AD%A6%E4%B9%A0/</guid>
+        <description>&lt;h1 id=&#34;go关键字&#34;&gt;Go关键字&lt;/h1&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;关键字&lt;/th&gt;
+&lt;th&gt;意义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;break&lt;/td&gt;
+&lt;td&gt;退出&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;default&lt;/td&gt;
+&lt;td&gt;默认函数&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;func&lt;/td&gt;
+&lt;td&gt;定义函数和方法&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;interface&lt;/td&gt;
+&lt;td&gt;用于定义接口&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;select&lt;/td&gt;
+&lt;td&gt;用于选择不同类型的通讯&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;case&lt;/td&gt;
+&lt;td&gt;用户条件选择&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;defer&lt;/td&gt;
+&lt;td&gt;延迟执行内容（收尾工作）有点类似C++的析构，但是它是再函数结尾的时候去执行（也就是栈即将被释放的时候）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;go&lt;/td&gt;
+&lt;td&gt;用于并发&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;map&lt;/td&gt;
+&lt;td&gt;用于声明map类型数据&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;struct&lt;/td&gt;
+&lt;td&gt;用于定义抽象数据类型&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;range&lt;/td&gt;
+&lt;td&gt;用于读取slice、map、channel数据&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;chan&lt;/td&gt;
+&lt;td&gt;用于channel通讯&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;if&lt;/td&gt;
+&lt;td&gt;选择结构-如果&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;else&lt;/td&gt;
+&lt;td&gt;选择结构-否则&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;type&lt;/td&gt;
+&lt;td&gt;用于声明自定义类型&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;return&lt;/td&gt;
+&lt;td&gt;用于从函数返回&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;var&lt;/td&gt;
+&lt;td&gt;Go语言基础里面的变量和常量申明 (var age int)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;const&lt;/td&gt;
+&lt;td&gt;变量和常量的声明&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;package&lt;/td&gt;
+&lt;td&gt;包管理&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;import&lt;/td&gt;
+&lt;td&gt;导入&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;switch&lt;/td&gt;
+&lt;td&gt;选择结构&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;fallthrough&lt;/td&gt;
+&lt;td&gt;流程控制&lt;!-- raw HTML omitted --&gt;1.加了fallthrough后，会直接运行【紧跟的后一个】case或default语句，不论条件是否满足都会执行)&lt;!-- raw HTML omitted --&gt;2.加了fallthrough语句后，【紧跟的后一个】case条件不能定义常量和变量&lt;!-- raw HTML omitted --&gt;3.执行完fallthrough后直接跳到下一个条件语句，本条件执行语句后面的语句不执行&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;continue&lt;/td&gt;
+&lt;td&gt;跳过本次循环&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;for&lt;/td&gt;
+&lt;td&gt;循环&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;goto&lt;/td&gt;
+&lt;td&gt;跳转语句&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;36个预定义标识符&#34;&gt;36个预定义标识符&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;内建常量&lt;/th&gt;
+&lt;th&gt;内建类型&lt;/th&gt;
+&lt;th&gt;内建函数&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;true&lt;/td&gt;
+&lt;td&gt;int&lt;/td&gt;
+&lt;td&gt;make&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;false&lt;/td&gt;
+&lt;td&gt;int8&lt;/td&gt;
+&lt;td&gt;len&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;iota&lt;/td&gt;
+&lt;td&gt;int16&lt;/td&gt;
+&lt;td&gt;cap&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;nil&lt;/td&gt;
+&lt;td&gt;int32&lt;/td&gt;
+&lt;td&gt;new&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;int64&lt;/td&gt;
+&lt;td&gt;append&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;uint&lt;/td&gt;
+&lt;td&gt;copy&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;uint8&lt;/td&gt;
+&lt;td&gt;close&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;uint16&lt;/td&gt;
+&lt;td&gt;delete&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;uint32&lt;/td&gt;
+&lt;td&gt;complex&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;uint64&lt;/td&gt;
+&lt;td&gt;real&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;uintprt&lt;/td&gt;
+&lt;td&gt;imag&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;float32&lt;/td&gt;
+&lt;td&gt;panic&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;float64&lt;/td&gt;
+&lt;td&gt;recover&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;complex64&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;complex128&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;bool&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;byte&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;rune&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;error&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;img src=&#34;https://sunnnner.github.io/static/go.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;xx&#34;
+	
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Go学习</title>
+        <link>https://sunnnner.github.io/p/go%E5%AD%A6%E4%B9%A0/</link>
+        <pubDate>Sat, 01 Feb 2020 15:45:32 +0800</pubDate>
+        
+        <guid>https://sunnnner.github.io/p/go%E5%AD%A6%E4%B9%A0/</guid>
         <description>&lt;h1 id=&#34;go关键字&#34;&gt;Go关键字&lt;/h1&gt;
 &lt;table&gt;
 &lt;thead&gt;

@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Desc Text.'><title>Rclone挂载googleDrive</title>
+
+<link rel='canonical' href='https://sunnnner.github.io/p/rclone%E6%8C%82%E8%BD%BDgoogledrive/'>
+
+<link rel="stylesheet" href="/scss/style.min.450926226e724574a6b936335ea06111f8aeb253d932c86cb2cc807341cd2889.css"><meta property='og:title' content='Rclone挂载googleDrive'>
+<meta property='og:description' content='Desc Text.'>
+<meta property='og:url' content='https://sunnnner.github.io/p/rclone%E6%8C%82%E8%BD%BDgoogledrive/'>
+<meta property='og:site_name' content='whiteKBlog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='pyhton' /><meta property='article:published_time' content='2019-09-04T11:30:51&#43;08:00'/><meta property='article:modified_time' content='2019-09-04T11:30:51&#43;08:00'/>
+<meta name="twitter:title" content="Rclone挂载googleDrive">
+<meta name="twitter:description" content="Desc Text.">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu61207e00082f6a4a006b92708ca02495_11808_300x0_resize_q75_box.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">whiteKBlog</a></h1>
+            <h2 class="site-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/Sunnnner'
+                        target="_blank"
+                        title="GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://stackoverflow.com'
+                        target="_blank"
+                        title="Twitter"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+                <li id="i18n-switch">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                        
+                            <option value="https://sunnnner.github.io/" selected>English</option>
+                        
+                            <option value="https://sunnnner.github.io/zh-cn/" >中文</option>
+                        
+                    </select>
+                </li>
+            
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/rclone%E6%8C%82%E8%BD%BDgoogledrive/">Rclone挂载googleDrive</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Desc Text.
+        </h3>
+        
+    </div>
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Sep 04, 2019</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    3 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <ul>
+<li>最近查找大容量存储工具，想到了免费版的Google云盘，询问了一下有一个无限空间的云盘，话不多说开始搞，在淘宝买了个账号开始配在自己的服务器上，但是发现并不是这么好配，查找了很多资料，到最后朋友给我说rclone可以挂在Google云盘，查了一下果然可以，把教程贴出来为以后查看方便</li>
+</ul>
+<h2 id="首先安装rclone">首先安装rclone</h2>
+<pre><code>wget https://www.moerats.com/usr/shell/rclone_debian.sh &amp;&amp; bash rclone_debian.sh
+</code></pre>
+<h2 id="初始化配置">初始化配置</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
+</span><span class="lnt">82
+</span><span class="lnt">83
+</span><span class="lnt">84
+</span><span class="lnt">85
+</span><span class="lnt">86
+</span><span class="lnt">87
+</span><span class="lnt">88
+</span><span class="lnt">89
+</span><span class="lnt">90
+</span><span class="lnt">91
+</span><span class="lnt">92
+</span><span class="lnt">93
+</span><span class="lnt">94
+</span><span class="lnt">95
+</span><span class="lnt">96
+</span><span class="lnt">97
+</span><span class="lnt">98
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">    rclone config
+</span></span><span class="line"><span class="cl">n) New remote
+</span></span><span class="line"><span class="cl">s) Set configuration password
+</span></span><span class="line"><span class="cl">q) Quit config
+</span></span><span class="line"><span class="cl">n/s/q&gt; n
+</span></span><span class="line"><span class="cl">name&gt; Rats  #随便填，后面要用到
+</span></span><span class="line"><span class="cl">Type of storage to configure.
+</span></span><span class="line"><span class="cl">Choose a number from below, or type in your own value
+</span></span><span class="line"><span class="cl"> 1 / Amazon Drive
+</span></span><span class="line"><span class="cl">   \ &#34;amazon cloud drive&#34;
+</span></span><span class="line"><span class="cl"> 2 / Amazon S3 (also Dreamhost, Ceph, Minio)
+</span></span><span class="line"><span class="cl">   \ &#34;s3&#34;
+</span></span><span class="line"><span class="cl"> 3 / Backblaze B2
+</span></span><span class="line"><span class="cl">   \ &#34;b2&#34;
+</span></span><span class="line"><span class="cl"> 4 / Box
+</span></span><span class="line"><span class="cl">   \ &#34;box&#34;
+</span></span><span class="line"><span class="cl"> 5 / Cache a remote
+</span></span><span class="line"><span class="cl">   \ &#34;cache&#34;
+</span></span><span class="line"><span class="cl"> 6 / Dropbox
+</span></span><span class="line"><span class="cl">   \ &#34;dropbox&#34;
+</span></span><span class="line"><span class="cl"> 7 / Encrypt/Decrypt a remote
+</span></span><span class="line"><span class="cl">   \ &#34;crypt&#34;
+</span></span><span class="line"><span class="cl"> 8 / FTP Connection
+</span></span><span class="line"><span class="cl">   \ &#34;ftp&#34;
+</span></span><span class="line"><span class="cl"> 9 / Google Cloud Storage (this is not Google Drive)
+</span></span><span class="line"><span class="cl">   \ &#34;google cloud storage&#34;
+</span></span><span class="line"><span class="cl">10 / Google Drive
+</span></span><span class="line"><span class="cl">   \ &#34;drive&#34;
+</span></span><span class="line"><span class="cl">11 / Hubic
+</span></span><span class="line"><span class="cl">   \ &#34;hubic&#34;
+</span></span><span class="line"><span class="cl">12 / Local Disk
+</span></span><span class="line"><span class="cl">   \ &#34;local&#34;
+</span></span><span class="line"><span class="cl">13 / Microsoft Azure Blob Storage
+</span></span><span class="line"><span class="cl">   \ &#34;azureblob&#34;
+</span></span><span class="line"><span class="cl">14 / Microsoft OneDrive
+</span></span><span class="line"><span class="cl">   \ &#34;onedrive&#34;
+</span></span><span class="line"><span class="cl">15 / Openstack Swift (Rackspace Cloud Files, Memset Memstore, OVH)
+</span></span><span class="line"><span class="cl">   \ &#34;swift&#34;
+</span></span><span class="line"><span class="cl">16 / Pcloud
+</span></span><span class="line"><span class="cl">   \ &#34;pcloud&#34;
+</span></span><span class="line"><span class="cl">17 / QingCloud Object Storage
+</span></span><span class="line"><span class="cl">   \ &#34;qingstor&#34;
+</span></span><span class="line"><span class="cl">18 / SSH/SFTP Connection
+</span></span><span class="line"><span class="cl">   \ &#34;sftp&#34;
+</span></span><span class="line"><span class="cl">19 / Webdav
+</span></span><span class="line"><span class="cl">   \ &#34;webdav&#34;
+</span></span><span class="line"><span class="cl">20 / Yandex Disk
+</span></span><span class="line"><span class="cl">   \ &#34;yandex&#34;
+</span></span><span class="line"><span class="cl">21 / http Connection
+</span></span><span class="line"><span class="cl">   \ &#34;http&#34;
+</span></span><span class="line"><span class="cl">Storage&gt; 10  #选择10，Google Drive
+</span></span><span class="line"><span class="cl">Google Application Client Id - leave blank normally.
+</span></span><span class="line"><span class="cl">client_id&gt;  #留空 
+</span></span><span class="line"><span class="cl">Google Application Client Secret - leave blank normally.
+</span></span><span class="line"><span class="cl">client_secret&gt;  #留空
+</span></span><span class="line"><span class="cl">Service Account Credentials JSON file path - needed only if you want use SA instead of interactive login.
+</span></span><span class="line"><span class="cl">service_account_file&gt; 
+</span></span><span class="line"><span class="cl">Remote config
+</span></span><span class="line"><span class="cl">Use auto config?
+</span></span><span class="line"><span class="cl"> * Say Y if not sure
+</span></span><span class="line"><span class="cl"> * Say N if you are working on a remote or headless machine or Y didn&#39;t work
+</span></span><span class="line"><span class="cl">y) Yes
+</span></span><span class="line"><span class="cl">n) No
+</span></span><span class="line"><span class="cl">y/n&gt; n  #选择n
+</span></span><span class="line"><span class="cl">If your browser doesn&#39;t open automatically go to the following link: https://accounts.google.com/o/oauth2/auth....  #复制到浏览器打开，获取验证码
+</span></span><span class="line"><span class="cl">Log in and authorize rclone for access
+</span></span><span class="line"><span class="cl">Enter verification code&gt;  #填入上面获取到的验证码
+</span></span><span class="line"><span class="cl">Configure this as a team drive?
+</span></span><span class="line"><span class="cl">y) Yes
+</span></span><span class="line"><span class="cl">n) No
+</span></span><span class="line"><span class="cl">y/n&gt; y  #选择y
+</span></span><span class="line"><span class="cl">Fetching team drive list...
+</span></span><span class="line"><span class="cl">No team drives found in your account--------------------
+</span></span><span class="line"><span class="cl">[Rats]
+</span></span><span class="line"><span class="cl">client_id = 
+</span></span><span class="line"><span class="cl">client_secret = 
+</span></span><span class="line"><span class="cl">service_account_file = 
+</span></span><span class="line"><span class="cl">token = {&#34;access_token&#34;:&#34;ya29.GltFBd7UJN2qrxdG8FnG_rMuB18ogb8QlujdL7glvXtfV&#34;}
+</span></span><span class="line"><span class="cl">team_drive = 
+</span></span><span class="line"><span class="cl">--------------------
+</span></span><span class="line"><span class="cl">y) Yes this is OK
+</span></span><span class="line"><span class="cl">e) Edit this remote
+</span></span><span class="line"><span class="cl">d) Delete this remote
+</span></span><span class="line"><span class="cl">y/e/d&gt; y  #选择y
+</span></span><span class="line"><span class="cl">Current remotes:
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">Name                 Type
+</span></span><span class="line"><span class="cl">====                 ====
+</span></span><span class="line"><span class="cl">Rats                 drive
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">e) Edit existing remote
+</span></span><span class="line"><span class="cl">n) New remote
+</span></span><span class="line"><span class="cl">d) Delete remote
+</span></span><span class="line"><span class="cl">r) Rename remote
+</span></span><span class="line"><span class="cl">c) Copy remote
+</span></span><span class="line"><span class="cl">s) Set configuration password
+</span></span><span class="line"><span class="cl">q) Quit config
+</span></span><span class="line"><span class="cl">e/n/d/r/c/s/q&gt; q  #选择q退出
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="挂载硬盘这里坑比较多">挂载硬盘（这里坑比较多）</h2>
+<ul>
+<li>
+<p>首先我们要在vps上创建一个文件夹(作为Google云盘的载体盘)</p>
+<p>mkdir /root/GoogleDrive</p>
+</li>
+<li>
+<p>首先我们先创建云盘文件夹</p>
+<p>rclone mkdir test</p>
+</li>
+<li>
+<p>其次我们使用rclone开始挂载云盘</p>
+<p>rclone mount gdrive:test /root/GoogleDrive &amp;</p>
+</li>
+</ul>
+<blockquote>
+<p>gdrive是谷歌云盘标识</p>
+</blockquote>
+<ul>
+<li>卸载文件夹
+fusermount -qzu GoogleDrive</li>
+</ul>
+<blockquote>
+<p>GoogleDrive 为你本地VPS载体文件夹</p>
+</blockquote>
+<ul>
+<li>上传文件
+rclone copy /root/test gdrive:test</li>
+</ul>
+<blockquote>
+<p>/root/test为本地文件 后面的为谷歌云盘标识及文件夹名字</p>
+</blockquote>
+<ul>
+<li>文件下载
+rclone copy gdrive:test /root/test</li>
+</ul>
+<blockquote>
+<p>下载到本地vps文件夹下</p>
+</blockquote>
+<ul>
+<li>
+<p>列表</p>
+<p>rclone ls gdrive:test</p>
+<p>rclone lsl gdrive:test</p>
+</li>
+</ul>
+<blockquote>
+<p>显示上传时间
+rclone lsd gdrive:test</p>
+</blockquote>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/pyhton/">pyhton</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2022 whiteKBlog
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.11.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#首先安装rclone">首先安装rclone</a></li>
+    <li><a href="#初始化配置">初始化配置</a></li>
+    <li><a href="#挂载硬盘这里坑比较多">挂载硬盘（这里坑比较多）</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

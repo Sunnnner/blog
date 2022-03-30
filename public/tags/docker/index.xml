@@ -30,11 +30,59 @@
 </description>
         </item>
         <item>
+        <title>Docker添加root权限省去sudo</title>
+        <link>https://sunnnner.github.io/p/docker%E6%B7%BB%E5%8A%A0root%E6%9D%83%E9%99%90%E7%9C%81%E5%8E%BBsudo/</link>
+        <pubDate>Fri, 01 Nov 2019 15:35:30 +0800</pubDate>
+        
+        <guid>https://sunnnner.github.io/p/docker%E6%B7%BB%E5%8A%A0root%E6%9D%83%E9%99%90%E7%9C%81%E5%8E%BBsudo/</guid>
+        <description>&lt;ul&gt;
+&lt;li&gt;首先使用root权限账户登录系统&lt;/li&gt;
+&lt;li&gt;首先查看用户组中有没有docker组sudo cat /etc/group | grep docker&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;创建docker分组，并将相应的用户添加到这个分组里面&lt;/p&gt;
+&lt;p&gt;sudo groupadd -g 999 docker&lt;/p&gt;
+&lt;p&gt;-g 999为组ID 也可以不指定&lt;/p&gt;
+&lt;p&gt;sudo usermod -aG dockerroot username&lt;/p&gt;
+&lt;p&gt;sudo usermod -aG docker username&lt;/p&gt;
+&lt;p&gt;检查一下是否有效 cat /etc/group&lt;/p&gt;
+&lt;p&gt;用户退出登录或者重启docker-daemon使权限生效&lt;/p&gt;
+&lt;p&gt;sudo systemctl restart docker&lt;/p&gt;
+&lt;p&gt;运行docker info查看是否生效&lt;/p&gt;
+&lt;p&gt;如果提示get权限不足，修改/var/run/docker.sock权限即可&lt;/p&gt;
+&lt;p&gt;sudo chmod a+rw /var/run/docker.sock&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Docker操作</title>
         <link>https://sunnnner.github.io/docker%E6%93%8D%E4%BD%9C/</link>
         <pubDate>Tue, 08 Oct 2019 14:19:00 +0800</pubDate>
         
         <guid>https://sunnnner.github.io/docker%E6%93%8D%E4%BD%9C/</guid>
+        <description>&lt;p&gt;&lt;code&gt;docker build&lt;/code&gt; 打包docker 项目&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;docker-compose up&lt;/code&gt; 启动整体项目(docker-compose.yml文件)&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;docker-compose down&lt;/code&gt; 强制停止docker运行的所有项目&lt;/p&gt;
+&lt;p&gt;1、删除所有容器 docker rm &lt;code&gt;docker ps -a -q&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;2、删除所有镜像d ocker rmi &lt;code&gt;docker images -q&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;3、按条件删除镜像 没有打标签docker rmi &lt;code&gt;docker images -q | awk &#39;/^&amp;lt;none&amp;gt;/ { print $3 }&#39;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;镜像名包含关键字docker rmi &amp;ndash;force &lt;code&gt;docker images | grep doss-api | awk &#39;{print $3}&#39;&lt;/code&gt;    //其中doss-api为关键字&lt;/p&gt;
+&lt;p&gt;　&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;docker-compose.yml&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;service&lt;/code&gt; 项目&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;image docker&lt;/code&gt;镜像名字，若本地没有会尝试在docker服务器拉取&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;restart&lt;/code&gt; 是否stop后重启&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;command&lt;/code&gt; 启动路径&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;volumes&lt;/code&gt; 将docker容器文件夹与本地文件夹映射挂载 [本地:docker文件夹]&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;environment&lt;/code&gt; 运行携带的参数&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ports&lt;/code&gt;运行端口&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;links&lt;/code&gt; 关联项目，关联之后内部访问&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Docker操作</title>
+        <link>https://sunnnner.github.io/p/docker%E6%93%8D%E4%BD%9C/</link>
+        <pubDate>Tue, 08 Oct 2019 14:19:00 +0800</pubDate>
+        
+        <guid>https://sunnnner.github.io/p/docker%E6%93%8D%E4%BD%9C/</guid>
         <description>&lt;p&gt;&lt;code&gt;docker build&lt;/code&gt; 打包docker 项目&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;docker-compose up&lt;/code&gt; 启动整体项目(docker-compose.yml文件)&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;docker-compose down&lt;/code&gt; 强制停止docker运行的所有项目&lt;/p&gt;

@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Desc Text.'><title>RESTful_API设计指南</title>
+
+<link rel='canonical' href='https://sunnnner.github.io/p/restful_api%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97/'>
+
+<link rel="stylesheet" href="/scss/style.min.450926226e724574a6b936335ea06111f8aeb253d932c86cb2cc807341cd2889.css"><meta property='og:title' content='RESTful_API设计指南'>
+<meta property='og:description' content='Desc Text.'>
+<meta property='og:url' content='https://sunnnner.github.io/p/restful_api%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97/'>
+<meta property='og:site_name' content='whiteKBlog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='drf' /><meta property='article:published_time' content='2019-09-12T11:43:08&#43;08:00'/><meta property='article:modified_time' content='2019-09-12T11:43:08&#43;08:00'/>
+<meta name="twitter:title" content="RESTful_API设计指南">
+<meta name="twitter:description" content="Desc Text.">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu61207e00082f6a4a006b92708ca02495_11808_300x0_resize_q75_box.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">whiteKBlog</a></h1>
+            <h2 class="site-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/Sunnnner'
+                        target="_blank"
+                        title="GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://stackoverflow.com'
+                        target="_blank"
+                        title="Twitter"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+                <li id="i18n-switch">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                        
+                            <option value="https://sunnnner.github.io/" selected>English</option>
+                        
+                            <option value="https://sunnnner.github.io/zh-cn/" >中文</option>
+                        
+                    </select>
+                </li>
+            
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/restful_api%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97/">RESTful_API设计指南</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Desc Text.
+        </h3>
+        
+    </div>
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Sep 12, 2019</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    2 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <blockquote>
+<p>网络应用程序，分为前端和后端两个部分， 当前的发展趋势， 就是前段设备层出不穷
+因此，必须有一种统一的机制，方便不同的前端设备与后端进行通信， 这导致API架构的流行， &gt; 甚至出现APIfirst的设计思想。</p>
+</blockquote>
+<h2 id="协议">协议</h2>
+<pre><code>API与用户的通信协议， 总是使用HTTPs协议
+</code></pre>
+<h2 id="域名">域名</h2>
+<ul>
+<li>
+<p>应尽量将API部署在专用域名之下</p>
+<pre><code>  https:// api.example.com
+</code></pre>
+</li>
+<li>
+<p>如果确定API很简单，不会有进一步扩展， 可以考虑放在主域名下</p>
+<pre><code>  https: // example.com
+</code></pre>
+</li>
+</ul>
+<h2 id="版本versioning">版本(Versioning)</h2>
+<ul>
+<li>
+<p>应将API的版本号放入URL</p>
+<pre><code>  https://api.example.com/v1/
+</code></pre>
+</li>
+<li>
+<p>另一种做法是，将版本号放在HTTP头信息中，但不如放入URL方便和直观。Github采用这种做法。</p>
+</li>
+</ul>
+<h2 id="路径endpoint">路径(Endpoint)</h2>
+<pre><code>路径又称”终点”（endpoint），表示API的具体网址。
+
+在RESTful架构中，每个网址代表一种资源（resource），所以网址中不能有动词，只能有名词，而且所用的名词往往与数据库的表格名对应。一般来说，数据库中的表都是同种记录的”集合”（collection），所以API中的名词也应该使用复数。
+
+举例来说，有一个API提供动物园（zoo）的信息，还包括各种动物和雇员的信息，则它的路径应该设计成下面这样。
+        · https://api.example.com/v1/zoos
+        · https://api.example.com/v1/animals
+        · https://api.example.com/v1/employees
+</code></pre>
+<h2 id="http动词">HTTP动词</h2>
+<pre><code>对于资源的具体操作类型，由HTTP动词表示。
+
+常用的HTTP动词有下面五个（括号里是对应的SQL命令）。
+
+    GET(SELECT) : 从服务器取出资源(一项或者多项)
+    POST(CREATE) : 在服务器新建一个资源
+    PUT(UPDATE) : 在服务器更新资源（客户端提供改变后的完整资源）
+    PATCH(update): 在服务器更新资源（客户端提供改变的属性）
+    DELETE(DELETE): 从服务器删除资源
+
+还有两个不常用的HTTP动词
+
+    HEAD: 获取资源的元数据
+    OPTIONS: 获 取信息， 关于资源的哪些属性是客户端可以改变的
+
+下面是一些例子
+
+    GET/ courses ：列出所有课程
+    POST/ courses : 添加一门课程
+    GET/ courses/ID: 获取某个课程的信息
+    PUT/ courses/ID: 更新某个指定课程信息（提供该课程的全部信息）
+    PATCH/ courses/ID: 更新某个指定课程信息（提供该课程的部分信息）
+    DELETE/courses/ID: 删除一门课程
+    GET/ courses/ ID/ class: 列出某个指定课程的所有班级
+    DELETE/courses/ class/ID: 删除某个指定课程的指定班级
+</code></pre>
+<h2 id="过滤信息fitering">过滤信息（Fitering）</h2>
+<pre><code>如果记录数量很多，服务器不可能都将他们返回给用户，API应该提供参数， 过滤返回结果，下面是一些常见的参数
+
+    ?limit=10: 指定返回记录的数量
+    ?offset=10: 指定返回记录的开始位置
+    ?page=2&amp;per_page=100: 指定第几页，以及每页的记录数
+    ?sortby=name&amp;order=asc: 指定返回结果按照那个属性排序， 以及排序顺序
+    ?animal_type_id=1: 指定筛选条件
+
+参数的设计允许存在冗余，即允许API路径和URL参数偶尔有重复， 比如：GET/zoo/ID/animals与GET/animals?zoo_id=ID的含义是相同的
+</code></pre>
+<h2 id="状态吗status-codes">状态吗（status codes）</h2>
+<pre><code>服务器向 用户返回的状态吗和提示信息， 常见的有以下一些
+
+
+    200 OK - [GET]：服务器成功返回用户请求的数据，该操作是幂等的（Idempotent）
+    201 CREATED - [POST/PUT/PATCH]：用户新建或修改数据成功。
+    202 Accepted - [*]：表示一个请求已经进入后台排队（异步任务）
+    204 NO CONTENT - [DELETE]：用户删除数据成功。
+    400 INVALID REQUEST - [POST/PUT/PATCH]：用户发出的请求有错误，服务器没有进行新建或修改数据的操作，该操作是幂等的。
+    Unauthorized - [*]：表示用户没有权限（令牌、用户名、密码错误）。
+    Forbidden - [*] 表示用户得到授权（与401错误相对），但是访问是被禁止的。
+    404 NOT FOUND - [*]：用户发出的请求针对的是不存在的记录，服务器没有进行操作，该操作是幂等的。
+    406 Not Acceptable - [GET]：用户请求的格式不可得（比如用户请求JSON格式，但是只有XML格式）。
+    410 Gone -[GET]：用户请求的资源被永久删除，且不会再得到的。
+    422 Unprocesable entity - [POST/PUT/PATCH] 当创建一个对象时，发生一个验证错误。
+    500 INTERNAL SERVER ERROR - [*]：服务器发生错误，用户将无法判断发出的请求是否成功。
+</code></pre>
+<p>状态码的完全列表参见 <a class="link" href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html"  target="_blank" rel="noopener"
+    >这里</a></p>
+<h2 id="错误处理error-handling">错误处理(ERROR handling)</h2>
+<pre><code>如果状态码是4XX，就应该向用户返回出错信息，一般来说，返回的信息中将error作为键名，出错信息作为键值即可
+
+{error:&quot;Invalid API key&quot;}
+</code></pre>
+<h2 id="返回结果">返回结果</h2>
+<pre><code>针对不同操作， 服务器向用户返回的结果应该符合以下规范
+
+    GET /collection：返回资源对象的列表（数组）
+    GET /collection/resource：返回单个资源对象
+    POST /collection：返回新生成的资源对象
+    PUT /collection/resource：返回完整的资源对象
+    PATCH /collection/resource：返回完整的资源对象
+    DELETE /collection/resource：返回一个空文档
+</code></pre>
+<h2 id="hypermedia-api">Hypermedia API</h2>
+<pre><code>RESTful API最好做到Hypermedia，即返回结果中提供链接，连向其他API方法，使得用户不查文档，也知道下一步应该做什么。
+
+比如，当用户向api.example.com的根目录发出请求，会得到这样一个文档。
+    ```text
+    {&quot;link&quot;: {
+    &quot;rel&quot;:   &quot;collection https://www.example.com/zoos&quot;,
+    &quot;href&quot;:  &quot;https://api.example.com/zoos&quot;,
+    &quot;title&quot;: &quot;List of zoos&quot;,
+    &quot;type&quot;:  &quot;application/vnd.yourformat+json&quot;
+    }}
+    ```
+上面代码表示，文档中有一个link属性，用户读取这个属性就知道下一步该调用什么API了。rel表示这个API与当前网址的关系（collection关系，并给出该collection的网址），href表示API的路径，title表示API的标题，type表示返回类型。
+
+Hypermedia API的设计被称为HATEOAS。Github的API就是这种设计，访问 api.github.com 会得到一个所有可用API的网址列表。
+
+{
+&quot;current_user_url&quot;: &quot;https://api.github.com/user&quot;,
+&quot;authorizations_url&quot;: &quot;https://api.github.com/authorizations&quot;,
+// ...
+}
+
+从上面可以看到，如果想获取当前用户的信息，应该去访问 api.github.com/user ，然后就得到了下面结果。
+
+
+{
+    &quot;message&quot;: &quot;Requires authentication&quot;,
+    &quot;documentation_url&quot;: &quot;https://developer.github.com/v3&quot;
+    }
+
+上面代码表示，服务器给出了提示信息，以及文档的网址。
+</code></pre>
+<h2 id="其他">其他</h2>
+<pre><code>(1) API的身份认证应该使用OAuth 2.0框架。
+
+(2) 服务器返回的数据格式，应该尽量使用JSON，避免使用XML。
+</code></pre>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/drf/">drf</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2022 whiteKBlog
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.11.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#协议">协议</a></li>
+    <li><a href="#域名">域名</a></li>
+    <li><a href="#版本versioning">版本(Versioning)</a></li>
+    <li><a href="#路径endpoint">路径(Endpoint)</a></li>
+    <li><a href="#http动词">HTTP动词</a></li>
+    <li><a href="#过滤信息fitering">过滤信息（Fitering）</a></li>
+    <li><a href="#状态吗status-codes">状态吗（status codes）</a></li>
+    <li><a href="#错误处理error-handling">错误处理(ERROR handling)</a></li>
+    <li><a href="#返回结果">返回结果</a></li>
+    <li><a href="#hypermedia-api">Hypermedia API</a></li>
+    <li><a href="#其他">其他</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

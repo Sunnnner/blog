@@ -23,6 +23,23 @@
 &lt;p&gt;返回结果中要提供帮助链接， 即API最好做好Hypermedia&lt;/p&gt;
 </description>
         </item>
+        <item>
+        <title>Restful规范</title>
+        <link>https://sunnnner.github.io/p/restful%E8%A7%84%E8%8C%83/</link>
+        <pubDate>Fri, 06 Sep 2019 11:36:12 +0800</pubDate>
+        
+        <guid>https://sunnnner.github.io/p/restful%E8%A7%84%E8%8C%83/</guid>
+        <description>&lt;p&gt;restful 只是一种软件架构风格或者说是一种设计风格，它只是给我们提供了一个设计的原则和约束的条件，主要用于客户端与服务端的交互&lt;/p&gt;
+&lt;p&gt;我们可以根据自己的需求做的更加简洁， 更有层次&lt;/p&gt;
+&lt;p&gt;它里面提供了一些规范，比如restful提倡面向资源编程， 在URL接口中尽量使用名词， 不要使用动词&lt;/p&gt;
+&lt;p&gt;在restful推荐使用HTTPS协议，更加安全&lt;/p&gt;
+&lt;p&gt;尽量在URL中体现版本号&lt;/p&gt;
+&lt;p&gt;restful的method &amp;lt;GET/ POST/ PUT/ DELETE/ PATCH&amp;gt;&lt;/p&gt;
+&lt;p&gt;响应应该设置状态码&lt;/p&gt;
+&lt;p&gt;有返回值，并且为json格式&lt;/p&gt;
+&lt;p&gt;返回结果中要提供帮助链接， 即API最好做好Hypermedia&lt;/p&gt;
+</description>
+        </item>
         
     </channel>
 </rss>

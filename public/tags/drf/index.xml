@@ -165,11 +165,238 @@ Hypermedia API的设计被称为HATEOAS。Github的API就是这种设计，访�
 </description>
         </item>
         <item>
+        <title>RESTful_API设计指南</title>
+        <link>https://sunnnner.github.io/p/restful_api%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97/</link>
+        <pubDate>Thu, 12 Sep 2019 11:43:08 +0800</pubDate>
+        
+        <guid>https://sunnnner.github.io/p/restful_api%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;网络应用程序，分为前端和后端两个部分， 当前的发展趋势， 就是前段设备层出不穷
+因此，必须有一种统一的机制，方便不同的前端设备与后端进行通信， 这导致API架构的流行， &amp;gt; 甚至出现APIfirst的设计思想。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;协议&#34;&gt;协议&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;API与用户的通信协议， 总是使用HTTPs协议
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;域名&#34;&gt;域名&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;应尽量将API部署在专用域名之下&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  https:// api.example.com
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果确定API很简单，不会有进一步扩展， 可以考虑放在主域名下&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  https: // example.com
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;版本versioning&#34;&gt;版本(Versioning)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;应将API的版本号放入URL&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  https://api.example.com/v1/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;另一种做法是，将版本号放在HTTP头信息中，但不如放入URL方便和直观。Github采用这种做法。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;路径endpoint&#34;&gt;路径(Endpoint)&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;路径又称”终点”（endpoint），表示API的具体网址。
+
+在RESTful架构中，每个网址代表一种资源（resource），所以网址中不能有动词，只能有名词，而且所用的名词往往与数据库的表格名对应。一般来说，数据库中的表都是同种记录的”集合”（collection），所以API中的名词也应该使用复数。
+
+举例来说，有一个API提供动物园（zoo）的信息，还包括各种动物和雇员的信息，则它的路径应该设计成下面这样。
+        · https://api.example.com/v1/zoos
+        · https://api.example.com/v1/animals
+        · https://api.example.com/v1/employees
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;http动词&#34;&gt;HTTP动词&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;对于资源的具体操作类型，由HTTP动词表示。
+
+常用的HTTP动词有下面五个（括号里是对应的SQL命令）。
+
+    GET(SELECT) : 从服务器取出资源(一项或者多项)
+    POST(CREATE) : 在服务器新建一个资源
+    PUT(UPDATE) : 在服务器更新资源（客户端提供改变后的完整资源）
+    PATCH(update): 在服务器更新资源（客户端提供改变的属性）
+    DELETE(DELETE): 从服务器删除资源
+
+还有两个不常用的HTTP动词
+
+    HEAD: 获取资源的元数据
+    OPTIONS: 获 取信息， 关于资源的哪些属性是客户端可以改变的
+
+下面是一些例子
+
+    GET/ courses ：列出所有课程
+    POST/ courses : 添加一门课程
+    GET/ courses/ID: 获取某个课程的信息
+    PUT/ courses/ID: 更新某个指定课程信息（提供该课程的全部信息）
+    PATCH/ courses/ID: 更新某个指定课程信息（提供该课程的部分信息）
+    DELETE/courses/ID: 删除一门课程
+    GET/ courses/ ID/ class: 列出某个指定课程的所有班级
+    DELETE/courses/ class/ID: 删除某个指定课程的指定班级
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;过滤信息fitering&#34;&gt;过滤信息（Fitering）&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;如果记录数量很多，服务器不可能都将他们返回给用户，API应该提供参数， 过滤返回结果，下面是一些常见的参数
+
+    ?limit=10: 指定返回记录的数量
+    ?offset=10: 指定返回记录的开始位置
+    ?page=2&amp;amp;per_page=100: 指定第几页，以及每页的记录数
+    ?sortby=name&amp;amp;order=asc: 指定返回结果按照那个属性排序， 以及排序顺序
+    ?animal_type_id=1: 指定筛选条件
+
+参数的设计允许存在冗余，即允许API路径和URL参数偶尔有重复， 比如：GET/zoo/ID/animals与GET/animals?zoo_id=ID的含义是相同的
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;状态吗status-codes&#34;&gt;状态吗（status codes）&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;服务器向 用户返回的状态吗和提示信息， 常见的有以下一些
+
+
+    200 OK - [GET]：服务器成功返回用户请求的数据，该操作是幂等的（Idempotent）
+    201 CREATED - [POST/PUT/PATCH]：用户新建或修改数据成功。
+    202 Accepted - [*]：表示一个请求已经进入后台排队（异步任务）
+    204 NO CONTENT - [DELETE]：用户删除数据成功。
+    400 INVALID REQUEST - [POST/PUT/PATCH]：用户发出的请求有错误，服务器没有进行新建或修改数据的操作，该操作是幂等的。
+    Unauthorized - [*]：表示用户没有权限（令牌、用户名、密码错误）。
+    Forbidden - [*] 表示用户得到授权（与401错误相对），但是访问是被禁止的。
+    404 NOT FOUND - [*]：用户发出的请求针对的是不存在的记录，服务器没有进行操作，该操作是幂等的。
+    406 Not Acceptable - [GET]：用户请求的格式不可得（比如用户请求JSON格式，但是只有XML格式）。
+    410 Gone -[GET]：用户请求的资源被永久删除，且不会再得到的。
+    422 Unprocesable entity - [POST/PUT/PATCH] 当创建一个对象时，发生一个验证错误。
+    500 INTERNAL SERVER ERROR - [*]：服务器发生错误，用户将无法判断发出的请求是否成功。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;状态码的完全列表参见 &lt;a class=&#34;link&#34; href=&#34;https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;这里&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;错误处理error-handling&#34;&gt;错误处理(ERROR handling)&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;如果状态码是4XX，就应该向用户返回出错信息，一般来说，返回的信息中将error作为键名，出错信息作为键值即可
+
+{error:&amp;quot;Invalid API key&amp;quot;}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;返回结果&#34;&gt;返回结果&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;针对不同操作， 服务器向用户返回的结果应该符合以下规范
+
+    GET /collection：返回资源对象的列表（数组）
+    GET /collection/resource：返回单个资源对象
+    POST /collection：返回新生成的资源对象
+    PUT /collection/resource：返回完整的资源对象
+    PATCH /collection/resource：返回完整的资源对象
+    DELETE /collection/resource：返回一个空文档
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;hypermedia-api&#34;&gt;Hypermedia API&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;RESTful API最好做到Hypermedia，即返回结果中提供链接，连向其他API方法，使得用户不查文档，也知道下一步应该做什么。
+
+比如，当用户向api.example.com的根目录发出请求，会得到这样一个文档。
+    ```text
+    {&amp;quot;link&amp;quot;: {
+    &amp;quot;rel&amp;quot;:   &amp;quot;collection https://www.example.com/zoos&amp;quot;,
+    &amp;quot;href&amp;quot;:  &amp;quot;https://api.example.com/zoos&amp;quot;,
+    &amp;quot;title&amp;quot;: &amp;quot;List of zoos&amp;quot;,
+    &amp;quot;type&amp;quot;:  &amp;quot;application/vnd.yourformat+json&amp;quot;
+    }}
+    ```
+上面代码表示，文档中有一个link属性，用户读取这个属性就知道下一步该调用什么API了。rel表示这个API与当前网址的关系（collection关系，并给出该collection的网址），href表示API的路径，title表示API的标题，type表示返回类型。
+
+Hypermedia API的设计被称为HATEOAS。Github的API就是这种设计，访问 api.github.com 会得到一个所有可用API的网址列表。
+
+{
+&amp;quot;current_user_url&amp;quot;: &amp;quot;https://api.github.com/user&amp;quot;,
+&amp;quot;authorizations_url&amp;quot;: &amp;quot;https://api.github.com/authorizations&amp;quot;,
+// ...
+}
+
+从上面可以看到，如果想获取当前用户的信息，应该去访问 api.github.com/user ，然后就得到了下面结果。
+
+
+{
+    &amp;quot;message&amp;quot;: &amp;quot;Requires authentication&amp;quot;,
+    &amp;quot;documentation_url&amp;quot;: &amp;quot;https://developer.github.com/v3&amp;quot;
+    }
+
+上面代码表示，服务器给出了提示信息，以及文档的网址。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;其他&#34;&gt;其他&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;(1) API的身份认证应该使用OAuth 2.0框架。
+
+(2) 服务器返回的数据格式，应该尽量使用JSON，避免使用XML。
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+        </item>
+        <item>
         <title>Django_rest_framework</title>
         <link>https://sunnnner.github.io/django_rest_framework/</link>
         <pubDate>Sun, 08 Sep 2019 11:37:47 +0800</pubDate>
         
         <guid>https://sunnnner.github.io/django_rest_framework/</guid>
+        <description>&lt;p&gt;为什么要使用Django_rest_framework
+能自动生成restful规范的API&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;代码简介 并且开发速度快
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Django_rest_framework框架有什么组件
+序列化组件：serializers 对queryset序列化及对请求数据格式校验&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;路由组件：routers 进行路由开发
+
+视图组件： ModelViewSet 帮助开发者提供了一些类。 并在类中提供了多个方法
+
+认证组件： 写一个类并注册到选线类（authentication_classes）， 再类的authticate方法中编写认证逻辑
+
+权限组件：写一个类并注册到权限类（permission_classes）, 在类中的has_permission方法中编写认证逻辑
+
+频率限制： 写一个类并注册到频率类（throttle_classes）, 在类中的allow_request/wait方法中编写认证逻辑
+
+解析器 选择对数据解析的类， 在解析类中注册(parser_classes)
+
+渲染器 定义数据如何渲染到页面上， 在渲染器类中注册(render_classes)
+
+分页 对获取到的数据进行分页处理 pagination_class
+
+版本 版本控制用来在不同的客户端使用不同的行为
+
+在URL中设置version参数， 用户请求时候传入参数， 在request.version中获取版本, 根据版本不同，做不同处理
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;django rest framework框架的认证流程
+用户请求走进来进入APIView， 初始化了默认的认证方式&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;进入APIView.dispatch()方法， initial方法调用了request.user
+
+如果我们配置了认证类， 走我们自己认证类中的authentication方法
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;django rest framework如何实现的用户访问频率控制
+使用ip/用户账户作为建， 每次访问时间作为值， 构造一个字典数据， 存起来， 每次访问对时间列表进行判断&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;把没有访问的超时的删掉。 在计算列表剩余的元素就能做到频率限制了
+
+匿名账户， 使用IP控制， 但是无法完全控制， 因为用户可以更换代理IP
+
+登陆用户使用账号控制，但是如果有很多账号，也无法限制
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如何实现用户登陆认证
+cookice session&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;token 登陆成功后生成的加密字符串
+
+JWT： json wed token 缩写， 他讲用户信息加密到token中 服务器不保存任何用户信息， 服务器通过使用保存的密匙来验证token的正确性
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;rest_framework序列化组件的作用,以及一些外键关系的钩子方法&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;作用：帮助我们序列化数据
+```python
+1.choices  get_字段名_display
+2.ForeignKey source=orm 操作
+3.ManyToManyFiled  SerializerMethodField()
+                    def get_字段名():
+                    return 自定义
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;PV 和 UV&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;pv :页面访问量打开一次算一次刷新也算
+
+uv ： 独立访问数， 一台电脑算一个访客
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+        </item>
+        <item>
+        <title>Django_rest_framework</title>
+        <link>https://sunnnner.github.io/p/django_rest_framework/</link>
+        <pubDate>Sun, 08 Sep 2019 11:37:47 +0800</pubDate>
+        
+        <guid>https://sunnnner.github.io/p/django_rest_framework/</guid>
         <description>&lt;p&gt;为什么要使用Django_rest_framework
 能自动生成restful规范的API&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;代码简介 并且开发速度快
