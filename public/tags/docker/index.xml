@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>docker on whiteKBlog</title>
+    <link>https://sunnnner.github.io/tags/docker/</link>
+    <description>Recent content in docker on whiteKBlog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 01 Nov 2019 15:35:30 +0800</lastBuildDate><atom:link href="https://sunnnner.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker添加root权限省去sudo</title>
+      <link>https://sunnnner.github.io/archetypes/docker%E6%B7%BB%E5%8A%A0root%E6%9D%83%E9%99%90%E7%9C%81%E5%8E%BBsudo/</link>
+      <pubDate>Fri, 01 Nov 2019 15:35:30 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/archetypes/docker%E6%B7%BB%E5%8A%A0root%E6%9D%83%E9%99%90%E7%9C%81%E5%8E%BBsudo/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>Docker操作</title>
+      <link>https://sunnnner.github.io/archetypes/docker%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Tue, 08 Oct 2019 14:19:00 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/archetypes/docker%E6%93%8D%E4%BD%9C/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+  </channel>
+</rss>

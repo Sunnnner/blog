@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>python on whiteKBlog</title>
+    <link>https://sunnnner.github.io/tags/python/</link>
+    <description>Recent content in python on whiteKBlog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 10 Dec 2019 15:43:08 +0800</lastBuildDate><atom:link href="https://sunnnner.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python日期转换</title>
+      <link>https://sunnnner.github.io/archetypes/python%E6%97%A5%E6%9C%9F%E8%BD%AC%E6%8D%A2/</link>
+      <pubDate>Tue, 10 Dec 2019 15:43:08 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/archetypes/python%E6%97%A5%E6%9C%9F%E8%BD%AC%E6%8D%A2/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>Log BasicConfig函数</title>
+      <link>https://sunnnner.github.io/archetypes/log-basicconfig%E5%87%BD%E6%95%B0/</link>
+      <pubDate>Thu, 05 Dec 2019 15:40:17 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/archetypes/log-basicconfig%E5%87%BD%E6%95%B0/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>Divmod函数</title>
+      <link>https://sunnnner.github.io/archetypes/divmod%E5%87%BD%E6%95%B0/</link>
+      <pubDate>Sun, 01 Dec 2019 15:39:29 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/archetypes/divmod%E5%87%BD%E6%95%B0/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>Python Collections Duque函数演示</title>
+      <link>https://sunnnner.github.io/archetypes/python-collections-duque%E5%87%BD%E6%95%B0%E6%BC%94%E7%A4%BA/</link>
+      <pubDate>Tue, 15 Oct 2019 15:33:37 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/archetypes/python-collections-duque%E5%87%BD%E6%95%B0%E6%BC%94%E7%A4%BA/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>Getattr函数</title>
+      <link>https://sunnnner.github.io/archetypes/getattr%E5%87%BD%E6%95%B0/</link>
+      <pubDate>Mon, 14 Oct 2019 15:31:31 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/archetypes/getattr%E5%87%BD%E6%95%B0/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>Hasattr函数</title>
+      <link>https://sunnnner.github.io/archetypes/hasattr%E5%87%BD%E6%95%B0/</link>
+      <pubDate>Sun, 13 Oct 2019 15:30:12 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/archetypes/hasattr%E5%87%BD%E6%95%B0/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>Os模块</title>
+      <link>https://sunnnner.github.io/archetypes/os%E6%A8%A1%E5%9D%97/</link>
+      <pubDate>Thu, 10 Oct 2019 14:20:46 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/archetypes/os%E6%A8%A1%E5%9D%97/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>Python实现AES加密</title>
+      <link>https://sunnnner.github.io/archetypes/python%E5%AE%9E%E7%8E%B0aes%E5%8A%A0%E5%AF%86/</link>
+      <pubDate>Sat, 05 Oct 2019 14:14:41 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/archetypes/python%E5%AE%9E%E7%8E%B0aes%E5%8A%A0%E5%AF%86/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>动态网页爬取</title>
+      <link>https://sunnnner.github.io/archetypes/%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%88%AC%E5%8F%96/</link>
+      <pubDate>Wed, 11 Sep 2019 11:42:10 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/archetypes/%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E7%88%AC%E5%8F%96/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>Python字符串操作</title>
+      <link>https://sunnnner.github.io/archetypes/python%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Tue, 03 Sep 2019 11:25:09 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/archetypes/python%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%93%8D%E4%BD%9C/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>修改macos自带Python版本（尽量不要修改）</title>
+      <link>https://sunnnner.github.io/archetypes/%E4%BF%AE%E6%94%B9macos%E8%87%AA%E5%B8%A6python%E7%89%88%E6%9C%AC%E5%B0%BD%E9%87%8F%E4%B8%8D%E8%A6%81%E4%BF%AE%E6%94%B9/</link>
+      <pubDate>Mon, 02 Sep 2019 11:24:14 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/archetypes/%E4%BF%AE%E6%94%B9macos%E8%87%AA%E5%B8%A6python%E7%89%88%E6%9C%AC%E5%B0%BD%E9%87%8F%E4%B8%8D%E8%A6%81%E4%BF%AE%E6%94%B9/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>Python版本控制以及虚拟环境的安装</title>
+      <link>https://sunnnner.github.io/archetypes/python%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E4%BB%A5%E5%8F%8A%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E7%9A%84%E5%AE%89%E8%A3%85/</link>
+      <pubDate>Sun, 01 Sep 2019 11:22:47 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/archetypes/python%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E4%BB%A5%E5%8F%8A%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E7%9A%84%E5%AE%89%E8%A3%85/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>数据库优化</title>
+      <link>https://sunnnner.github.io/archetypes/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BC%98%E5%8C%96/</link>
+      <pubDate>Tue, 05 Feb 2019 11:15:10 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/archetypes/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BC%98%E5%8C%96/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>数据库如何优化</title>
+      <link>https://sunnnner.github.io/archetypes/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A6%82%E4%BD%95%E4%BC%98%E5%8C%96/</link>
+      <pubDate>Mon, 04 Feb 2019 10:52:21 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/archetypes/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A6%82%E4%BD%95%E4%BC%98%E5%8C%96/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>Session&#43;cookie和使用tocken有什么区别</title>
+      <link>https://sunnnner.github.io/archetypes/session&#43;cookie%E5%92%8C%E4%BD%BF%E7%94%A8tocken%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB/</link>
+      <pubDate>Sun, 03 Feb 2019 10:51:26 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/archetypes/session&#43;cookie%E5%92%8C%E4%BD%BF%E7%94%A8tocken%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>线程进程协程</title>
+      <link>https://sunnnner.github.io/archetypes/%E7%BA%BF%E7%A8%8B%E8%BF%9B%E7%A8%8B%E5%8D%8F%E7%A8%8B/</link>
+      <pubDate>Sat, 02 Feb 2019 10:46:49 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/archetypes/%E7%BA%BF%E7%A8%8B%E8%BF%9B%E7%A8%8B%E5%8D%8F%E7%A8%8B/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>广度优先遍历二叉树</title>
+      <link>https://sunnnner.github.io/archetypes/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86%E4%BA%8C%E5%8F%89%E6%A0%91/</link>
+      <pubDate>Fri, 01 Feb 2019 10:44:14 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/archetypes/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86%E4%BA%8C%E5%8F%89%E6%A0%91/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>深度优先遍历二叉树</title>
+      <link>https://sunnnner.github.io/archetypes/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86%E4%BA%8C%E5%8F%89%E6%A0%91/</link>
+      <pubDate>Tue, 01 Jan 2019 10:41:11 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/archetypes/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86%E4%BA%8C%E5%8F%89%E6%A0%91/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>Python字典按值排序</title>
+      <link>https://sunnnner.github.io/archetypes/python%E5%AD%97%E5%85%B8%E6%8C%89%E5%80%BC%E6%8E%92%E5%BA%8F/</link>
+      <pubDate>Sun, 02 Dec 2018 10:39:55 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/archetypes/python%E5%AD%97%E5%85%B8%E6%8C%89%E5%80%BC%E6%8E%92%E5%BA%8F/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>Python上楼梯问题</title>
+      <link>https://sunnnner.github.io/archetypes/python%E4%B8%8A%E6%A5%BC%E6%A2%AF%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Sat, 01 Dec 2018 10:39:04 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/archetypes/python%E4%B8%8A%E6%A5%BC%E6%A2%AF%E9%97%AE%E9%A2%98/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>Python快速排序</title>
+      <link>https://sunnnner.github.io/archetypes/python%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/</link>
+      <pubDate>Thu, 01 Nov 2018 10:38:06 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/archetypes/python%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>Python链表</title>
+      <link>https://sunnnner.github.io/archetypes/python%E9%93%BE%E8%A1%A8/</link>
+      <pubDate>Tue, 02 Oct 2018 10:37:28 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/archetypes/python%E9%93%BE%E8%A1%A8/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>Python二分查找</title>
+      <link>https://sunnnner.github.io/archetypes/python%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/</link>
+      <pubDate>Mon, 01 Oct 2018 10:36:53 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/archetypes/python%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>Python冒泡算法</title>
+      <link>https://sunnnner.github.io/archetypes/python%E5%86%92%E6%B3%A1%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Sat, 08 Sep 2018 10:36:08 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/archetypes/python%E5%86%92%E6%B3%A1%E7%AE%97%E6%B3%95/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>Python装饰器</title>
+      <link>https://sunnnner.github.io/archetypes/python%E8%A3%85%E9%A5%B0%E5%99%A8/</link>
+      <pubDate>Fri, 07 Sep 2018 10:35:21 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/archetypes/python%E8%A3%85%E9%A5%B0%E5%99%A8/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>Python单例</title>
+      <link>https://sunnnner.github.io/archetypes/python%E5%8D%95%E4%BE%8B/</link>
+      <pubDate>Wed, 05 Sep 2018 10:32:39 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/archetypes/python%E5%8D%95%E4%BE%8B/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>Python多态</title>
+      <link>https://sunnnner.github.io/archetypes/python%E5%A4%9A%E6%80%81/</link>
+      <pubDate>Tue, 04 Sep 2018 10:32:01 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/archetypes/python%E5%A4%9A%E6%80%81/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>Celery任务队列</title>
+      <link>https://sunnnner.github.io/archetypes/celery%E4%BB%BB%E5%8A%A1%E9%98%9F%E5%88%97/</link>
+      <pubDate>Sun, 02 Sep 2018 10:29:21 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/archetypes/celery%E4%BB%BB%E5%8A%A1%E9%98%9F%E5%88%97/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>支付宝生成密匙步骤</title>
+      <link>https://sunnnner.github.io/archetypes/%E6%94%AF%E4%BB%98%E5%AE%9D%E7%94%9F%E6%88%90%E5%AF%86%E5%8C%99%E6%AD%A5%E9%AA%A4/</link>
+      <pubDate>Tue, 05 Jun 2018 10:26:17 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/archetypes/%E6%94%AF%E4%BB%98%E5%AE%9D%E7%94%9F%E6%88%90%E5%AF%86%E5%8C%99%E6%AD%A5%E9%AA%A4/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>怎么加快页面的访问速度</title>
+      <link>https://sunnnner.github.io/archetypes/%E6%80%8E%E4%B9%88%E5%8A%A0%E5%BF%AB%E9%A1%B5%E9%9D%A2%E7%9A%84%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6/</link>
+      <pubDate>Thu, 31 May 2018 18:47:29 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/archetypes/%E6%80%8E%E4%B9%88%E5%8A%A0%E5%BF%AB%E9%A1%B5%E9%9D%A2%E7%9A%84%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+  </channel>
+</rss>

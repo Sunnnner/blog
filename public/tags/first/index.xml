@@ -1,22 +1,99 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>first on My New Hugo Site</title>
-    <link>http://example.org/tags/first/</link>
-    <description>Recent content in first on My New Hugo Site</description>
-    <image>
-      <url>http://example.org/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>http://example.org/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
-    </image>
+    <title>first on whiteKBlog</title>
+    <link>https://sunnnner.github.io/tags/first/</link>
+    <description>Recent content in first on whiteKBlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 31 May 2018 18:47:29 +0800</lastBuildDate><atom:link href="http://example.org/tags/first/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Mar 2022 15:46:40 +0800</lastBuildDate><atom:link href="https://sunnnner.github.io/tags/first/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>页面开发</title>
-      <link>http://example.org/archetypes/blog-%E5%95%86%E5%93%81%E9%A1%B5%E9%9D%A2%E6%98%BE%E7%A4%BA%E5%BC%80%E5%8F%91/</link>
-      <pubDate>Thu, 31 May 2018 18:47:29 +0800</pubDate>
+      <title>Pysocket</title>
+      <link>https://sunnnner.github.io/archetypes/pysocket/</link>
+      <pubDate>Thu, 10 Mar 2022 15:46:40 +0800</pubDate>
       
-      <guid>http://example.org/archetypes/blog-%E5%95%86%E5%93%81%E9%A1%B5%E9%9D%A2%E6%98%BE%E7%A4%BA%E5%BC%80%E5%8F%91/</guid>
+      <guid>https://sunnnner.github.io/archetypes/pysocket/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>Djangoupgrade</title>
+      <link>https://sunnnner.github.io/archetypes/django_upgrade3.2/</link>
+      <pubDate>Tue, 08 Mar 2022 11:06:40 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/archetypes/django_upgrade3.2/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>Go导入外部包失效问题</title>
+      <link>https://sunnnner.github.io/archetypes/go%E5%AF%BC%E5%85%A5%E5%A4%96%E9%83%A8%E5%8C%85%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Thu, 26 Aug 2021 10:48:36 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/archetypes/go%E5%AF%BC%E5%85%A5%E5%A4%96%E9%83%A8%E5%8C%85%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>Django Admin Permissions控制</title>
+      <link>https://sunnnner.github.io/archetypes/django-admin-permissions%E6%8E%A7%E5%88%B6/</link>
+      <pubDate>Tue, 24 Aug 2021 09:26:52 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/archetypes/django-admin-permissions%E6%8E%A7%E5%88%B6/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>Go词法单元</title>
+      <link>https://sunnnner.github.io/archetypes/go%E8%AF%8D%E6%B3%95%E5%8D%95%E5%85%83/</link>
+      <pubDate>Tue, 17 Aug 2021 10:10:49 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/archetypes/go%E8%AF%8D%E6%B3%95%E5%8D%95%E5%85%83/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>Django Orm聚合分组知识</title>
+      <link>https://sunnnner.github.io/archetypes/django-orm%E8%81%9A%E5%90%88%E5%88%86%E7%BB%84%E7%9F%A5%E8%AF%86/</link>
+      <pubDate>Thu, 12 Aug 2021 16:19:36 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/archetypes/django-orm%E8%81%9A%E5%90%88%E5%88%86%E7%BB%84%E7%9F%A5%E8%AF%86/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu20.04 LTS编译python3.7</title>
+      <link>https://sunnnner.github.io/archetypes/ubuntu-install-python3.7/</link>
+      <pubDate>Fri, 06 Aug 2021 19:29:05 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/archetypes/ubuntu-install-python3.7/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>K8s Install</title>
+      <link>https://sunnnner.github.io/archetypes/k8s-install/</link>
+      <pubDate>Tue, 08 Oct 2019 14:57:24 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/archetypes/k8s-install/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>缺少的知识</title>
+      <link>https://sunnnner.github.io/archetypes/%E7%BC%BA%E5%B0%91%E7%9A%84%E7%9F%A5%E8%AF%86/</link>
+      <pubDate>Sat, 01 Sep 2018 10:28:49 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/archetypes/%E7%BC%BA%E5%B0%91%E7%9A%84%E7%9F%A5%E8%AF%86/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>Python基础</title>
+      <link>https://sunnnner.github.io/archetypes/python%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Sun, 03 Jun 2018 10:22:36 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/archetypes/python%E5%9F%BA%E7%A1%80/</guid>
       <description>Desc Text.</description>
     </item>
     

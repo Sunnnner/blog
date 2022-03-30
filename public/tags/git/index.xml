@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>git on whiteKBlog</title>
+    <link>https://sunnnner.github.io/tags/git/</link>
+    <description>Recent content in git on whiteKBlog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 03 Nov 2019 15:36:46 +0800</lastBuildDate><atom:link href="https://sunnnner.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Github Page自定义域名开启https</title>
+      <link>https://sunnnner.github.io/archetypes/github-page%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E5%BC%80%E5%90%AFhttps/</link>
+      <pubDate>Sun, 03 Nov 2019 15:36:46 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/archetypes/github-page%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E5%BC%80%E5%90%AFhttps/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>Git加速</title>
+      <link>https://sunnnner.github.io/archetypes/git%E5%8A%A0%E9%80%9F/</link>
+      <pubDate>Sat, 12 Oct 2019 15:29:07 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/archetypes/git%E5%8A%A0%E9%80%9F/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+  </channel>
+</rss>

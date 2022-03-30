@@ -1,0 +1,346 @@
+<!doctype html><html lang=en dir=auto>
+<head><meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name=robots content="index, follow">
+<title>Django用户模块 | whiteKBlog</title><meta name=keywords content="django">
+<meta name=description content="Desc Text.">
+<meta name=author content="whitek">
+<link rel=canonical href=https://sunnnner.github.io/archetypes/django%E7%94%A8%E6%88%B7%E6%A8%A1%E5%9D%97/>
+<meta name=google-site-verification content="XYZabc">
+<meta name=yandex-verification content="XYZabc">
+<meta name=msvalidate.01 content="XYZabc">
+<link crossorigin=anonymous href=/assets/css/stylesheet.min.35cd0f65a15cafa92372b8313deef5960aae04b90ad722f2bbf509eb0468137e.css integrity="sha256-Nc0PZaFcr6kjcrgxPe71lgquBLkK1yLyu/UJ6wRoE34=" rel="preload stylesheet" as=style>
+<link rel=preload href="https://avatars.githubusercontent.com/u/9432907?v=4" as=image>
+<script defer crossorigin=anonymous src=/assets/js/highlight.min.4dcb3c4f38462f66c6b6137227726f5543cb934cca9788f041c087e374491df2.js integrity="sha256-Tcs8TzhGL2bGthNyJ3JvVUPLk0zKl4jwQcCH43RJHfI=" onload=hljs.initHighlightingOnLoad()></script>
+<link rel=icon href=https://sunnnner.github.io/favicon.ico>
+<link rel=icon type=image/png sizes=16x16 href=https://sunnnner.github.io/favicon-16x16.png>
+<link rel=icon type=image/png sizes=32x32 href=https://sunnnner.github.io/favicon-32x32.png>
+<link rel=apple-touch-icon href=https://sunnnner.github.io/apple-touch-icon.png>
+<link rel=mask-icon href=https://sunnnner.github.io/safari-pinned-tab.svg>
+<meta name=theme-color content="#2e2e33">
+<meta name=msapplication-TileColor content="#2e2e33">
+<meta name=generator content="Hugo 0.93.2">
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(e,o,i,a,t,n,s){e.GoogleAnalyticsObject=t,e[t]=e[t]||function(){(e[t].q=e[t].q||[]).push(arguments)},e[t].l=1*new Date,n=o.createElement(i),s=o.getElementsByTagName(i)[0],n.async=1,n.src=a,s.parentNode.insertBefore(n,s)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-123-45","auto"),ga("send","pageview"))</script><meta property="og:title" content="Django用户模块">
+<meta property="og:description" content="Desc Text.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://sunnnner.github.io/archetypes/django%E7%94%A8%E6%88%B7%E6%A8%A1%E5%9D%97/">
+<meta property="og:image" content="https://sunnnner.github.io/%3Cimage%20path/url%3E"><meta property="article:section" content="archetypes">
+<meta property="article:published_time" content="2018-06-01T10:15:16+08:00">
+<meta property="article:modified_time" content="2018-06-01T10:15:16+08:00"><meta property="og:site_name" content="ExampleSite">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://sunnnner.github.io/%3Cimage%20path/url%3E">
+<meta name=twitter:title content="Django用户模块">
+<meta name=twitter:description content="Desc Text.">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Archetypes","item":"https://sunnnner.github.io/archetypes/"},{"@type":"ListItem","position":2,"name":"Django用户模块","item":"https://sunnnner.github.io/archetypes/django%E7%94%A8%E6%88%B7%E6%A8%A1%E5%9D%97/"}]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Django用户模块","name":"Django用户模块","description":"Desc Text.","keywords":["django"],"articleBody":"第一步创建Django项目  django-admin startproject blog  创建第一个应用user  python manage.py startapp user  设置setting文件 ALLOWED_HOSTS=[“*”]//更改为所有都可以访问上线模式 INSTALLEN_APPS—》加入第一个user应用  创建templates文件夹 并设置TEMPLATES里面文件夹的路径os.path.join 设置DATABASES的储存为mysql  字段 DATABASES = {  'default': {  'ENGINE': 'django.db.backends.mysql',  'NAME': 'bookstore',  'USER':'root',  'PASSWORD':'123',  'HOST':'localhost',  'PORT':3306,  } } 修改语言与时区 LANGUAGE_CODE = 'zh-Hans'  TIME_ZONE = 'Asia/Shanghai' 设置静态文件收集static文件夹并在setting设置 STATIC_URL = '/static/' STATICFILES_DIRS = [  os.path.join(BASE_DIR, 'static') ] 设置主页url与视图函数 url(r'^$',index,name='index') def index(request):  return render(request, 'index.html') 编写用户模块 编写注册模块  首先编写抽象类，所谓抽象类就是所有类模板都能用上的类 在根目录创建db pythonFile文件夹  创建base_model抽象基类抽象基类继承models.Model from django.db import models class BaseModel(models.Model):  '''模型抽象基类'''  is_delete = models.BooleanField(default=False, verbose_name='是否删除')  create_time = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')  update_time = models.DateTimeField(auto_now=True, verbose_name='更新时间')   class Meta:  # 继承抽象类  abstract = True  根目录创建utils文件夹该文件夹的作用作为加密用户密码 创建get_hash文件夹  from hashlib import sha256  def get_hash(str):  '''取一个字符串的hash值'''  sh = sha256  sh.update(str.encode('utf8'))  return sh.hexdigest()  打开app内的models模块开始编写用户模块 导入get_hash函数 导入抽象基类 创建用户字段使其继承与抽象基类 其中db_table的作用为制定创建数据库的名称  class Passport(BaseModel):  username = models.CharField(max_length=20,verbose_name='用户名称',unique=True)  password = models.CharField(max_length=40,verbose_name='用户密码')  email = models.EmailField(verbose_name='用户邮箱')  is_active = models.BooleanField(default=False, verbose_name='激活状态')   # 创建用户表的管理器  object = PassportManager()   class Meta():  # 指定数据库名称  db_table = 's_user_accoumt'  创建添加用户跟查找用户模块注意此字段必须在用户模块的上方因为此字段继承的model.Manager模块在用户模块之上  class PassportManager(models.Manager):   def add_user(self,username, password, email):  '''添加一个用户信息'''  # s使用crate方法添加一个用户  passport = self.create(username=username, password=get_hash(password), email=email)   # 并且返回当前的数据  return passport   def find_user(self,username, password):  '''根据用户的信息进行查找用户'''  try:  passport = self.get(username=username, password=get_hash(password))  except self.model.DoesNotExist:  # 账户不存在  print(\"=======\")  passport = None  # 返回当前的信息  return passport  创建完成之后python3 manage.py makemigrations迁移同步 编写用户注册视图函数  url(r’^/register/$’, register, name=’register’), def register(request):  if request.method == 'GET':  return render(request,'register.html')   else:  username = request.POST.get('user_name')  password = request.POST.get('pwd')  password1 = request.POST.get('cpwd')  email = request.POST.get('email')  # all方法进行数据校验，如果里面任意值为空，就不通过校验  if not all([username,password,password1,email]):  return render(request, 'register.html', {  'msg':'不能输入有空的参数'  })  # 邮箱正则验证  if not re.match(r'[a-z0-9][\\w\\.\\-]*@[a-z0-9\\-]+(\\.[a-z]{2,5}){1,2}$', email):  return render(request, 'register.html', {'msg':'输入的邮箱不正确'})   # 通过向数据库添加用户信息  # 调用添加用户的方法  passport = Passport.object.add_user(username=username, password=password, email=email)   return redirect(reverse('user:register'), {'cmsg':'注册成功'}) 创建登录模块  url(r’^login/$’, login, name=’login’), 因为登录模块用到ajax 所以我们先写前端数据 首先ajax传输不用表单数据我们就删除from表单  div class=\"form_input\"  {% csrf_token %} \tinput type=\"text\" id=\"username\" value=\"{{ username }}\" class=\"name_input\" placeholder=\"请输入用户名\" \tdiv class=\"user_error\"输入错误div \tinput type=\"password\" id=\"pwd\" class=\"pass_input\" placeholder=\"请输入密码\" \tdiv class=\"pwd_error\"输入错误div \tdiv class=\"more_input clearfix\" \tinput type=\"checkbox\" id=\"remember\" checked={{ checked }} \tlabel记住用户名label \ta href=\"#\"忘记密码a \tdiv \tinput type=\"button\" id=\"btnLogin\" value=\"登录\" class=\"input_submit\"  div AJAX script src=\"{% static 'js/jquery-1.12.4.min.js' %}\"script  script  $(function () {  $('#btnLogin').click(function () {  //获取用户名和密码  # 使用jquay获取用户的信息  var username = $('#username').val();  var password = $('#pwd').val();  # 设置csrf_token为标签设置其属性name=csrfmiddlewaretoken并将获取到的cdrf_token的值赋值给csrf  var csrf = $('input[name=\"csrfmiddlewaretoken\"]').val();  # 返回当前记住用户的状态true/false  var remember = $('#remember').prop('checked');   //发起ajax请求  params = {'username':username, 'password':password,  'csrfmiddlewaretoken':csrf, 'remember':remember};  //ajax将python字典转换为了json字符串型字典此时类型为json类型  $.post('{% url \"user:login\" %}', params, function(data){  //用户名密码错误{'res':0}  //登录成功{'res':1}  //状态码状态码为01，2  if (data.res == 0) {  alert('用户名或者密码错误')  }  else if(data.res == 1)  {  //跳转页面 获取后端next_url  location.href = data.next_url  }  else if(data.res == 2)  {  alert('请填写完整的用户名或者密码')  }  })  })  })  script 后端代码  用户登录校验  def login(request):  if request.method == 'GET':  # 记住用户名功能 checked表示单选框状态  if request.COOKIES.get(\"username\"):  username = request.COOKIES.get(\"username\")  checked = True  else:  username = ''  checked = ''  context = {  'username': username,  'checked' : checked,  }  return render(request, 'login.html', context)  elif request.method == 'POST':  # 此时post取的是前段ajax数据并不是表单数据因为表单已经删除  username = request.POST.get('username')  password = request.POST.get('password')  remember = request.POST.get('remember')   # 数据校验 使用all()方法进行校验只有两个都不为空时才为true  if not all([username, password]):  # 数据为空 返回ajax里面的状态码json数据  return JsonResponse({'res': 2})  # 调用查找方法判断用户是否存在  passport = Passport.object.find_user(username=username,password=password)   if passport:  # 两种方法都是重定向到主页  # next_url = request.session.get('url_path', reverse('index'))  next_url = '/'  print('---------------')  # 登录成功 返回状态码并设置next_url数据传输到前段都是字典模式会自动转换成json字符串  jire = JsonResponse({'res': 1, 'next_url': next_url})  # 如果单选框选中  if remember == 'true':  # 记住用户名并设置cookie的保存时间  jire.set_cookie('username', username, max_age=1*24*3600)  else:  # 不要记住用户名并删除cookie  jire.delete_cookie('username')  # 记住用户名的状态  # 设置是否登录状态前段要用用session保存到服务器  request.session['islogin'] = True  request.session['username'] = username  # 当前用户的唯一标示  request.session['passport_id'] = passport.id  return jire  else:   return JsonResponse({'res': 0}) 退出 url(r’^logout/$’, logout, name=’logout’), def logout(request):  '''用户退出操作'''  # 清空用户session数据  request.session.flush()  # 然后跳转首页  return redirect(reverse('index')) ","wordCount":"509","inLanguage":"en","image":"https://sunnnner.github.io/%3Cimage%20path/url%3E","datePublished":"2018-06-01T10:15:16+08:00","dateModified":"2018-06-01T10:15:16+08:00","author":{"@type":"Person","name":"whitek"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://sunnnner.github.io/archetypes/django%E7%94%A8%E6%88%B7%E6%A8%A1%E5%9D%97/"},"publisher":{"@type":"Organization","name":"whiteKBlog","logo":{"@type":"ImageObject","url":"https://sunnnner.github.io/favicon.ico"}}}</script>
+</head><body id=top>
+<script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script>
+<noscript>
+<style type=text/css>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:#1d1e20;--entry:#2e2e33;--primary:rgba(255, 255, 255, 0.84);--secondary:rgba(255, 255, 255, 0.56);--tertiary:rgba(255, 255, 255, 0.16);--content:rgba(255, 255, 255, 0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><header class=header>
+<nav class=nav>
+<div class=logo>
+<a href=https://sunnnner.github.io/ accesskey=h title="Home (Alt + H)">
+<img src="https://avatars.githubusercontent.com/u/9432907?v=4" alt=logo aria-label=logo height=35>Home</a>
+<span class=logo-switches>
+<button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+</button>
+</span>
+</div><ul id=menu>
+<li>
+<a href=https://sunnnner.github.io/tags/ title=tags>
+<span>tags</span>
+</a>
+</li><li>
+<a href=https://sunnnner.github.io/about/ title=about>
+<span>about</span>
+</a>
+</li><li>
+<a href=https://pythongo.wiki title=wiki>
+<span>wiki</span>
+</a>
+</li></ul></nav></header><main class=main>
+<article class=post-single>
+<header class=post-header>
+<div class=breadcrumbs><a href=https://sunnnner.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://sunnnner.github.io/archetypes/>Archetypes</a></div><h1 class=post-title>
+Django用户模块
+</h1><div class=post-description>
+Desc Text.
+</div><div class=post-meta>June 1, 2018&nbsp;·&nbsp;3 min&nbsp;·&nbsp;whitek&nbsp;|&nbsp;<a href=https://github.com/Sunnnner/Sunnnner.github.io/content/archetypes/Django%e7%94%a8%e6%88%b7%e6%a8%a1%e5%9d%97.md rel="noopener noreferrer" target=_blank>Suggest Changes</a>
+</div></header><div class=toc>
+<details>
+<summary accesskey=c title="(Alt + C)">
+<div class=details>Table of Contents</div></summary>
+<div class=inner><ul>
+<li>
+<a href=#%e7%ac%ac%e4%b8%80%e6%ad%a5%e5%88%9b%e5%bb%badjango%e9%a1%b9%e7%9b%ae aria-label=第一步创建Django项目>第一步创建Django项目</a><ul>
+<li>
+<a href=#%e5%88%9b%e5%bb%ba%e7%ac%ac%e4%b8%80%e4%b8%aa%e5%ba%94%e7%94%a8user aria-label=创建第一个应用user>创建第一个应用user</a></li><li>
+<a href=#%e8%ae%be%e7%bd%aesetting%e6%96%87%e4%bb%b6 aria-label=设置setting文件>设置setting文件</a></li><li>
+<a href=#%e4%bf%ae%e6%94%b9%e8%af%ad%e8%a8%80%e4%b8%8e%e6%97%b6%e5%8c%ba aria-label=修改语言与时区>修改语言与时区</a></li><li>
+<a href=#%e8%ae%be%e7%bd%ae%e9%9d%99%e6%80%81%e6%96%87%e4%bb%b6%e6%94%b6%e9%9b%86static%e6%96%87%e4%bb%b6%e5%a4%b9%e5%b9%b6%e5%9c%a8setting%e8%ae%be%e7%bd%ae aria-label=设置静态文件收集static文件夹并在setting设置>设置静态文件收集static文件夹并在setting设置</a></li><li>
+<a href=#%e8%ae%be%e7%bd%ae%e4%b8%bb%e9%a1%b5url%e4%b8%8e%e8%a7%86%e5%9b%be%e5%87%bd%e6%95%b0 aria-label=设置主页url与视图函数>设置主页url与视图函数</a></li><li>
+<a href=#%e7%bc%96%e5%86%99%e7%94%a8%e6%88%b7%e6%a8%a1%e5%9d%97 aria-label=编写用户模块>编写用户模块</a></li><li>
+<a href=#%e7%bc%96%e5%86%99%e6%b3%a8%e5%86%8c%e6%a8%a1%e5%9d%97 aria-label=编写注册模块>编写注册模块</a></li><li>
+<a href=#%e5%88%9b%e5%bb%babase_model%e6%8a%bd%e8%b1%a1%e5%9f%ba%e7%b1%bb%e6%8a%bd%e8%b1%a1%e5%9f%ba%e7%b1%bb%e7%bb%a7%e6%89%bfmodelsmodel aria-label=创建base_model抽象基类抽象基类继承models.Model>创建base_model抽象基类抽象基类继承models.Model</a></li><li>
+<a href=#%e5%88%9b%e5%bb%ba%e7%99%bb%e5%bd%95%e6%a8%a1%e5%9d%97 aria-label=创建登录模块>创建登录模块</a></li><li>
+<a href=#%e5%90%8e%e7%ab%af%e4%bb%a3%e7%a0%81 aria-label=后端代码>后端代码</a></li><li>
+<a href=#%e9%80%80%e5%87%ba aria-label=退出>退出</a>
+</li></ul></li></ul></div></details>
+</div><div class=post-content><h1 id=第一步创建django项目>第一步创建Django项目<a hidden class=anchor aria-hidden=true href=#第一步创建django项目>#</a></h1><ul>
+<li><code>django-admin startproject blog</code></li></ul><h2 id=创建第一个应用user>创建第一个应用user<a hidden class=anchor aria-hidden=true href=#创建第一个应用user>#</a></h2><ul>
+<li><code>python manage.py startapp user</code></li></ul><h2 id=设置setting文件>设置setting文件<a hidden class=anchor aria-hidden=true href=#设置setting文件>#</a></h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>ALLOWED_HOSTS<span style=color:#f92672>=</span>[<span style=color:#960050;background-color:#1e0010>“</span><span style=color:#f92672>*</span><span style=color:#960050;background-color:#1e0010>”</span>]<span style=color:#f92672>//</span>更改为所有都可以访问上线模式
+</span></span><span style=display:flex><span>INSTALLEN_APPS<span style=color:#960050;background-color:#1e0010>—》</span>加入第一个user应用
+</span></span></code></pre></div><ul>
+<li>创建templates文件夹 并设置TEMPLATES里面文件夹的路径os.path.join</li><li>设置DATABASES的储存为mysql</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>字段
+</span></span><span style=display:flex><span>DATABASES <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#39;default&#39;</span>: {
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;ENGINE&#39;</span>: <span style=color:#e6db74>&#39;django.db.backends.mysql&#39;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;NAME&#39;</span>: <span style=color:#e6db74>&#39;bookstore&#39;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;USER&#39;</span>:<span style=color:#e6db74>&#39;root&#39;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;PASSWORD&#39;</span>:<span style=color:#e6db74>&#39;123&#39;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;HOST&#39;</span>:<span style=color:#e6db74>&#39;localhost&#39;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;PORT&#39;</span>:<span style=color:#ae81ff>3306</span>,
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h2 id=修改语言与时区>修改语言与时区<a hidden class=anchor aria-hidden=true href=#修改语言与时区>#</a></h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>LANGUAGE_CODE <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;zh-Hans&#39;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>TIME_ZONE <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;Asia/Shanghai&#39;</span>
+</span></span></code></pre></div><h2 id=设置静态文件收集static文件夹并在setting设置>设置静态文件收集static文件夹并在setting设置<a hidden class=anchor aria-hidden=true href=#设置静态文件收集static文件夹并在setting设置>#</a></h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>STATIC_URL <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;/static/&#39;</span>
+</span></span><span style=display:flex><span>STATICFILES_DIRS <span style=color:#f92672>=</span> [
+</span></span><span style=display:flex><span>    os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>join(BASE_DIR, <span style=color:#e6db74>&#39;static&#39;</span>)
+</span></span><span style=display:flex><span>]
+</span></span></code></pre></div><h2 id=设置主页url与视图函数>设置主页url与视图函数<a hidden class=anchor aria-hidden=true href=#设置主页url与视图函数>#</a></h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>url(<span style=color:#e6db74>r</span><span style=color:#e6db74>&#39;^$&#39;</span>,index,name<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;index&#39;</span>)
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>index</span>(request):
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> render(request, <span style=color:#e6db74>&#39;index.html&#39;</span>)
+</span></span></code></pre></div><h2 id=编写用户模块>编写用户模块<a hidden class=anchor aria-hidden=true href=#编写用户模块>#</a></h2><h2 id=编写注册模块>编写注册模块<a hidden class=anchor aria-hidden=true href=#编写注册模块>#</a></h2><ul>
+<li>首先编写抽象类，所谓抽象类就是所有类模板都能用上的类</li><li>在根目录创建<code>db pythonFile</code>文件夹</li></ul><h2 id=创建base_model抽象基类抽象基类继承modelsmodel>创建base_model抽象基类抽象基类继承models.Model<a hidden class=anchor aria-hidden=true href=#创建base_model抽象基类抽象基类继承modelsmodel>#</a></h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#f92672>from</span> django.db <span style=color:#f92672>import</span> models
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>BaseModel</span>(models<span style=color:#f92672>.</span>Model):
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#39;&#39;&#39;模型抽象基类&#39;&#39;&#39;</span>
+</span></span><span style=display:flex><span>    is_delete <span style=color:#f92672>=</span> models<span style=color:#f92672>.</span>BooleanField(default<span style=color:#f92672>=</span><span style=color:#66d9ef>False</span>, verbose_name<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;是否删除&#39;</span>)
+</span></span><span style=display:flex><span>    create_time <span style=color:#f92672>=</span> models<span style=color:#f92672>.</span>DateTimeField(auto_now_add<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>, verbose_name<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;创建时间&#39;</span>)
+</span></span><span style=display:flex><span>    update_time <span style=color:#f92672>=</span> models<span style=color:#f92672>.</span>DateTimeField(auto_now<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>, verbose_name<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;更新时间&#39;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Meta</span>:
+</span></span><span style=display:flex><span>        <span style=color:#75715e># 继承抽象类</span>
+</span></span><span style=display:flex><span>        abstract <span style=color:#f92672>=</span> <span style=color:#66d9ef>True</span>
+</span></span></code></pre></div><ul>
+<li>根目录创建utils文件夹该文件夹的作用作为加密用户密码</li><li>创建get_hash文件夹</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#f92672>from</span> hashlib <span style=color:#f92672>import</span> sha256
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>get_hash</span>(str):
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#39;&#39;&#39;取一个字符串的hash值&#39;&#39;&#39;</span>
+</span></span><span style=display:flex><span>    sh <span style=color:#f92672>=</span> sha256
+</span></span><span style=display:flex><span>    sh<span style=color:#f92672>.</span>update(str<span style=color:#f92672>.</span>encode(<span style=color:#e6db74>&#39;utf8&#39;</span>))
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> sh<span style=color:#f92672>.</span>hexdigest()
+</span></span></code></pre></div><ul>
+<li>打开app内的models模块开始编写用户模块</li><li>导入get_hash函数</li><li>导入抽象基类</li><li>创建用户字段使其继承与抽象基类</li><li>其中db_table的作用为制定创建数据库的名称</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Passport</span>(BaseModel):
+</span></span><span style=display:flex><span>    username <span style=color:#f92672>=</span> models<span style=color:#f92672>.</span>CharField(max_length<span style=color:#f92672>=</span><span style=color:#ae81ff>20</span>,verbose_name<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;用户名称&#39;</span>,unique<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>)
+</span></span><span style=display:flex><span>    password <span style=color:#f92672>=</span> models<span style=color:#f92672>.</span>CharField(max_length<span style=color:#f92672>=</span><span style=color:#ae81ff>40</span>,verbose_name<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;用户密码&#39;</span>)
+</span></span><span style=display:flex><span>    email <span style=color:#f92672>=</span> models<span style=color:#f92672>.</span>EmailField(verbose_name<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;用户邮箱&#39;</span>)
+</span></span><span style=display:flex><span>    is_active <span style=color:#f92672>=</span> models<span style=color:#f92672>.</span>BooleanField(default<span style=color:#f92672>=</span><span style=color:#66d9ef>False</span>, verbose_name<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;激活状态&#39;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># 创建用户表的管理器</span>
+</span></span><span style=display:flex><span>    object <span style=color:#f92672>=</span> PassportManager()
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Meta</span>():
+</span></span><span style=display:flex><span>        <span style=color:#75715e># 指定数据库名称</span>
+</span></span><span style=display:flex><span>        db_table <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;s_user_accoumt&#39;</span>
+</span></span></code></pre></div><ul>
+<li>创建添加用户跟查找用户模块注意此字段必须在用户模块的上方因为此字段继承的model.Manager模块在用户模块之上</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>PassportManager</span>(models<span style=color:#f92672>.</span>Manager):
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>add_user</span>(self,username, password, email):
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;&#39;&#39;添加一个用户信息&#39;&#39;&#39;</span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e># s使用crate方法添加一个用户</span>
+</span></span><span style=display:flex><span>        passport <span style=color:#f92672>=</span> self<span style=color:#f92672>.</span>create(username<span style=color:#f92672>=</span>username, password<span style=color:#f92672>=</span>get_hash(password), email<span style=color:#f92672>=</span>email)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e># 并且返回当前的数据</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> passport
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>find_user</span>(self,username, password):
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#39;&#39;&#39;根据用户的信息进行查找用户&#39;&#39;&#39;</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>try</span>:
+</span></span><span style=display:flex><span>            passport <span style=color:#f92672>=</span> self<span style=color:#f92672>.</span>get(username<span style=color:#f92672>=</span>username, password<span style=color:#f92672>=</span>get_hash(password))
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>except</span> self<span style=color:#f92672>.</span>model<span style=color:#f92672>.</span>DoesNotExist:
+</span></span><span style=display:flex><span>            <span style=color:#75715e># 账户不存在</span>
+</span></span><span style=display:flex><span>            print(<span style=color:#e6db74>&#34;=======&#34;</span>)
+</span></span><span style=display:flex><span>            passport <span style=color:#f92672>=</span> <span style=color:#66d9ef>None</span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e># 返回当前的信息</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> passport
+</span></span></code></pre></div><ul>
+<li>创建完成之后python3 manage.py makemigrations迁移同步</li><li>编写用户注册视图函数</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>url(r<span style=color:#960050;background-color:#1e0010>’</span><span style=color:#f92672>^/</span>register<span style=color:#f92672>/</span><span style=color:#960050;background-color:#1e0010>$’</span>, register, name<span style=color:#f92672>=</span><span style=color:#960050;background-color:#1e0010>’</span>register<span style=color:#960050;background-color:#1e0010>’</span>),
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>register</span>(request):
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> request<span style=color:#f92672>.</span>method <span style=color:#f92672>==</span> <span style=color:#e6db74>&#39;GET&#39;</span>:
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> render(request,<span style=color:#e6db74>&#39;register.html&#39;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>else</span>:
+</span></span><span style=display:flex><span>        username <span style=color:#f92672>=</span> request<span style=color:#f92672>.</span>POST<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;user_name&#39;</span>)
+</span></span><span style=display:flex><span>        password <span style=color:#f92672>=</span> request<span style=color:#f92672>.</span>POST<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;pwd&#39;</span>)
+</span></span><span style=display:flex><span>        password1 <span style=color:#f92672>=</span> request<span style=color:#f92672>.</span>POST<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;cpwd&#39;</span>)
+</span></span><span style=display:flex><span>        email <span style=color:#f92672>=</span> request<span style=color:#f92672>.</span>POST<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;email&#39;</span>)
+</span></span><span style=display:flex><span>        <span style=color:#75715e># all方法进行数据校验，如果里面任意值为空，就不通过校验</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> <span style=color:#f92672>not</span> all([username,password,password1,email]):
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> render(request, <span style=color:#e6db74>&#39;register.html&#39;</span>, {
+</span></span><span style=display:flex><span>                <span style=color:#e6db74>&#39;msg&#39;</span>:<span style=color:#e6db74>&#39;不能输入有空的参数&#39;</span>
+</span></span><span style=display:flex><span>            })
+</span></span><span style=display:flex><span>        <span style=color:#75715e># 邮箱正则验证</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> <span style=color:#f92672>not</span> re<span style=color:#f92672>.</span>match(<span style=color:#e6db74>r</span><span style=color:#e6db74>&#39;[a-z0-9][\w\.\-]*@[a-z0-9\-]+(\.[a-z]{2,5}){1,2}$&#39;</span>, email):
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> render(request, <span style=color:#e6db74>&#39;register.html&#39;</span>, {<span style=color:#e6db74>&#39;msg&#39;</span>:<span style=color:#e6db74>&#39;输入的邮箱不正确&#39;</span>})
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e># 通过向数据库添加用户信息</span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e># 调用添加用户的方法</span>
+</span></span><span style=display:flex><span>        passport <span style=color:#f92672>=</span> Passport<span style=color:#f92672>.</span>object<span style=color:#f92672>.</span>add_user(username<span style=color:#f92672>=</span>username, password<span style=color:#f92672>=</span>password, email<span style=color:#f92672>=</span>email)
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> redirect(reverse(<span style=color:#e6db74>&#39;user:register&#39;</span>), {<span style=color:#e6db74>&#39;cmsg&#39;</span>:<span style=color:#e6db74>&#39;注册成功&#39;</span>})
+</span></span></code></pre></div><h2 id=创建登录模块>创建登录模块<a hidden class=anchor aria-hidden=true href=#创建登录模块>#</a></h2><ul>
+<li>url(r’^login/$’, login, name=’login’),</li><li>因为登录模块用到ajax 所以我们先写前端数据</li><li>首先ajax传输不用表单数据我们就删除from表单</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>&lt;<span style=color:#f92672>div</span> <span style=color:#a6e22e>class</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;form_input&#34;</span>&gt;
+</span></span><span style=display:flex><span>    {% csrf_token %}
+</span></span><span style=display:flex><span>	&lt;<span style=color:#f92672>input</span> <span style=color:#a6e22e>type</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;text&#34;</span> <span style=color:#a6e22e>id</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;username&#34;</span> <span style=color:#a6e22e>value</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;{{ username }}&#34;</span> <span style=color:#a6e22e>class</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;name_input&#34;</span> <span style=color:#a6e22e>placeholder</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;请输入用户名&#34;</span>&gt;
+</span></span><span style=display:flex><span>	&lt;<span style=color:#f92672>div</span> <span style=color:#a6e22e>class</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;user_error&#34;</span>&gt;输入错误&lt;/<span style=color:#f92672>div</span>&gt;
+</span></span><span style=display:flex><span>	&lt;<span style=color:#f92672>input</span> <span style=color:#a6e22e>type</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;password&#34;</span> <span style=color:#a6e22e>id</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;pwd&#34;</span> <span style=color:#a6e22e>class</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;pass_input&#34;</span> <span style=color:#a6e22e>placeholder</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;请输入密码&#34;</span>&gt;
+</span></span><span style=display:flex><span>	&lt;<span style=color:#f92672>div</span> <span style=color:#a6e22e>class</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;pwd_error&#34;</span>&gt;输入错误&lt;/<span style=color:#f92672>div</span>&gt;
+</span></span><span style=display:flex><span>	&lt;<span style=color:#f92672>div</span> <span style=color:#a6e22e>class</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;more_input clearfix&#34;</span>&gt;
+</span></span><span style=display:flex><span>		&lt;<span style=color:#f92672>input</span> <span style=color:#a6e22e>type</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;checkbox&#34;</span> <span style=color:#a6e22e>id</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;remember&#34;</span> <span style=color:#a6e22e>checked</span><span style=color:#f92672>=</span><span style=color:#e6db74>{{</span> <span style=color:#a6e22e>checked</span> <span style=color:#960050;background-color:#1e0010>}}</span>&gt;
+</span></span><span style=display:flex><span>		&lt;<span style=color:#f92672>label</span>&gt;记住用户名&lt;/<span style=color:#f92672>label</span>&gt;
+</span></span><span style=display:flex><span>		&lt;<span style=color:#f92672>a</span> <span style=color:#a6e22e>href</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;#&#34;</span>&gt;忘记密码&lt;/<span style=color:#f92672>a</span>&gt;
+</span></span><span style=display:flex><span>	&lt;/<span style=color:#f92672>div</span>&gt;
+</span></span><span style=display:flex><span>	&lt;<span style=color:#f92672>input</span> <span style=color:#a6e22e>type</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;button&#34;</span> <span style=color:#a6e22e>id</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;btnLogin&#34;</span> <span style=color:#a6e22e>value</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;登录&#34;</span> <span style=color:#a6e22e>class</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;input_submit&#34;</span>&gt;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>&lt;/<span style=color:#f92672>div</span>&gt;
+</span></span><span style=display:flex><span>AJAX
+</span></span><span style=display:flex><span>&lt;<span style=color:#f92672>script</span> <span style=color:#a6e22e>src</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;{% static &#39;js/jquery-1.12.4.min.js&#39; %}&#34;</span>&gt;&lt;/<span style=color:#f92672>script</span>&gt;
+</span></span><span style=display:flex><span>    &lt;<span style=color:#f92672>script</span>&gt;
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>$</span>(<span style=color:#66d9ef>function</span> () {
+</span></span><span style=display:flex><span>            <span style=color:#a6e22e>$</span>(<span style=color:#e6db74>&#39;#btnLogin&#39;</span>).<span style=color:#a6e22e>click</span>(<span style=color:#66d9ef>function</span> () {
+</span></span><span style=display:flex><span>                <span style=color:#75715e>//获取用户名和密码
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                <span style=color:#960050;background-color:#1e0010>#</span> <span style=color:#a6e22e>使用jquay获取用户的信息</span>
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>var</span> <span style=color:#a6e22e>username</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>$</span>(<span style=color:#e6db74>&#39;#username&#39;</span>).<span style=color:#a6e22e>val</span>();
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>var</span> <span style=color:#a6e22e>password</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>$</span>(<span style=color:#e6db74>&#39;#pwd&#39;</span>).<span style=color:#a6e22e>val</span>();
+</span></span><span style=display:flex><span>                <span style=color:#960050;background-color:#1e0010>#</span> <span style=color:#a6e22e>设置csrf_token为标签设置其属性name</span><span style=color:#f92672>=</span><span style=color:#a6e22e>csrfmiddlewaretoken并将获取到的cdrf_token的值赋值给csrf</span>
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>var</span> <span style=color:#a6e22e>csrf</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>$</span>(<span style=color:#e6db74>&#39;input[name=&#34;csrfmiddlewaretoken&#34;]&#39;</span>).<span style=color:#a6e22e>val</span>();
+</span></span><span style=display:flex><span>                <span style=color:#960050;background-color:#1e0010>#</span> <span style=color:#a6e22e>返回当前记住用户的状态true</span><span style=color:#f92672>/</span><span style=color:#66d9ef>false</span>
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>var</span> <span style=color:#a6e22e>remember</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>$</span>(<span style=color:#e6db74>&#39;#remember&#39;</span>).<span style=color:#a6e22e>prop</span>(<span style=color:#e6db74>&#39;checked&#39;</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>                <span style=color:#75715e>//发起ajax请求
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                <span style=color:#a6e22e>params</span> <span style=color:#f92672>=</span> {<span style=color:#e6db74>&#39;username&#39;</span><span style=color:#f92672>:</span><span style=color:#a6e22e>username</span>, <span style=color:#e6db74>&#39;password&#39;</span><span style=color:#f92672>:</span><span style=color:#a6e22e>password</span>,
+</span></span><span style=display:flex><span>                <span style=color:#e6db74>&#39;csrfmiddlewaretoken&#39;</span><span style=color:#f92672>:</span><span style=color:#a6e22e>csrf</span>, <span style=color:#e6db74>&#39;remember&#39;</span><span style=color:#f92672>:</span><span style=color:#a6e22e>remember</span>};
+</span></span><span style=display:flex><span>                <span style=color:#75715e>//ajax将python字典转换为了json字符串型字典此时类型为json类型
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                <span style=color:#a6e22e>$</span>.<span style=color:#a6e22e>post</span>(<span style=color:#e6db74>&#39;{% url &#34;user:login&#34; %}&#39;</span>, <span style=color:#a6e22e>params</span>, <span style=color:#66d9ef>function</span>(<span style=color:#a6e22e>data</span>){
+</span></span><span style=display:flex><span>                    <span style=color:#75715e>//用户名密码错误{&#39;res&#39;:0}
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                    <span style=color:#75715e>//登录成功{&#39;res&#39;:1}
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                    <span style=color:#75715e>//状态码状态码为01，2
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                    <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>data</span>.<span style=color:#a6e22e>res</span> <span style=color:#f92672>==</span> <span style=color:#ae81ff>0</span>) {
+</span></span><span style=display:flex><span>                        <span style=color:#a6e22e>alert</span>(<span style=color:#e6db74>&#39;用户名或者密码错误&#39;</span>)
+</span></span><span style=display:flex><span>                    }
+</span></span><span style=display:flex><span>                    <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>data</span>.<span style=color:#a6e22e>res</span> <span style=color:#f92672>==</span> <span style=color:#ae81ff>1</span>)
+</span></span><span style=display:flex><span>                        {
+</span></span><span style=display:flex><span>                            <span style=color:#75715e>//跳转页面  获取后端next_url
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>                            <span style=color:#a6e22e>location</span>.<span style=color:#a6e22e>href</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>data</span>.<span style=color:#a6e22e>next_url</span>
+</span></span><span style=display:flex><span>                        }
+</span></span><span style=display:flex><span>                    <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>data</span>.<span style=color:#a6e22e>res</span> <span style=color:#f92672>==</span> <span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>                    {
+</span></span><span style=display:flex><span>                        <span style=color:#a6e22e>alert</span>(<span style=color:#e6db74>&#39;请填写完整的用户名或者密码&#39;</span>)
+</span></span><span style=display:flex><span>                    }
+</span></span><span style=display:flex><span>                })
+</span></span><span style=display:flex><span>            })
+</span></span><span style=display:flex><span>        })
+</span></span><span style=display:flex><span>    &lt;/<span style=color:#f92672>script</span>&gt;
+</span></span></code></pre></div><h2 id=后端代码>后端代码<a hidden class=anchor aria-hidden=true href=#后端代码>#</a></h2><ul>
+<li>用户登录校验</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>login</span>(request):
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> request<span style=color:#f92672>.</span>method <span style=color:#f92672>==</span> <span style=color:#e6db74>&#39;GET&#39;</span>:
+</span></span><span style=display:flex><span>        <span style=color:#75715e># 记住用户名功能 checked表示单选框状态</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> request<span style=color:#f92672>.</span>COOKIES<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#34;username&#34;</span>):
+</span></span><span style=display:flex><span>            username <span style=color:#f92672>=</span> request<span style=color:#f92672>.</span>COOKIES<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#34;username&#34;</span>)
+</span></span><span style=display:flex><span>            checked <span style=color:#f92672>=</span> <span style=color:#66d9ef>True</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>else</span>:
+</span></span><span style=display:flex><span>            username <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;&#39;</span>
+</span></span><span style=display:flex><span>            checked <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;&#39;</span>
+</span></span><span style=display:flex><span>        context <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#39;username&#39;</span>: username,
+</span></span><span style=display:flex><span>            <span style=color:#e6db74>&#39;checked&#39;</span> : checked,
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> render(request, <span style=color:#e6db74>&#39;login.html&#39;</span>, context)
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>elif</span> request<span style=color:#f92672>.</span>method <span style=color:#f92672>==</span> <span style=color:#e6db74>&#39;POST&#39;</span>:
+</span></span><span style=display:flex><span>        <span style=color:#75715e># 此时post取的是前段ajax数据并不是表单数据因为表单已经删除</span>
+</span></span><span style=display:flex><span>        username <span style=color:#f92672>=</span> request<span style=color:#f92672>.</span>POST<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;username&#39;</span>)
+</span></span><span style=display:flex><span>        password <span style=color:#f92672>=</span> request<span style=color:#f92672>.</span>POST<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;password&#39;</span>)
+</span></span><span style=display:flex><span>        remember <span style=color:#f92672>=</span> request<span style=color:#f92672>.</span>POST<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;remember&#39;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e># 数据校验 使用all()方法进行校验只有两个都不为空时才为true</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> <span style=color:#f92672>not</span> all([username, password]):
+</span></span><span style=display:flex><span>            <span style=color:#75715e># 数据为空 返回ajax里面的状态码json数据</span>
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> JsonResponse({<span style=color:#e6db74>&#39;res&#39;</span>: <span style=color:#ae81ff>2</span>})
+</span></span><span style=display:flex><span>        <span style=color:#75715e># 调用查找方法判断用户是否存在</span>
+</span></span><span style=display:flex><span>        passport <span style=color:#f92672>=</span> Passport<span style=color:#f92672>.</span>object<span style=color:#f92672>.</span>find_user(username<span style=color:#f92672>=</span>username,password<span style=color:#f92672>=</span>password)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> passport:
+</span></span><span style=display:flex><span>            <span style=color:#75715e># 两种方法都是重定向到主页</span>
+</span></span><span style=display:flex><span>            <span style=color:#75715e># next_url = request.session.get(&#39;url_path&#39;, reverse(&#39;index&#39;))</span>
+</span></span><span style=display:flex><span>            next_url <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;/&#39;</span>
+</span></span><span style=display:flex><span>            print(<span style=color:#e6db74>&#39;---------------&#39;</span>)
+</span></span><span style=display:flex><span>            <span style=color:#75715e># 登录成功 返回状态码并设置next_url数据传输到前段都是字典模式会自动转换成json字符串</span>
+</span></span><span style=display:flex><span>            jire <span style=color:#f92672>=</span> JsonResponse({<span style=color:#e6db74>&#39;res&#39;</span>: <span style=color:#ae81ff>1</span>, <span style=color:#e6db74>&#39;next_url&#39;</span>: next_url})
+</span></span><span style=display:flex><span>            <span style=color:#75715e># 如果单选框选中</span>
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>if</span> remember <span style=color:#f92672>==</span> <span style=color:#e6db74>&#39;true&#39;</span>:
+</span></span><span style=display:flex><span>                <span style=color:#75715e># 记住用户名并设置cookie的保存时间</span>
+</span></span><span style=display:flex><span>                jire<span style=color:#f92672>.</span>set_cookie(<span style=color:#e6db74>&#39;username&#39;</span>, username, max_age<span style=color:#f92672>=</span><span style=color:#ae81ff>1</span><span style=color:#f92672>*</span><span style=color:#ae81ff>24</span><span style=color:#f92672>*</span><span style=color:#ae81ff>3600</span>)
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>else</span>:
+</span></span><span style=display:flex><span>                <span style=color:#75715e># 不要记住用户名并删除cookie</span>
+</span></span><span style=display:flex><span>                jire<span style=color:#f92672>.</span>delete_cookie(<span style=color:#e6db74>&#39;username&#39;</span>)
+</span></span><span style=display:flex><span>            <span style=color:#75715e># 记住用户名的状态</span>
+</span></span><span style=display:flex><span>            <span style=color:#75715e># 设置是否登录状态前段要用用session保存到服务器</span>
+</span></span><span style=display:flex><span>            request<span style=color:#f92672>.</span>session[<span style=color:#e6db74>&#39;islogin&#39;</span>] <span style=color:#f92672>=</span> <span style=color:#66d9ef>True</span>
+</span></span><span style=display:flex><span>            request<span style=color:#f92672>.</span>session[<span style=color:#e6db74>&#39;username&#39;</span>] <span style=color:#f92672>=</span> username
+</span></span><span style=display:flex><span>            <span style=color:#75715e># 当前用户的唯一标示</span>
+</span></span><span style=display:flex><span>            request<span style=color:#f92672>.</span>session[<span style=color:#e6db74>&#39;passport_id&#39;</span>] <span style=color:#f92672>=</span> passport<span style=color:#f92672>.</span>id
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> jire
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>else</span>:
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> JsonResponse({<span style=color:#e6db74>&#39;res&#39;</span>: <span style=color:#ae81ff>0</span>})
+</span></span></code></pre></div><h2 id=退出>退出<a hidden class=anchor aria-hidden=true href=#退出>#</a></h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>url(r<span style=color:#960050;background-color:#1e0010>’</span><span style=color:#f92672>^</span>logout<span style=color:#f92672>/</span><span style=color:#960050;background-color:#1e0010>$’</span>, logout, name<span style=color:#f92672>=</span><span style=color:#960050;background-color:#1e0010>’</span>logout<span style=color:#960050;background-color:#1e0010>’</span>),
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>logout</span>(request):
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#39;&#39;&#39;用户退出操作&#39;&#39;&#39;</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># 清空用户session数据</span>
+</span></span><span style=display:flex><span>    request<span style=color:#f92672>.</span>session<span style=color:#f92672>.</span>flush()
+</span></span><span style=display:flex><span>    <span style=color:#75715e># 然后跳转首页</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> redirect(reverse(<span style=color:#e6db74>&#39;index&#39;</span>))
+</span></span></code></pre></div></div><footer class=post-footer>
+<ul class=post-tags>
+<li><a href=https://sunnnner.github.io/tags/django/>django</a></li></ul><nav class=paginav>
+<a class=prev href=https://sunnnner.github.io/archetypes/django-redis%E9%85%8D%E7%BD%AE/>
+<span class=title>« Prev Page</span>
+<br>
+<span>Django Redis配置</span>
+</a>
+<a class=next href=https://sunnnner.github.io/archetypes/redis%E9%85%8D%E7%BD%AE/>
+<span class=title>Next Page »</span>
+<br>
+<span>Redis配置</span>
+</a>
+</nav><div class=share-buttons>
+<a target=_blank rel="noopener noreferrer" aria-label="share Django用户模块 on twitter" href="https://twitter.com/intent/tweet/?text=Django%e7%94%a8%e6%88%b7%e6%a8%a1%e5%9d%97&url=https%3a%2f%2fsunnnner.github.io%2farchetypes%2fdjango%25E7%2594%25A8%25E6%2588%25B7%25E6%25A8%25A1%25E5%259D%2597%2f&hashtags=django"><svg viewBox="0 0 512 512"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM195.519 424.544c135.939.0 210.268-112.643 210.268-210.268.0-3.218.0-6.437-.153-9.502 14.406-10.421 26.973-23.448 36.935-38.314-13.18 5.824-27.433 9.809-42.452 11.648 15.326-9.196 26.973-23.602 32.49-40.92-14.252 8.429-30.038 14.56-46.896 17.931-13.487-14.406-32.644-23.295-53.946-23.295-40.767.0-73.87 33.104-73.87 73.87.0 5.824.613 11.494 1.992 16.858-61.456-3.065-115.862-32.49-152.337-77.241-6.284 10.881-9.962 23.601-9.962 37.088.0 25.594 13.027 48.276 32.95 61.456-12.107-.307-23.448-3.678-33.41-9.196v.92c0 35.862 25.441 65.594 59.311 72.49-6.13 1.686-12.72 2.606-19.464 2.606-4.751.0-9.348-.46-13.946-1.38 9.349 29.426 36.628 50.728 68.965 51.341-25.287 19.771-57.164 31.571-91.8 31.571-5.977.0-11.801-.306-17.625-1.073 32.337 21.15 71.264 33.41 112.95 33.41z"/></svg>
+</a>
+<a target=_blank rel="noopener noreferrer" aria-label="share Django用户模块 on linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fsunnnner.github.io%2farchetypes%2fdjango%25E7%2594%25A8%25E6%2588%25B7%25E6%25A8%25A1%25E5%259D%2597%2f&title=Django%e7%94%a8%e6%88%b7%e6%a8%a1%e5%9d%97&summary=Django%e7%94%a8%e6%88%b7%e6%a8%a1%e5%9d%97&source=https%3a%2f%2fsunnnner.github.io%2farchetypes%2fdjango%25E7%2594%25A8%25E6%2588%25B7%25E6%25A8%25A1%25E5%259D%2597%2f"><svg viewBox="0 0 512 512"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM160.461 423.278V197.561h-75.04v225.717h75.04zm270.539.0V293.839c0-69.333-37.018-101.586-86.381-101.586-39.804.0-57.634 21.891-67.617 37.266v-31.958h-75.021c.995 21.181.0 225.717.0 225.717h75.02V297.222c0-6.748.486-13.492 2.474-18.315 5.414-13.475 17.767-27.434 38.494-27.434 27.135.0 38.007 20.707 38.007 51.037v120.768H431zM123.448 88.722C97.774 88.722 81 105.601 81 127.724c0 21.658 16.264 39.002 41.455 39.002h.484c26.165.0 42.452-17.344 42.452-39.002-.485-22.092-16.241-38.954-41.943-39.002z"/></svg>
+</a>
+<a target=_blank rel="noopener noreferrer" aria-label="share Django用户模块 on reddit" href="https://reddit.com/submit?url=https%3a%2f%2fsunnnner.github.io%2farchetypes%2fdjango%25E7%2594%25A8%25E6%2588%25B7%25E6%25A8%25A1%25E5%259D%2597%2f&title=Django%e7%94%a8%e6%88%b7%e6%a8%a1%e5%9d%97"><svg viewBox="0 0 512 512"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM446 265.638c0-22.964-18.616-41.58-41.58-41.58-11.211.0-21.361 4.457-28.841 11.666-28.424-20.508-67.586-33.757-111.204-35.278l18.941-89.121 61.884 13.157c.756 15.734 13.642 28.29 29.56 28.29 16.407.0 29.706-13.299 29.706-29.701.0-16.403-13.299-29.702-29.706-29.702-11.666.0-21.657 6.792-26.515 16.578l-69.105-14.69c-1.922-.418-3.939-.042-5.585 1.036-1.658 1.073-2.811 2.761-3.224 4.686l-21.152 99.438c-44.258 1.228-84.046 14.494-112.837 35.232-7.468-7.164-17.589-11.591-28.757-11.591-22.965.0-41.585 18.616-41.585 41.58.0 16.896 10.095 31.41 24.568 37.918-.639 4.135-.99 8.328-.99 12.576.0 63.977 74.469 115.836 166.33 115.836s166.334-51.859 166.334-115.836c0-4.218-.347-8.387-.977-12.493 14.564-6.47 24.735-21.034 24.735-38.001zM326.526 373.831c-20.27 20.241-59.115 21.816-70.534 21.816-11.428.0-50.277-1.575-70.522-21.82-3.007-3.008-3.007-7.882.0-10.889 3.003-2.999 7.882-3.003 10.885.0 12.777 12.781 40.11 17.317 59.637 17.317 19.522.0 46.86-4.536 59.657-17.321 3.016-2.999 7.886-2.995 10.885.008 3.008 3.011 3.003 7.882-.008 10.889zm-5.23-48.781c-16.373.0-29.701-13.324-29.701-29.698.0-16.381 13.328-29.714 29.701-29.714 16.378.0 29.706 13.333 29.706 29.714.0 16.374-13.328 29.698-29.706 29.698zM160.91 295.348c0-16.381 13.328-29.71 29.714-29.71 16.369.0 29.689 13.329 29.689 29.71.0 16.373-13.32 29.693-29.689 29.693-16.386.0-29.714-13.32-29.714-29.693z"/></svg>
+</a>
+<a target=_blank rel="noopener noreferrer" aria-label="share Django用户模块 on facebook" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fsunnnner.github.io%2farchetypes%2fdjango%25E7%2594%25A8%25E6%2588%25B7%25E6%25A8%25A1%25E5%259D%2597%2f"><svg viewBox="0 0 512 512"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H342.978V319.085h66.6l12.672-82.621h-79.272v-53.617c0-22.603 11.073-44.636 46.58-44.636H425.6v-70.34s-32.71-5.582-63.982-5.582c-65.288.0-107.96 39.569-107.96 111.204v62.971h-72.573v82.621h72.573V512h-191.104c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892z"/></svg>
+</a>
+<a target=_blank rel="noopener noreferrer" aria-label="share Django用户模块 on whatsapp" href="https://api.whatsapp.com/send?text=Django%e7%94%a8%e6%88%b7%e6%a8%a1%e5%9d%97%20-%20https%3a%2f%2fsunnnner.github.io%2farchetypes%2fdjango%25E7%2594%25A8%25E6%2588%25B7%25E6%25A8%25A1%25E5%259D%2597%2f"><svg viewBox="0 0 512 512"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zm-58.673 127.703c-33.842-33.881-78.847-52.548-126.798-52.568-98.799.0-179.21 80.405-179.249 179.234-.013 31.593 8.241 62.428 23.927 89.612l-25.429 92.884 95.021-24.925c26.181 14.28 55.659 21.807 85.658 21.816h.074c98.789.0 179.206-80.413 179.247-179.243.018-47.895-18.61-92.93-52.451-126.81zM263.976 403.485h-.06c-26.734-.01-52.954-7.193-75.828-20.767l-5.441-3.229-56.386 14.792 15.05-54.977-3.542-5.637c-14.913-23.72-22.791-51.136-22.779-79.287.033-82.142 66.867-148.971 149.046-148.971 39.793.014 77.199 15.531 105.329 43.692 28.128 28.16 43.609 65.592 43.594 105.4-.034 82.149-66.866 148.983-148.983 148.984zm81.721-111.581c-4.479-2.242-26.499-13.075-30.604-14.571-4.105-1.495-7.091-2.241-10.077 2.241-2.986 4.483-11.569 14.572-14.182 17.562-2.612 2.988-5.225 3.364-9.703 1.12-4.479-2.241-18.91-6.97-36.017-22.23C231.8 264.15 222.81 249.484 220.198 245s-.279-6.908 1.963-9.14c2.016-2.007 4.48-5.232 6.719-7.847 2.24-2.615 2.986-4.484 4.479-7.472 1.493-2.99.747-5.604-.374-7.846-1.119-2.241-10.077-24.288-13.809-33.256-3.635-8.733-7.327-7.55-10.077-7.688-2.609-.13-5.598-.158-8.583-.158-2.986.0-7.839 1.121-11.944 5.604-4.105 4.484-15.675 15.32-15.675 37.364.0 22.046 16.048 43.342 18.287 46.332 2.24 2.99 31.582 48.227 76.511 67.627 10.685 4.615 19.028 7.371 25.533 9.434 10.728 3.41 20.492 2.929 28.209 1.775 8.605-1.285 26.499-10.833 30.231-21.295 3.732-10.464 3.732-19.431 2.612-21.298-1.119-1.869-4.105-2.99-8.583-5.232z"/></svg>
+</a>
+<a target=_blank rel="noopener noreferrer" aria-label="share Django用户模块 on telegram" href="https://telegram.me/share/url?text=Django%e7%94%a8%e6%88%b7%e6%a8%a1%e5%9d%97&url=https%3a%2f%2fsunnnner.github.io%2farchetypes%2fdjango%25E7%2594%25A8%25E6%2588%25B7%25E6%25A8%25A1%25E5%259D%2597%2f"><svg viewBox="2 2 28 28"><path d="M26.49 29.86H5.5a3.37 3.37.0 01-2.47-1 3.35 3.35.0 01-1-2.47V5.48A3.36 3.36.0 013 3 3.37 3.37.0 015.5 2h21A3.38 3.38.0 0129 3a3.36 3.36.0 011 2.46V26.37a3.35 3.35.0 01-1 2.47 3.38 3.38.0 01-2.51 1.02zm-5.38-6.71a.79.79.0 00.85-.66L24.73 9.24a.55.55.0 00-.18-.46.62.62.0 00-.41-.17q-.08.0-16.53 6.11a.59.59.0 00-.41.59.57.57.0 00.43.52l4 1.24 1.61 4.83a.62.62.0 00.63.43.56.56.0 00.4-.17L16.54 20l4.09 3A.9.9.0 0021.11 23.15zM13.8 20.71l-1.21-4q8.72-5.55 8.78-5.55c.15.0.23.0.23.16a.18.18.0 010 .06s-2.51 2.3-7.52 6.8z"/></svg>
+</a>
+</div></footer></article></main><footer class=footer>
+<span>&copy; 2022 <a href=https://sunnnner.github.io/>whiteKBlog</a></span>
+<span>
+Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a>
+</span>
+</footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)">
+<button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
+</button>
+</a>
+<script>let menu=document.getElementById("menu");menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)},document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(t){t.preventDefault();var e=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(e)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(e)}']`).scrollIntoView({behavior:"smooth"}),e==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${e}`)})})</script>
+<script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script>
+<script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script>
+</body></html>

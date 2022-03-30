@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>system on whiteKBlog</title>
+    <link>https://sunnnner.github.io/tags/system/</link>
+    <description>Recent content in system on whiteKBlog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 10 Oct 2019 14:20:46 +0800</lastBuildDate><atom:link href="https://sunnnner.github.io/tags/system/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Os模块</title>
+      <link>https://sunnnner.github.io/archetypes/os%E6%A8%A1%E5%9D%97/</link>
+      <pubDate>Thu, 10 Oct 2019 14:20:46 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/archetypes/os%E6%A8%A1%E5%9D%97/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+  </channel>
+</rss>

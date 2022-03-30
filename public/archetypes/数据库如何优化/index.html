@@ -1,0 +1,149 @@
+<!doctype html><html lang=en dir=auto>
+<head><meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name=robots content="index, follow">
+<title>数据库如何优化 | whiteKBlog</title><meta name=keywords content="python">
+<meta name=description content="Desc Text.">
+<meta name=author content="whitek">
+<link rel=canonical href=https://sunnnner.github.io/archetypes/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A6%82%E4%BD%95%E4%BC%98%E5%8C%96/>
+<meta name=google-site-verification content="XYZabc">
+<meta name=yandex-verification content="XYZabc">
+<meta name=msvalidate.01 content="XYZabc">
+<link crossorigin=anonymous href=/assets/css/stylesheet.min.35cd0f65a15cafa92372b8313deef5960aae04b90ad722f2bbf509eb0468137e.css integrity="sha256-Nc0PZaFcr6kjcrgxPe71lgquBLkK1yLyu/UJ6wRoE34=" rel="preload stylesheet" as=style>
+<link rel=preload href="https://avatars.githubusercontent.com/u/9432907?v=4" as=image>
+<script defer crossorigin=anonymous src=/assets/js/highlight.min.4dcb3c4f38462f66c6b6137227726f5543cb934cca9788f041c087e374491df2.js integrity="sha256-Tcs8TzhGL2bGthNyJ3JvVUPLk0zKl4jwQcCH43RJHfI=" onload=hljs.initHighlightingOnLoad()></script>
+<link rel=icon href=https://sunnnner.github.io/favicon.ico>
+<link rel=icon type=image/png sizes=16x16 href=https://sunnnner.github.io/favicon-16x16.png>
+<link rel=icon type=image/png sizes=32x32 href=https://sunnnner.github.io/favicon-32x32.png>
+<link rel=apple-touch-icon href=https://sunnnner.github.io/apple-touch-icon.png>
+<link rel=mask-icon href=https://sunnnner.github.io/safari-pinned-tab.svg>
+<meta name=theme-color content="#2e2e33">
+<meta name=msapplication-TileColor content="#2e2e33">
+<meta name=generator content="Hugo 0.93.2">
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(e,o,i,a,t,n,s){e.GoogleAnalyticsObject=t,e[t]=e[t]||function(){(e[t].q=e[t].q||[]).push(arguments)},e[t].l=1*new Date,n=o.createElement(i),s=o.getElementsByTagName(i)[0],n.async=1,n.src=a,s.parentNode.insertBefore(n,s)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-123-45","auto"),ga("send","pageview"))</script><meta property="og:title" content="数据库如何优化">
+<meta property="og:description" content="Desc Text.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://sunnnner.github.io/archetypes/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A6%82%E4%BD%95%E4%BC%98%E5%8C%96/">
+<meta property="og:image" content="https://sunnnner.github.io/%3Cimage%20path/url%3E"><meta property="article:section" content="archetypes">
+<meta property="article:published_time" content="2019-02-04T10:52:21+08:00">
+<meta property="article:modified_time" content="2019-02-04T10:52:21+08:00"><meta property="og:site_name" content="ExampleSite">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://sunnnner.github.io/%3Cimage%20path/url%3E">
+<meta name=twitter:title content="数据库如何优化">
+<meta name=twitter:description content="Desc Text.">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Archetypes","item":"https://sunnnner.github.io/archetypes/"},{"@type":"ListItem","position":2,"name":"数据库如何优化","item":"https://sunnnner.github.io/archetypes/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A6%82%E4%BD%95%E4%BC%98%E5%8C%96/"}]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"数据库如何优化","name":"数据库如何优化","description":"Desc Text.","keywords":["python"],"articleBody":"优化SQL语句\n通过添加索引进行优化\n优化Order by\n有两种方式如下：\n（1）索引优化：对by后的列添加索引，从而大达到优化的目的。\n（2）where+order by 的组合优化：通过where进行限制后在进行order by\n优化limit\n优化子查询\n2.优化数据库结构\n1、优化insert语句\n 禁用索引，禁用唯一性检查，使用一条insert插入多条语句。  2、优化update语句\n 使用一个update语句同时做多个更新。  3、优化delete语句\n 删除一条记录的时间与索引的数量成正比。删除一个表的所有行，使用truncate table Tbname 而不要使用delete from table  Django如何优化\n1利用标准数据库优化技术：索引, Django建立实体的时候，支持给字段添加索引，具体参考Django.db.models.Field.db_index。\n2了解Django的QuerySets：QuerySets是有缓存的，一旦取出来，它就会在内存里呆上一段时间，尽量重用它\n3数据库的工作就交给数据库本身计算，别用Python处理：使用 filter and exclude 过滤不需要的记录，这两个是最常用语句，相当是SQL的where。使用annotate对数据库做聚合运算。不要用python语言对以上类型数据过滤筛选，同样的结果，python处理复杂度要高，而且效率不高， 白白浪费内存。使用原生的SQL语句：\n4如果需要就一次性取出你所需要的数据：\n单一动作（如：同一个页面）需要多次连接数据库时，最好一次性取出所有需要的数据，减少连接数据库次数。此类需求推荐使用QuerySet.select_related() 和 prefetch_related()。使用QuerySet.count()代替len(queryset),虽然这两个处理得出的结果是一样的，但前者性能优秀很多。同理判断记录存在时，QuerySet.exists()比if queryset实在强得太多了。\n5 懂减少数据库的连接数：\n使用 QuerySet.update() 和 delete()，这两个函数是能批处理多条记录的，适当使用它们事半功倍；如果可以，别一条条数据去update delete处理。\n使用 Redis 进行缓存\n使用异步 Worker 进行写库操作\n高并发问题\n：1，悲观锁；2，乐观锁\n使用场景：\n并发量高的时候使用悲观锁，\n缺点：加锁消耗资源\n并发量低的时候使用乐观锁，\n缺点：乐观锁循环耗费时间。 秒杀问题,一件商品多人抢购如何处理\n获取第一位的数据其他人均不满足\n说一下事务四大特性和隔离级别\nACID\n原子性（Atomicity） 要么全部完成，要么都不成功\n一致性(Consistency) 几个并行执行的事务，其执行结果必须与按照某一舒徐串执行的结果相一致\n隔离性(Isolation) 事务的执行不受其他事务的干扰，事务执行的中间结果对其他事务必须市透明的\n持久性(Durability) 对于任意已提交事务，系统必须保证该事务对数据库的改变不被丢失，即使数据库出现故障；\n隔离级别\n脏读 在一个事务处理过程里读取了另一个未提交的事务中的数据\n不可重复读 在对于数据库中的某个数据，一个事务范围内多次查询却返回了不同的数据值，\n虚读 是事务非独立执行时发生的一种现象 现在来看看MySQL数据库为我们提供的四种隔离级别：\n　① Serializable (串行化)：可避免脏读、不可重复读、幻读的发生。\n　② Repeatable read (可重复读)：可避免脏读、不可重复读的发生。\n　③ Read committed (读已提交)：可避免脏读的发生。\n　④ Read uncommitted (读未提交)：最低级别，任何情况都无法保证。\nredis的数据类型和使用场景\n字符串(str)， 哈希(hash) 列表(list) 集合(set) 有序集合(zset)\n一万件商品如何按价格排序取前十个\n使用快速排序\ndef partition(A, p, r): x = A[r] i = p - 1 for j in range(p, r): if A[j]  x: i = i + 1 A[i], A[j] = A[j], A[i] A[i + 1], A[r] = A[r], A[i + 1] return i + 1  def quickSort(A, p, r): if p  r: q = partition(A, p, r) quickSort(A, p, q - 1) quickSort(A, q + 1, r)  A = […]  quickSort(A, 0, 9999) print(A[:-9]) redis考数据类型和使用场景,比如list啥时候用,\nredis 七个使用场景https://www.cnblogs.com/NiceCui/p/7794659.html\n还有MySQL有哪些数据库引擎,有什么区别\nISAM：ISAM是一个定义明确且历经时间考验的数据表格管理方法，它在设计之时就考虑到数据库被查询的次数要远大于更新的次数\nMyISAM：MyISAM是MySQL的ISAM扩展格式和缺省的数据库引擎。\nInnoDB：InnoDB数据库引擎都是造就MySQL灵活性的技术的直接产品，这项技术就是MYSQL+API\nMEMORY: MEMORY是MySQL中一类特殊的存储引擎。它使用存储在内存中的内容来创建表，而且数据全部放在内存中。\nInnoDB：支持事务处理，支持外键，支持崩溃修复能力和并发控制。\nMyISAM：插入数据快，空间和内存使用比较低。\nMEMORY：所有的数据都在内存中，数据的处理速度快，但是安全性不高\nhttps://blog.csdn.net/t146lla128xx0x/article/details/78737290\n[“1”,”2”,”10”],列表里是字符型数值,如何按数字大小给列表排序 list1 = [] a = [“1”,”2”,”10”] for i in a: b = int(i) list1.append(b) print(sorted(list1, reverse=True)) Python2和3的区别\nprint不再是语句，而是函数\n在Python 3中，没有旧式类，只有新式类\n原来1/2（两个整数相除）结果是0，现在是0.5了\n新的字符串格式化方法format取代%\nxrange重命名为range\n!=取代 long重命名为int\nexcept Exception, e变成except (Exception) as e\nexec变成函数\n爬虫好像问scrapy和scrapy_redis有什么区别\n还有scrapy爬虫的执行流程,当场手写\n看完我说的你在百度django和爬虫的面试题\nRESTfromework问得也挺多\napiview和viewset有啥关系\n问rest是啥\n","wordCount":"230","inLanguage":"en","image":"https://sunnnner.github.io/%3Cimage%20path/url%3E","datePublished":"2019-02-04T10:52:21+08:00","dateModified":"2019-02-04T10:52:21+08:00","author":{"@type":"Person","name":"whitek"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://sunnnner.github.io/archetypes/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A6%82%E4%BD%95%E4%BC%98%E5%8C%96/"},"publisher":{"@type":"Organization","name":"whiteKBlog","logo":{"@type":"ImageObject","url":"https://sunnnner.github.io/favicon.ico"}}}</script>
+</head><body id=top>
+<script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script>
+<noscript>
+<style type=text/css>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:#1d1e20;--entry:#2e2e33;--primary:rgba(255, 255, 255, 0.84);--secondary:rgba(255, 255, 255, 0.56);--tertiary:rgba(255, 255, 255, 0.16);--content:rgba(255, 255, 255, 0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><header class=header>
+<nav class=nav>
+<div class=logo>
+<a href=https://sunnnner.github.io/ accesskey=h title="Home (Alt + H)">
+<img src="https://avatars.githubusercontent.com/u/9432907?v=4" alt=logo aria-label=logo height=35>Home</a>
+<span class=logo-switches>
+<button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+</button>
+</span>
+</div><ul id=menu>
+<li>
+<a href=https://sunnnner.github.io/tags/ title=tags>
+<span>tags</span>
+</a>
+</li><li>
+<a href=https://sunnnner.github.io/about/ title=about>
+<span>about</span>
+</a>
+</li><li>
+<a href=https://pythongo.wiki title=wiki>
+<span>wiki</span>
+</a>
+</li></ul></nav></header><main class=main>
+<article class=post-single>
+<header class=post-header>
+<div class=breadcrumbs><a href=https://sunnnner.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://sunnnner.github.io/archetypes/>Archetypes</a></div><h1 class=post-title>
+数据库如何优化
+</h1><div class=post-description>
+Desc Text.
+</div><div class=post-meta>February 4, 2019&nbsp;·&nbsp;2 min&nbsp;·&nbsp;whitek&nbsp;|&nbsp;<a href=https://github.com/Sunnnner/Sunnnner.github.io/content/archetypes/%e6%95%b0%e6%8d%ae%e5%ba%93%e5%a6%82%e4%bd%95%e4%bc%98%e5%8c%96.md rel="noopener noreferrer" target=_blank>Suggest Changes</a>
+</div></header><div class=toc>
+<details>
+<summary accesskey=c title="(Alt + C)">
+<div class=details>Table of Contents</div></summary>
+<div class=inner>
+</div></details>
+</div><div class=post-content><p>优化SQL语句</p><p>通过添加索引进行优化</p><p>优化Order by</p><p>有两种方式如下：</p><p>（1）索引优化：对by后的列添加索引，从而大达到优化的目的。</p><p>（2）where+order by 的组合优化：通过where进行限制后在进行order by</p><p>优化limit</p><p>优化子查询</p><p>2.优化数据库结构</p><p>1、优化insert语句</p><pre><code>  禁用索引，禁用唯一性检查，使用一条insert插入多条语句。
+</code></pre><p>2、优化update语句</p><pre><code>  使用一个update语句同时做多个更新。
+</code></pre><p>3、优化delete语句</p><pre><code>  删除一条记录的时间与索引的数量成正比。删除一个表的所有行，使用truncate table Tbname 而不要使用delete from table
+</code></pre><p>Django如何优化</p><p>1利用标准数据库优化技术：索引, Django建立实体的时候，支持给字段添加索引，具体参考Django.db.models.Field.db_index。</p><p>2了解Django的QuerySets：QuerySets是有缓存的，一旦取出来，它就会在内存里呆上一段时间，尽量重用它</p><p>3数据库的工作就交给数据库本身计算，别用Python处理：使用 filter and exclude 过滤不需要的记录，这两个是最常用语句，相当是SQL的where。使用annotate对数据库做聚合运算。不要用python语言对以上类型数据过滤筛选，同样的结果，python处理复杂度要高，而且效率不高， 白白浪费内存。使用原生的SQL语句：</p><p>4如果需要就一次性取出你所需要的数据：</p><p>单一动作（如：同一个页面）需要多次连接数据库时，最好一次性取出所有需要的数据，减少连接数据库次数。此类需求推荐使用QuerySet.select_related() 和 prefetch_related()。使用QuerySet.count()代替len(queryset),虽然这两个处理得出的结果是一样的，但前者性能优秀很多。同理判断记录存在时，QuerySet.exists()比if queryset实在强得太多了。</p><p>5 懂减少数据库的连接数：</p><p>使用 QuerySet.update() 和 delete()，这两个函数是能批处理多条记录的，适当使用它们事半功倍；如果可以，别一条条数据去update delete处理。</p><p>使用 Redis 进行缓存</p><p>使用异步 Worker 进行写库操作</p><p>高并发问题</p><p>：1，悲观锁；2，乐观锁</p><p>使用场景：</p><p>并发量高的时候使用悲观锁，</p><p>缺点：加锁消耗资源</p><p>并发量低的时候使用乐观锁，</p><p>缺点：乐观锁循环耗费时间。
+秒杀问题,一件商品多人抢购如何处理</p><p>获取第一位的数据其他人均不满足</p><p>说一下事务四大特性和隔离级别</p><p>ACID</p><p>原子性（Atomicity） 要么全部完成，要么都不成功</p><p>一致性(Consistency) 几个并行执行的事务，其执行结果必须与按照某一舒徐串执行的结果相一致</p><p>隔离性(Isolation) 事务的执行不受其他事务的干扰，事务执行的中间结果对其他事务必须市透明的</p><p>持久性(Durability) 对于任意已提交事务，系统必须保证该事务对数据库的改变不被丢失，即使数据库出现故障；</p><p>隔离级别</p><p>脏读 在一个事务处理过程里读取了另一个未提交的事务中的数据</p><p>不可重复读 在对于数据库中的某个数据，一个事务范围内多次查询却返回了不同的数据值，</p><p>虚读 是事务非独立执行时发生的一种现象
+　　
+现在来看看MySQL数据库为我们提供的四种隔离级别：</p><p>　　① Serializable (串行化)：可避免脏读、不可重复读、幻读的发生。</p><p>　　② Repeatable read (可重复读)：可避免脏读、不可重复读的发生。</p><p>　　③ Read committed (读已提交)：可避免脏读的发生。</p><p>　　④ Read uncommitted (读未提交)：最低级别，任何情况都无法保证。</p><p>redis的数据类型和使用场景</p><p>字符串(str)， 哈希(hash) 列表(list) 集合(set) 有序集合(zset)</p><p>一万件商品如何按价格排序取前十个</p><p>使用快速排序</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>partition</span>(A, p, r):
+</span></span><span style=display:flex><span>x <span style=color:#f92672>=</span> A[r]
+</span></span><span style=display:flex><span>i <span style=color:#f92672>=</span> p <span style=color:#f92672>-</span> <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>for</span> j <span style=color:#f92672>in</span> range(p, r):
+</span></span><span style=display:flex><span><span style=color:#66d9ef>if</span> A[j] <span style=color:#f92672>&lt;=</span> x:
+</span></span><span style=display:flex><span>i <span style=color:#f92672>=</span> i <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>A[i], A[j] <span style=color:#f92672>=</span> A[j], A[i]
+</span></span><span style=display:flex><span>A[i <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>], A[r] <span style=color:#f92672>=</span> A[r], A[i <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>]
+</span></span><span style=display:flex><span><span style=color:#66d9ef>return</span> i <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>quickSort</span>(A, p, r):
+</span></span><span style=display:flex><span><span style=color:#66d9ef>if</span> p <span style=color:#f92672>&lt;</span> r:
+</span></span><span style=display:flex><span>q <span style=color:#f92672>=</span> partition(A, p, r)
+</span></span><span style=display:flex><span>quickSort(A, p, q <span style=color:#f92672>-</span> <span style=color:#ae81ff>1</span>)
+</span></span><span style=display:flex><span>quickSort(A, q <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>, r)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>A <span style=color:#f92672>=</span> [<span style=color:#960050;background-color:#1e0010>…</span>]
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>quickSort(A, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>9999</span>)
+</span></span><span style=display:flex><span>print(A[:<span style=color:#f92672>-</span><span style=color:#ae81ff>9</span>])
+</span></span></code></pre></div><p>redis考数据类型和使用场景,比如list啥时候用,</p><p>redis 七个使用场景https://www.cnblogs.com/NiceCui/p/7794659.html</p><p>还有MySQL有哪些数据库引擎,有什么区别</p><p>ISAM：ISAM是一个定义明确且历经时间考验的数据表格管理方法，它在设计之时就考虑到数据库被查询的次数要远大于更新的次数</p><p>MyISAM：MyISAM是MySQL的ISAM扩展格式和缺省的数据库引擎。</p><p>InnoDB：InnoDB数据库引擎都是造就MySQL灵活性的技术的直接产品，这项技术就是MYSQL+API</p><p>MEMORY: MEMORY是MySQL中一类特殊的存储引擎。它使用存储在内存中的内容来创建表，而且数据全部放在内存中。</p><p>InnoDB：支持事务处理，支持外键，支持崩溃修复能力和并发控制。</p><p>MyISAM：插入数据快，空间和内存使用比较低。</p><p>MEMORY：所有的数据都在内存中，数据的处理速度快，但是安全性不高</p><p><a href=https://blog.csdn.net/t146lla128xx0x/article/details/78737290>https://blog.csdn.net/t146lla128xx0x/article/details/78737290</a></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>[<span style=color:#960050;background-color:#1e0010>“</span><span style=color:#ae81ff>1</span><span style=color:#960050;background-color:#1e0010>”</span>,<span style=color:#960050;background-color:#1e0010>”</span><span style=color:#ae81ff>2</span><span style=color:#960050;background-color:#1e0010>”</span>,<span style=color:#960050;background-color:#1e0010>”</span><span style=color:#ae81ff>10</span><span style=color:#960050;background-color:#1e0010>”</span>],列表里是字符型数值,如何按数字大小给列表排序
+</span></span><span style=display:flex><span>list1 <span style=color:#f92672>=</span> []
+</span></span><span style=display:flex><span>a <span style=color:#f92672>=</span> [<span style=color:#960050;background-color:#1e0010>“</span><span style=color:#ae81ff>1</span><span style=color:#960050;background-color:#1e0010>”</span>,<span style=color:#960050;background-color:#1e0010>”</span><span style=color:#ae81ff>2</span><span style=color:#960050;background-color:#1e0010>”</span>,<span style=color:#960050;background-color:#1e0010>”</span><span style=color:#ae81ff>10</span><span style=color:#960050;background-color:#1e0010>”</span>]
+</span></span><span style=display:flex><span><span style=color:#66d9ef>for</span> i <span style=color:#f92672>in</span> a:
+</span></span><span style=display:flex><span>b <span style=color:#f92672>=</span> int(i)
+</span></span><span style=display:flex><span>list1<span style=color:#f92672>.</span>append(b)
+</span></span><span style=display:flex><span>print(sorted(list1, reverse<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>))
+</span></span></code></pre></div><p>Python2和3的区别</p><p>print不再是语句，而是函数</p><p>在Python 3中，没有旧式类，只有新式类</p><p>原来1/2（两个整数相除）结果是0，现在是0.5了</p><p>新的字符串格式化方法format取代%</p><p>xrange重命名为range</p><p>!=取代 &lt; ></p><p>long重命名为int</p><p>except Exception, e变成except (Exception) as e</p><p>exec变成函数</p><p>爬虫好像问scrapy和scrapy_redis有什么区别</p><p>还有scrapy爬虫的执行流程,当场手写</p><p>看完我说的你在百度django和爬虫的面试题</p><p>RESTfromework问得也挺多</p><p>apiview和viewset有啥关系</p><p>问rest是啥</p></div><footer class=post-footer>
+<ul class=post-tags>
+<li><a href=https://sunnnner.github.io/tags/python/>python</a></li></ul><nav class=paginav>
+<a class=prev href=https://sunnnner.github.io/archetypes/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BC%98%E5%8C%96/>
+<span class=title>« Prev Page</span>
+<br>
+<span>数据库优化</span>
+</a>
+<a class=next href=https://sunnnner.github.io/archetypes/session+cookie%E5%92%8C%E4%BD%BF%E7%94%A8tocken%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB/>
+<span class=title>Next Page »</span>
+<br>
+<span>Session+cookie和使用tocken有什么区别</span>
+</a>
+</nav><div class=share-buttons>
+<a target=_blank rel="noopener noreferrer" aria-label="share 数据库如何优化 on twitter" href="https://twitter.com/intent/tweet/?text=%e6%95%b0%e6%8d%ae%e5%ba%93%e5%a6%82%e4%bd%95%e4%bc%98%e5%8c%96&url=https%3a%2f%2fsunnnner.github.io%2farchetypes%2f%25E6%2595%25B0%25E6%258D%25AE%25E5%25BA%2593%25E5%25A6%2582%25E4%25BD%2595%25E4%25BC%2598%25E5%258C%2596%2f&hashtags=python"><svg viewBox="0 0 512 512"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM195.519 424.544c135.939.0 210.268-112.643 210.268-210.268.0-3.218.0-6.437-.153-9.502 14.406-10.421 26.973-23.448 36.935-38.314-13.18 5.824-27.433 9.809-42.452 11.648 15.326-9.196 26.973-23.602 32.49-40.92-14.252 8.429-30.038 14.56-46.896 17.931-13.487-14.406-32.644-23.295-53.946-23.295-40.767.0-73.87 33.104-73.87 73.87.0 5.824.613 11.494 1.992 16.858-61.456-3.065-115.862-32.49-152.337-77.241-6.284 10.881-9.962 23.601-9.962 37.088.0 25.594 13.027 48.276 32.95 61.456-12.107-.307-23.448-3.678-33.41-9.196v.92c0 35.862 25.441 65.594 59.311 72.49-6.13 1.686-12.72 2.606-19.464 2.606-4.751.0-9.348-.46-13.946-1.38 9.349 29.426 36.628 50.728 68.965 51.341-25.287 19.771-57.164 31.571-91.8 31.571-5.977.0-11.801-.306-17.625-1.073 32.337 21.15 71.264 33.41 112.95 33.41z"/></svg>
+</a>
+<a target=_blank rel="noopener noreferrer" aria-label="share 数据库如何优化 on linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fsunnnner.github.io%2farchetypes%2f%25E6%2595%25B0%25E6%258D%25AE%25E5%25BA%2593%25E5%25A6%2582%25E4%25BD%2595%25E4%25BC%2598%25E5%258C%2596%2f&title=%e6%95%b0%e6%8d%ae%e5%ba%93%e5%a6%82%e4%bd%95%e4%bc%98%e5%8c%96&summary=%e6%95%b0%e6%8d%ae%e5%ba%93%e5%a6%82%e4%bd%95%e4%bc%98%e5%8c%96&source=https%3a%2f%2fsunnnner.github.io%2farchetypes%2f%25E6%2595%25B0%25E6%258D%25AE%25E5%25BA%2593%25E5%25A6%2582%25E4%25BD%2595%25E4%25BC%2598%25E5%258C%2596%2f"><svg viewBox="0 0 512 512"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM160.461 423.278V197.561h-75.04v225.717h75.04zm270.539.0V293.839c0-69.333-37.018-101.586-86.381-101.586-39.804.0-57.634 21.891-67.617 37.266v-31.958h-75.021c.995 21.181.0 225.717.0 225.717h75.02V297.222c0-6.748.486-13.492 2.474-18.315 5.414-13.475 17.767-27.434 38.494-27.434 27.135.0 38.007 20.707 38.007 51.037v120.768H431zM123.448 88.722C97.774 88.722 81 105.601 81 127.724c0 21.658 16.264 39.002 41.455 39.002h.484c26.165.0 42.452-17.344 42.452-39.002-.485-22.092-16.241-38.954-41.943-39.002z"/></svg>
+</a>
+<a target=_blank rel="noopener noreferrer" aria-label="share 数据库如何优化 on reddit" href="https://reddit.com/submit?url=https%3a%2f%2fsunnnner.github.io%2farchetypes%2f%25E6%2595%25B0%25E6%258D%25AE%25E5%25BA%2593%25E5%25A6%2582%25E4%25BD%2595%25E4%25BC%2598%25E5%258C%2596%2f&title=%e6%95%b0%e6%8d%ae%e5%ba%93%e5%a6%82%e4%bd%95%e4%bc%98%e5%8c%96"><svg viewBox="0 0 512 512"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM446 265.638c0-22.964-18.616-41.58-41.58-41.58-11.211.0-21.361 4.457-28.841 11.666-28.424-20.508-67.586-33.757-111.204-35.278l18.941-89.121 61.884 13.157c.756 15.734 13.642 28.29 29.56 28.29 16.407.0 29.706-13.299 29.706-29.701.0-16.403-13.299-29.702-29.706-29.702-11.666.0-21.657 6.792-26.515 16.578l-69.105-14.69c-1.922-.418-3.939-.042-5.585 1.036-1.658 1.073-2.811 2.761-3.224 4.686l-21.152 99.438c-44.258 1.228-84.046 14.494-112.837 35.232-7.468-7.164-17.589-11.591-28.757-11.591-22.965.0-41.585 18.616-41.585 41.58.0 16.896 10.095 31.41 24.568 37.918-.639 4.135-.99 8.328-.99 12.576.0 63.977 74.469 115.836 166.33 115.836s166.334-51.859 166.334-115.836c0-4.218-.347-8.387-.977-12.493 14.564-6.47 24.735-21.034 24.735-38.001zM326.526 373.831c-20.27 20.241-59.115 21.816-70.534 21.816-11.428.0-50.277-1.575-70.522-21.82-3.007-3.008-3.007-7.882.0-10.889 3.003-2.999 7.882-3.003 10.885.0 12.777 12.781 40.11 17.317 59.637 17.317 19.522.0 46.86-4.536 59.657-17.321 3.016-2.999 7.886-2.995 10.885.008 3.008 3.011 3.003 7.882-.008 10.889zm-5.23-48.781c-16.373.0-29.701-13.324-29.701-29.698.0-16.381 13.328-29.714 29.701-29.714 16.378.0 29.706 13.333 29.706 29.714.0 16.374-13.328 29.698-29.706 29.698zM160.91 295.348c0-16.381 13.328-29.71 29.714-29.71 16.369.0 29.689 13.329 29.689 29.71.0 16.373-13.32 29.693-29.689 29.693-16.386.0-29.714-13.32-29.714-29.693z"/></svg>
+</a>
+<a target=_blank rel="noopener noreferrer" aria-label="share 数据库如何优化 on facebook" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fsunnnner.github.io%2farchetypes%2f%25E6%2595%25B0%25E6%258D%25AE%25E5%25BA%2593%25E5%25A6%2582%25E4%25BD%2595%25E4%25BC%2598%25E5%258C%2596%2f"><svg viewBox="0 0 512 512"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H342.978V319.085h66.6l12.672-82.621h-79.272v-53.617c0-22.603 11.073-44.636 46.58-44.636H425.6v-70.34s-32.71-5.582-63.982-5.582c-65.288.0-107.96 39.569-107.96 111.204v62.971h-72.573v82.621h72.573V512h-191.104c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892z"/></svg>
+</a>
+<a target=_blank rel="noopener noreferrer" aria-label="share 数据库如何优化 on whatsapp" href="https://api.whatsapp.com/send?text=%e6%95%b0%e6%8d%ae%e5%ba%93%e5%a6%82%e4%bd%95%e4%bc%98%e5%8c%96%20-%20https%3a%2f%2fsunnnner.github.io%2farchetypes%2f%25E6%2595%25B0%25E6%258D%25AE%25E5%25BA%2593%25E5%25A6%2582%25E4%25BD%2595%25E4%25BC%2598%25E5%258C%2596%2f"><svg viewBox="0 0 512 512"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zm-58.673 127.703c-33.842-33.881-78.847-52.548-126.798-52.568-98.799.0-179.21 80.405-179.249 179.234-.013 31.593 8.241 62.428 23.927 89.612l-25.429 92.884 95.021-24.925c26.181 14.28 55.659 21.807 85.658 21.816h.074c98.789.0 179.206-80.413 179.247-179.243.018-47.895-18.61-92.93-52.451-126.81zM263.976 403.485h-.06c-26.734-.01-52.954-7.193-75.828-20.767l-5.441-3.229-56.386 14.792 15.05-54.977-3.542-5.637c-14.913-23.72-22.791-51.136-22.779-79.287.033-82.142 66.867-148.971 149.046-148.971 39.793.014 77.199 15.531 105.329 43.692 28.128 28.16 43.609 65.592 43.594 105.4-.034 82.149-66.866 148.983-148.983 148.984zm81.721-111.581c-4.479-2.242-26.499-13.075-30.604-14.571-4.105-1.495-7.091-2.241-10.077 2.241-2.986 4.483-11.569 14.572-14.182 17.562-2.612 2.988-5.225 3.364-9.703 1.12-4.479-2.241-18.91-6.97-36.017-22.23C231.8 264.15 222.81 249.484 220.198 245s-.279-6.908 1.963-9.14c2.016-2.007 4.48-5.232 6.719-7.847 2.24-2.615 2.986-4.484 4.479-7.472 1.493-2.99.747-5.604-.374-7.846-1.119-2.241-10.077-24.288-13.809-33.256-3.635-8.733-7.327-7.55-10.077-7.688-2.609-.13-5.598-.158-8.583-.158-2.986.0-7.839 1.121-11.944 5.604-4.105 4.484-15.675 15.32-15.675 37.364.0 22.046 16.048 43.342 18.287 46.332 2.24 2.99 31.582 48.227 76.511 67.627 10.685 4.615 19.028 7.371 25.533 9.434 10.728 3.41 20.492 2.929 28.209 1.775 8.605-1.285 26.499-10.833 30.231-21.295 3.732-10.464 3.732-19.431 2.612-21.298-1.119-1.869-4.105-2.99-8.583-5.232z"/></svg>
+</a>
+<a target=_blank rel="noopener noreferrer" aria-label="share 数据库如何优化 on telegram" href="https://telegram.me/share/url?text=%e6%95%b0%e6%8d%ae%e5%ba%93%e5%a6%82%e4%bd%95%e4%bc%98%e5%8c%96&url=https%3a%2f%2fsunnnner.github.io%2farchetypes%2f%25E6%2595%25B0%25E6%258D%25AE%25E5%25BA%2593%25E5%25A6%2582%25E4%25BD%2595%25E4%25BC%2598%25E5%258C%2596%2f"><svg viewBox="2 2 28 28"><path d="M26.49 29.86H5.5a3.37 3.37.0 01-2.47-1 3.35 3.35.0 01-1-2.47V5.48A3.36 3.36.0 013 3 3.37 3.37.0 015.5 2h21A3.38 3.38.0 0129 3a3.36 3.36.0 011 2.46V26.37a3.35 3.35.0 01-1 2.47 3.38 3.38.0 01-2.51 1.02zm-5.38-6.71a.79.79.0 00.85-.66L24.73 9.24a.55.55.0 00-.18-.46.62.62.0 00-.41-.17q-.08.0-16.53 6.11a.59.59.0 00-.41.59.57.57.0 00.43.52l4 1.24 1.61 4.83a.62.62.0 00.63.43.56.56.0 00.4-.17L16.54 20l4.09 3A.9.9.0 0021.11 23.15zM13.8 20.71l-1.21-4q8.72-5.55 8.78-5.55c.15.0.23.0.23.16a.18.18.0 010 .06s-2.51 2.3-7.52 6.8z"/></svg>
+</a>
+</div></footer></article></main><footer class=footer>
+<span>&copy; 2022 <a href=https://sunnnner.github.io/>whiteKBlog</a></span>
+<span>
+Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a>
+</span>
+</footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)">
+<button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
+</button>
+</a>
+<script>let menu=document.getElementById("menu");menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)},document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(t){t.preventDefault();var e=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(e)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(e)}']`).scrollIntoView({behavior:"smooth"}),e==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${e}`)})})</script>
+<script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script>
+<script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script>
+</body></html>
