@@ -145,7 +145,7 @@ params:
     widgets:
         homepage:
             - type: search
-            - type: archives
+            - type: archetypes
               params:
                   limit: 5
             - type: categories
@@ -193,13 +193,13 @@ menu:
     social:
         - identifier: github
           name: GitHub
-          url: https://github.com/CaiJimmy/hugo-theme-stack
+          url: https://github.com/Sunnnner
           params:
               icon: brand-github
 
         - identifier: twitter
           name: Twitter
-          url: https://twitter.com
+          url: https://stackoverflow.com
           params:
               icon: brand-twitter
 
