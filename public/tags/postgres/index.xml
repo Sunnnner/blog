@@ -1,45 +1,43 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>postgres on whiteKBlog</title>
-        <link>https://sunnnner.github.io/tags/postgres/</link>
-        <description>Recent content in postgres on whiteKBlog</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
-        <lastBuildDate>Mon, 04 Nov 2019 15:37:26 +0800</lastBuildDate><atom:link href="https://sunnnner.github.io/tags/postgres/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Install Postgresql</title>
-        <link>https://sunnnner.github.io/install-postgresql/</link>
-        <pubDate>Mon, 04 Nov 2019 15:37:26 +0800</pubDate>
-        
-        <guid>https://sunnnner.github.io/install-postgresql/</guid>
-        <description>&lt;p&gt;安装postgres sudo apt install postgresql postgresql-contrib&lt;/p&gt;
-&lt;p&gt;安装完成后，PostgreSQL服务将自动启动。 要验证安装，我们将使用psql实用程序连接到PostgreSQL数据库服务器并打印服务器版本：sudo -u postgres
-psql -c &amp;ldquo;SELECT version();&amp;rdquo;&lt;/p&gt;
-&lt;p&gt;安装完毕后，系统会创建一个数据库超级用户 postgres，密码为空。&lt;/p&gt;
-&lt;p&gt;切换到postgres用户sudo -i -u postgres&lt;/p&gt;
-&lt;p&gt;执行psql进入postgres shell 执行\password postgres修改默认密码&lt;/p&gt;
-&lt;p&gt;修改/etc/postgresql/9.6/main下 postgresql.conf里面listen address为*&lt;/p&gt;
-&lt;p&gt;修改pg_hba.conf all 地址为0.0.0.0/0&lt;/p&gt;
-&lt;p&gt;重启sudo /etc/init.d/postgresql restart&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>Install Postgresql</title>
-        <link>https://sunnnner.github.io/p/install-postgresql/</link>
-        <pubDate>Mon, 04 Nov 2019 15:37:26 +0800</pubDate>
-        
-        <guid>https://sunnnner.github.io/p/install-postgresql/</guid>
-        <description>&lt;p&gt;安装postgres sudo apt install postgresql postgresql-contrib&lt;/p&gt;
-&lt;p&gt;安装完成后，PostgreSQL服务将自动启动。 要验证安装，我们将使用psql实用程序连接到PostgreSQL数据库服务器并打印服务器版本：sudo -u postgres
-psql -c &amp;ldquo;SELECT version();&amp;rdquo;&lt;/p&gt;
-&lt;p&gt;安装完毕后，系统会创建一个数据库超级用户 postgres，密码为空。&lt;/p&gt;
-&lt;p&gt;切换到postgres用户sudo -i -u postgres&lt;/p&gt;
-&lt;p&gt;执行psql进入postgres shell 执行\password postgres修改默认密码&lt;/p&gt;
-&lt;p&gt;修改/etc/postgresql/9.6/main下 postgresql.conf里面listen address为*&lt;/p&gt;
-&lt;p&gt;修改pg_hba.conf all 地址为0.0.0.0/0&lt;/p&gt;
-&lt;p&gt;重启sudo /etc/init.d/postgresql restart&lt;/p&gt;
-</description>
-        </item>
-        
-    </channel>
+  <channel>
+    <title>postgres on whiteKBlog</title>
+    <link>https://sunnnner.github.io/tags/postgres/</link>
+    <description>Recent content in postgres on whiteKBlog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 04 Nov 2019 15:37:26 +0800</lastBuildDate><atom:link href="https://sunnnner.github.io/tags/postgres/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install Postgresql</title>
+      <link>https://sunnnner.github.io/install-postgresql/</link>
+      <pubDate>Mon, 04 Nov 2019 15:37:26 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/install-postgresql/</guid>
+      <description>安装postgres sudo apt install postgresql postgresql-contrib
+安装完成后，PostgreSQL服务将自动启动。 要验证安装，我们将使用psql实用程序连接到PostgreSQL数据库服务器并打印服务器版本：sudo -u postgres psql -c &amp;ldquo;SELECT version();&amp;rdquo;
+安装完毕后，系统会创建一个数据库超级用户 postgres，密码为空。
+切换到postgres用户sudo -i -u postgres
+执行psql进入postgres shell 执行\password postgres修改默认密码
+修改/etc/postgresql/9.6/main下 postgresql.conf里面listen address为*
+修改pg_hba.conf all 地址为0.0.0.0/0
+重启sudo /etc/init.d/postgresql restart</description>
+    </item>
+    
+    <item>
+      <title>Install Postgresql</title>
+      <link>https://sunnnner.github.io/p/install-postgresql/</link>
+      <pubDate>Mon, 04 Nov 2019 15:37:26 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/p/install-postgresql/</guid>
+      <description>安装postgres sudo apt install postgresql postgresql-contrib
+安装完成后，PostgreSQL服务将自动启动。 要验证安装，我们将使用psql实用程序连接到PostgreSQL数据库服务器并打印服务器版本：sudo -u postgres psql -c &amp;ldquo;SELECT version();&amp;rdquo;
+安装完毕后，系统会创建一个数据库超级用户 postgres，密码为空。
+切换到postgres用户sudo -i -u postgres
+执行psql进入postgres shell 执行\password postgres修改默认密码
+修改/etc/postgresql/9.6/main下 postgresql.conf里面listen address为*
+修改pg_hba.conf all 地址为0.0.0.0/0
+重启sudo /etc/init.d/postgresql restart</description>
+    </item>
+    
+  </channel>
 </rss>

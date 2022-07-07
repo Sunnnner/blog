@@ -1,63 +1,61 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>kubernete on whiteKBlog</title>
-        <link>https://sunnnner.github.io/tags/kubernete/</link>
-        <description>Recent content in kubernete on whiteKBlog</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
-        <lastBuildDate>Mon, 11 Nov 2019 15:38:29 +0800</lastBuildDate><atom:link href="https://sunnnner.github.io/tags/kubernete/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>使用minikube创建集群</title>
-        <link>https://sunnnner.github.io/%E4%BD%BF%E7%94%A8minikube%E5%88%9B%E5%BB%BA%E9%9B%86%E7%BE%A4/</link>
-        <pubDate>Mon, 11 Nov 2019 15:38:29 +0800</pubDate>
-        
-        <guid>https://sunnnner.github.io/%E4%BD%BF%E7%94%A8minikube%E5%88%9B%E5%BB%BA%E9%9B%86%E7%BE%A4/</guid>
-        <description>&lt;p&gt;curl -LO &lt;a class=&#34;link&#34; href=&#34;https://storage.googleapis.com/minikube/releases/latest/minikube_1.5.2.deb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://storage.googleapis.com/minikube/releases/latest/minikube_1.5.2.deb&lt;/a&gt; \ &amp;amp;&amp;amp; sudo dpkg -i minikube_1.5.2.deb&lt;/p&gt;
-&lt;p&gt;系统管理程序设置验证系统是否启用虚拟化 egrep -q &amp;lsquo;vmx|svm&amp;rsquo; /proc/cpuinfo &amp;amp;&amp;amp; echo yes || echo no 如果启用则需要关闭虚拟化&lt;/p&gt;
-&lt;p&gt;minikube servion查看版本信息&lt;/p&gt;
-&lt;p&gt;minikube start启动&lt;/p&gt;
-&lt;p&gt;查看集群信息kubectl cluster-info&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>使用minikube创建集群</title>
-        <link>https://sunnnner.github.io/p/%E4%BD%BF%E7%94%A8minikube%E5%88%9B%E5%BB%BA%E9%9B%86%E7%BE%A4/</link>
-        <pubDate>Mon, 11 Nov 2019 15:38:29 +0800</pubDate>
-        
-        <guid>https://sunnnner.github.io/p/%E4%BD%BF%E7%94%A8minikube%E5%88%9B%E5%BB%BA%E9%9B%86%E7%BE%A4/</guid>
-        <description>&lt;p&gt;curl -LO &lt;a class=&#34;link&#34; href=&#34;https://storage.googleapis.com/minikube/releases/latest/minikube_1.5.2.deb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://storage.googleapis.com/minikube/releases/latest/minikube_1.5.2.deb&lt;/a&gt; \ &amp;amp;&amp;amp; sudo dpkg -i minikube_1.5.2.deb&lt;/p&gt;
-&lt;p&gt;系统管理程序设置验证系统是否启用虚拟化 egrep -q &amp;lsquo;vmx|svm&amp;rsquo; /proc/cpuinfo &amp;amp;&amp;amp; echo yes || echo no 如果启用则需要关闭虚拟化&lt;/p&gt;
-&lt;p&gt;minikube servion查看版本信息&lt;/p&gt;
-&lt;p&gt;minikube start启动&lt;/p&gt;
-&lt;p&gt;查看集群信息kubectl cluster-info&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>K8s基础操作</title>
-        <link>https://sunnnner.github.io/k8s%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</link>
-        <pubDate>Sat, 02 Nov 2019 15:36:16 +0800</pubDate>
-        
-        <guid>https://sunnnner.github.io/k8s%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</guid>
-        <description>&lt;p&gt;k8s获取所有运行的podskubectl get pods &amp;ndash;all-namespaces -o wide&lt;/p&gt;
-&lt;p&gt;获取当前集群名称kubectl get pods -o wide&lt;/p&gt;
-&lt;p&gt;当前etcd中的注册的宿主机的pod地址网段信息etcdctl ls /kube-centos/network/subnets&lt;/p&gt;
-&lt;p&gt;而每个node上的Pod子网是根据我们在安装flannel时配置来划分的，在etcd中查看该配置etcdctl get /kube-centos/network/config&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>K8s基础操作</title>
-        <link>https://sunnnner.github.io/p/k8s%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</link>
-        <pubDate>Sat, 02 Nov 2019 15:36:16 +0800</pubDate>
-        
-        <guid>https://sunnnner.github.io/p/k8s%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</guid>
-        <description>&lt;p&gt;k8s获取所有运行的podskubectl get pods &amp;ndash;all-namespaces -o wide&lt;/p&gt;
-&lt;p&gt;获取当前集群名称kubectl get pods -o wide&lt;/p&gt;
-&lt;p&gt;当前etcd中的注册的宿主机的pod地址网段信息etcdctl ls /kube-centos/network/subnets&lt;/p&gt;
-&lt;p&gt;而每个node上的Pod子网是根据我们在安装flannel时配置来划分的，在etcd中查看该配置etcdctl get /kube-centos/network/config&lt;/p&gt;
-</description>
-        </item>
-        
-    </channel>
+  <channel>
+    <title>kubernete on whiteKBlog</title>
+    <link>https://sunnnner.github.io/tags/kubernete/</link>
+    <description>Recent content in kubernete on whiteKBlog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 11 Nov 2019 15:38:29 +0800</lastBuildDate><atom:link href="https://sunnnner.github.io/tags/kubernete/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用minikube创建集群</title>
+      <link>https://sunnnner.github.io/%E4%BD%BF%E7%94%A8minikube%E5%88%9B%E5%BB%BA%E9%9B%86%E7%BE%A4/</link>
+      <pubDate>Mon, 11 Nov 2019 15:38:29 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/%E4%BD%BF%E7%94%A8minikube%E5%88%9B%E5%BB%BA%E9%9B%86%E7%BE%A4/</guid>
+      <description>curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube_1.5.2.deb \ &amp;amp;&amp;amp; sudo dpkg -i minikube_1.5.2.deb
+系统管理程序设置验证系统是否启用虚拟化 egrep -q &amp;lsquo;vmx|svm&amp;rsquo; /proc/cpuinfo &amp;amp;&amp;amp; echo yes || echo no 如果启用则需要关闭虚拟化
+minikube servion查看版本信息
+minikube start启动
+查看集群信息kubectl cluster-info</description>
+    </item>
+    
+    <item>
+      <title>使用minikube创建集群</title>
+      <link>https://sunnnner.github.io/p/%E4%BD%BF%E7%94%A8minikube%E5%88%9B%E5%BB%BA%E9%9B%86%E7%BE%A4/</link>
+      <pubDate>Mon, 11 Nov 2019 15:38:29 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/p/%E4%BD%BF%E7%94%A8minikube%E5%88%9B%E5%BB%BA%E9%9B%86%E7%BE%A4/</guid>
+      <description>curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube_1.5.2.deb \ &amp;amp;&amp;amp; sudo dpkg -i minikube_1.5.2.deb
+系统管理程序设置验证系统是否启用虚拟化 egrep -q &amp;lsquo;vmx|svm&amp;rsquo; /proc/cpuinfo &amp;amp;&amp;amp; echo yes || echo no 如果启用则需要关闭虚拟化
+minikube servion查看版本信息
+minikube start启动
+查看集群信息kubectl cluster-info</description>
+    </item>
+    
+    <item>
+      <title>K8s基础操作</title>
+      <link>https://sunnnner.github.io/k8s%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Sat, 02 Nov 2019 15:36:16 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/k8s%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</guid>
+      <description>k8s获取所有运行的podskubectl get pods &amp;ndash;all-namespaces -o wide
+获取当前集群名称kubectl get pods -o wide
+当前etcd中的注册的宿主机的pod地址网段信息etcdctl ls /kube-centos/network/subnets
+而每个node上的Pod子网是根据我们在安装flannel时配置来划分的，在etcd中查看该配置etcdctl get /kube-centos/network/config</description>
+    </item>
+    
+    <item>
+      <title>K8s基础操作</title>
+      <link>https://sunnnner.github.io/p/k8s%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Sat, 02 Nov 2019 15:36:16 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/p/k8s%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</guid>
+      <description>k8s获取所有运行的podskubectl get pods &amp;ndash;all-namespaces -o wide
+获取当前集群名称kubectl get pods -o wide
+当前etcd中的注册的宿主机的pod地址网段信息etcdctl ls /kube-centos/network/subnets
+而每个node上的Pod子网是根据我们在安装flannel时配置来划分的，在etcd中查看该配置etcdctl get /kube-centos/network/config</description>
+    </item>
+    
+  </channel>
 </rss>
