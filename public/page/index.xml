@@ -6,7 +6,30 @@
     <description>Recent content in Pages on whiteKBlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 07 Jul 2022 10:08:33 +0800</lastBuildDate><atom:link href="https://sunnnner.github.io/page/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 08 Jul 2022 09:39:21 +0800</lastBuildDate><atom:link href="https://sunnnner.github.io/page/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python中Queue的线程安全</title>
+      <link>https://sunnnner.github.io/python%E4%B8%ADqueue%E7%9A%84%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8/</link>
+      <pubDate>Fri, 08 Jul 2022 09:39:21 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/python%E4%B8%ADqueue%E7%9A%84%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8/</guid>
+      <description>  为什么Queue是线程安全的
+  python的threading模块里的消息通信机制主要有以下三种
+ Event Condition Queue    使用最多的是Queue
+  原因是Queue实现了锁原语
+ 原语： 指若干个机器指令构成的完成某种特定功能的一段程序，具有不可分割性，即原语的执行必须是连续的，在执行过程中不可中断.
+   </description>
+    </item>
+    
+    <item>
+      <title>Python线程安全</title>
+      <link>https://sunnnner.github.io/python%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8/</link>
+      <pubDate>Fri, 08 Jul 2022 09:32:29 +0800</pubDate>
+      
+      <guid>https://sunnnner.github.io/python%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8/</guid>
+      <description>线程不安全的主要原因是我们的代码不是原子操作导致的 原子操作(atomic operation),指不会被线程调度机制打断的操作，这种操作一旦开始，就一直运行到结束，中间不会切换，它类似与数据库的事务操作。 为确保线程安全，我们需要人工实现原子操作，因为我们不能保证我们在多线程的情况下代码都具有原子性 因此我们需要使用线程锁来使代码具有原子性 代码实例  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19  from threading import Thread, Lock number = 0 lock = Lock() def target(): global number for _ in range(1000000): with lock: number += 1 # 开启两个线程 threads = [Thread(target=target) for _ in range(2)] for t in threads: t.start() for t in threads: t.</description>
+    </item>
+    
     <item>
       <title>Python虚拟环境pipenv使用</title>
       <link>https://sunnnner.github.io/python%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83pipenv%E4%BD%BF%E7%94%A8/</link>
