@@ -1,3 +1,15 @@
+---
+title: "Mysql安装"
+description: 
+date: 2022-07-12T14:37:29+08:00
+image: 
+math: 
+license: 
+hidden: false
+comments: true
+draft: true
+---
+
 ----
 # 安装数据库
 - `sudo apt-get install mysql-server `

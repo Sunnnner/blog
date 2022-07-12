@@ -1,3 +1,15 @@
+---
+title: "Mysql高级"
+description: 
+date: 2022-07-12T14:37:29+08:00
+image: 
+math: 
+license: 
+hidden: false
+comments: true
+draft: true
+---
+
 ----
 - # 关系
 - 在创建scores表时可以直接创建约束

@@ -1,3 +1,15 @@
+---
+title: "Liunx编程-命令"
+description: 
+date: 2022-07-12T14:37:29+08:00
+image: 
+math: 
+license: 
+hidden: false
+comments: true
+draft: true
+---
+
 - `pwd`显示当前目录 全称Print Working Directory
 - `ctrl+l`清屏假的清屏
 - ``

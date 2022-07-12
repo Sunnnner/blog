@@ -1,3 +1,15 @@
+---
+title: "python 基础"
+description: 
+date: 2022-07-12T14:37:29+08:00
+image: 
+math: 
+license: 
+hidden: false
+comments: true
+draft: true
+---
+
 # 让python2支持中文
 
 - `    #coding=utf-8`

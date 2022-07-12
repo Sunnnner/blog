@@ -1,3 +1,14 @@
+---
+title: "阿里云安装mongodb"
+description: 
+date: 2022-07-12T14:37:29+08:00
+image: 
+math: 
+license: 
+hidden: false
+comments: true
+draft: true
+---
 - 第1步：导入公钥
 - sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2930ADAE8CAF5059EE73BB4B58712A2291FA4AD5 
 - 第2步：创建源文件

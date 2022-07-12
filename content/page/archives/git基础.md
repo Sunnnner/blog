@@ -1,3 +1,16 @@
+---
+title: "git基础"
+description: 
+date: 2022-07-12T14:37:29+08:00
+image: 
+math: 
+license: 
+hidden: false
+comments: true
+draft: true
+---
+
+
 # Linux的发行版
 - ubtnutu
 - redhat
