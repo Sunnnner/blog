@@ -7,7 +7,7 @@ categories:
 tags:
   - 设计模式
 ---
-
+<!--more-->
 ```python
 装饰器
 def demo(name):

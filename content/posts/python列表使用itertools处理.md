@@ -8,7 +8,7 @@ tags:
   - 内置函数
 
 ---
-
+<!--more-->
 
 - 使用itertools处理python嵌套列表问题
 

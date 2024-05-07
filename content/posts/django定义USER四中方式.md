@@ -6,7 +6,7 @@ categories:
   - django
 ---
 
-
+<!--more-->
 - 设计user models
 
 - django本身的auth_user 只包含了基本的信息包括用户名，密码，邮箱以及注册时间和最新的登录时间，但是这些字段很难满足我们的要求，有时我们想记录用户更多的信息，例如手机号等信息，这时就需要在auth_user 的基础上增加字段，django自定义User网上有四种方法。

@@ -7,7 +7,7 @@ categories:
 tags:
   - rest_framework
 ---
-
+<!--more-->
 为什么要使用Django_rest_framework
     能自动生成restful规范的API
 

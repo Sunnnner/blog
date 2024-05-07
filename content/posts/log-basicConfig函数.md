@@ -7,7 +7,7 @@ categories:
 tags:
   - 内置函数
 ---
-
+<!--more-->
 # logging.basicConfig函数
 
 - logging模块是Python内置标准模块，主要用于输出运行日志，可以设置输出日志的等级、日志保存路径，日志文件回滚等

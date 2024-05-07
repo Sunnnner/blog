@@ -5,7 +5,7 @@ draft: true
 categories:
   - django
 ---
-
+<!--more-->
 ## FBV
 
 > fbv就是在url中一个路径对应一个函数

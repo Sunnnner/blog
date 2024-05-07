@@ -7,7 +7,7 @@ categories:
 tags:
   - 算法
 ---
-
+<!--more-->
 ```python
 
 1-->2-->3-->4-->5-->null

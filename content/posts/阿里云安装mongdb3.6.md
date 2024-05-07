@@ -8,6 +8,7 @@ categories:
 tags:
   - mongodb
 ---
+<!--more-->
 - 第1步：导入公钥
 - sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2930ADAE8CAF5059EE73BB4B58712A2291FA4AD5 
 - 第2步：创建源文件

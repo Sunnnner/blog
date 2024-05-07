@@ -5,7 +5,7 @@ draft: true
 categories:
   - k8s
 ---
-
+<!--more-->
 k8s获取所有运行的podskubectl get pods --all-namespaces -o wide
 
 获取当前集群名称kubectl get pods -o wide

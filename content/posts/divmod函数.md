@@ -7,7 +7,7 @@ categories:
 tags:
   - divmod
 ---
-
+<!--more-->
 - python divmod()把除数和余数运算结果结合起来，返回一个包含商和余数的元组(a // b, a % b)。
 
 ```python

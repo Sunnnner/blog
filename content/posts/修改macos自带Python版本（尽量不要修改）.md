@@ -7,7 +7,7 @@ categories:
 tags:
   - macos
 ---
-
+<!--more-->
 ```text
 
 1.在下载最新python（3.6）：wget https://www.python.org/ftp/python/3.6.1/python-3.6.1-macosx10.6.pkg

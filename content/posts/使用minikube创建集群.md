@@ -7,7 +7,7 @@ categories:
 tags:
   - minikube
 ---
-
+<!--more-->
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube_1.5.2.deb \ && sudo dpkg -i minikube_1.5.2.deb
 
 系统管理程序设置验证系统是否启用虚拟化 egrep -q 'vmx|svm' /proc/cpuinfo && echo yes || echo no 如果启用则需要关闭虚拟化

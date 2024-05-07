@@ -5,7 +5,7 @@ draft: true
 categories:
   - go
 ---
-
+<!--more-->
 
 # Go关键字
 

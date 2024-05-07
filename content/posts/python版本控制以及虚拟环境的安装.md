@@ -7,7 +7,7 @@ categories:
 tags:
   - python虚拟环境
 ---
-
+<!--more-->
 ## 虚拟环境安装
 
     当然首先你先去官网下载Python3.6 注意不是3.7 它现在还不兼容

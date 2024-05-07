@@ -7,8 +7,7 @@ categories:
 tags:
   - 字符串
 ---
-
-
+<!--more-->
 | 语法| 	描述
 --- |  ---
 | s.capitalize() |	返回字符串s的副本，并将首字符变为大写 |

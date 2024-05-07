@@ -6,7 +6,8 @@ draft: true
 ---
 
 ---
-- #pygame
+# pygame
 ---
+<!--more-->
 - pygame.display.set_mode((将来创建的游戏窗口的宽和高)，0，32)  框架规定0,32
 - 外界需要一个属性就需要在默认属性里进行穿参

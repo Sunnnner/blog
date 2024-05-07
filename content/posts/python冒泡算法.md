@@ -7,7 +7,7 @@ categories:
 tags:
   - 算法
 ---
-
+<!--more-->
 ```python
 冒泡
 def damo(sun):

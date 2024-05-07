@@ -6,7 +6,7 @@ categories:
   - go
 
 ---
-
+<!--more-->
 
 - 小记在mac上使用vscode导入redis包失效问题
 

@@ -7,7 +7,7 @@ categories:
 tags:
   - git
 ---
-
+<!--more-->
 ## 全局代理，写入配置
     git config --global http.proxy 'socks5://127.0.0.1:1080'
     git config --global https.proxy 'socks5://127.0.0.1:1080'

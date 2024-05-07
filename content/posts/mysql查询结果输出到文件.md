@@ -5,7 +5,7 @@ draft: true
 categories:
   - mysql
 ---
-
+<!--more-->
 # 方法一：
 
     直接执行命令：

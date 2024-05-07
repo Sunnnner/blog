@@ -7,7 +7,7 @@ categories:
 tags:
   - 内置函数
 ---
-
+<!--more-->
 
 - 秒数是相对于1970.1.1号的秒数
 - 日期的模块有time、datetime

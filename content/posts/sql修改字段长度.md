@@ -5,7 +5,7 @@ draft: true
 categories:
   - sql
 ---
-
+<!--more-->
 
 sql修改字段长度的语法
     `alter table 表名 modify 字段名 字段类型;`

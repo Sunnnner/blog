@@ -9,7 +9,7 @@ tags:
 ---
 
 cookie数据存放在客户的浏览器上，session数据放在服务器上。
-
+<!--more-->
 cookie不是很安全，别人可以分析存放在本地的COOKIE并进行COOKIE欺骗
 
 考虑到安全应当使用session。

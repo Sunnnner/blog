@@ -8,7 +8,7 @@ categories:
 tags:
   - 线程安全
 ---
-
+<!--more-->
 - 为什么Queue是线程安全的
 
 - python的threading模块里的消息通信机制主要有以下三种

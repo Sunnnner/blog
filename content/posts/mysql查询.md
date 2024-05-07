@@ -6,7 +6,7 @@ draft: true
 categories:
   - mysql
 ---
-
+<!--more-->
 ----
 # 查询
 - 1.准备数据创建新的数据库

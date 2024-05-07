@@ -8,7 +8,7 @@ categories:
 tags:
   - git
 ---
-
+<!--more-->
 
 # Linux的发行版
 - ubtnutu

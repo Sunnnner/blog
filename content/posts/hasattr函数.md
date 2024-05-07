@@ -7,7 +7,7 @@ categories:
 tags:
   - 内置函数
 ---
-
+<!--more-->
 # 描述
 `hasattr()` 函数用于判断对象是否包含对应的属性。
 

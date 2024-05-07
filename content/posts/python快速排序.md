@@ -7,7 +7,7 @@ categories:
 tags:
   - 算法
 ---
-
+<!--more-->
 ```python
 
 def demo(A,p,r):

@@ -1,11 +1,12 @@
 ---
 title: "liunx基础"
 description: 
-date: 2022-07-12T14:37:29+08:00
+date: 2021-07-12T14:37:29+08:00
 draft: true
 categories:
   - liunx
 ---
+<!--more-->
 
 # liunx 概述
 - 系统指的是很多模块组成的软件

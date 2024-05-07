@@ -8,7 +8,8 @@ categories:
 ---
 
 ----
-- # 关系
+<!--more-->
+# 关系
 - 在创建scores表时可以直接创建约束
 - creat table socres ( id int() primary key auto_increament notnull,
 - score decimal(5,2) default 0,
@@ -28,7 +29,7 @@ categories:
 - foreign key (subid) references subjetes(id) on delete cascade
 - )charset=utf8;
 - ---
-- # 连接查询
+# 连接查询
 - 内连接 (inner join)
 - 姓名(name)  标题(title)  分数（score）
 - 1.这三个字段来自三张表,students.name,subjects.title,scores.score
@@ -73,7 +74,7 @@ categories:
 -  
 
 ----
-- # 自关联
+# 自关联
 - 1.引入自关联
 - 创建areas地区表 ：
 - create table areas (
@@ -109,7 +110,7 @@ categories:
 - 如果说两张表里面的==字段相同==就不能进行创建视图
 - 删除视图drop view xxx
 - ---
-- # 事务
+# 事务
 - 事务的四大特性：（ACID）
 - 原子性（Atomicity）  要么全部完成，要么都不成功
 - 一致性(Consistency)  几个并行执行的事务，其执行结果必须与按照某一舒徐串执行的结果相一致
@@ -120,12 +121,12 @@ categories:
 - 查看引擎：show engines;
 - 查看表的创建语句： show create table students/xxx;
 - 修改表的字段：alert table "表明" engine=innodb;
-- ### 使用事务的情况；
+### 使用事务的情况；
 - 开启 begin;
 - 提交： commit
 - 回滚： rollbaack;
 - ----
-- # 索引
+# 索引
 - 越小的数据通常更好
 - 简单的数据类型更好
 - 尽量避免null
@@ -144,7 +145,6 @@ categories:
 - 为表areas 的atitle创建索引
 - create index 索引名 on areas(atitle(20))
 - 执行查询语句
-- 
 - 在看执行时间
 - show profiles;
 - 字符串函数select ascii('a');
@@ -154,4 +154,3 @@ categories:
 - select left('1234',2)
 - select right()
 - 去除空格：select trim("  barr  ")
-- 

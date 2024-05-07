@@ -7,7 +7,7 @@ categories:
 tags:
   - redis
 ---
-
+<!--more-->
 # Django-setting配置Redis储存session
 
 

@@ -8,10 +8,10 @@ categories:
 tags:
   - pymysql
 ---
-
-- # pymysql
+<!--more-->
+# pymysql
 - import pymysql
-- ###  Connection对象
+###  Connection对象
 - •	用于建立与数据库的连接
 - 创建对象:调用connect()
 - conn = pymysql.connect(参数列表)
@@ -21,17 +21,17 @@ tags:
 - 参数user链接的用户名
 - 参数password链接的密码
 - 参数charset通信采用的编码方式，建议是utf8要求与数据库创建时指定的编码一致
-- ### 对象的方法
+### 对象的方法
 - 当链接成功后可以做如下操作：
 - close（）关闭链接
 - commit（）事务，所以需要提交时才会生效
 - rollback（）事务，放弃之前的操作
 - cursor（）返回cursor对象，用于执行sql语句并获得结果
-- ### cursor对象
+### cursor对象
 - 执行sql语句
 - 创建对象：调用connection对象的cursor（）方法
 - cursor = conn.cursor()
-- ### 对象的方法
+### 对象的方法
 - close（）关闭
 - execute（operation[,parametes]）执行语句，返回受影响的行数
 - fetchone()执行查询语句时，获取查询及如果集的第一行数据，返回一个元组
@@ -42,7 +42,7 @@ tags:
 - mode的默认值为relative，标志基于当前行移动到value，
 - value 为正则向下移动，value为负则向上移动
 - mode的值为absolute，表示基于第一条数据的位置，第一条数据的位置为0
-- ### 对象的属性
+### 对象的属性
 - rewcount只读属性，表示最近一次excute()执行后受影响的行数
 - connection 获得当前链接对象
 - 

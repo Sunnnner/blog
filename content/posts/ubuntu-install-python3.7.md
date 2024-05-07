@@ -7,7 +7,7 @@ categories:
 ---
 
 # ubuntu20.04 LTS编译 [python3.7.1](https://www.python.org/downloads/release/python-371/)
-
+<!--more-->
 
 ## 安装编译前依赖包
 

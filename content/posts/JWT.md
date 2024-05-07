@@ -7,7 +7,7 @@ categories:
 tags:
   - jWT
 ---
-
+<!--more-->
 # JWT——Json web token 
 
     是为了在网络应用环境间传递声明而执行的一种基于JSON的开放标准，可实现无状态、分布式的Web应用授权。

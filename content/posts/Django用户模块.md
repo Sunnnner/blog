@@ -5,7 +5,7 @@ draft: true
 categories:
   - django
 ---
-
+<!--more-->
 # 第一步创建Django项目
 - `django-admin startproject blog`
 

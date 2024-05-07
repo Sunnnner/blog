@@ -7,7 +7,7 @@ categories:
 tags:
   - 算法
 ---
-
+<!--more-->
 ```python
 时间复杂度为o（logN）
     def demo(array, t):

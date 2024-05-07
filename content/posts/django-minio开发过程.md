@@ -7,7 +7,7 @@ categories:
 tags:
   - minio
 ---
-
+<!--more-->
 > 使用Django-minio-storage进行开发minio的静态文件存储功能，本来寻思用minio直接进行开发，既然django有这个包我们就拿来用一下
 
 - 项目说明[django-minio-storage](https://django-minio-storage.readthedocs.io/en/latest/)

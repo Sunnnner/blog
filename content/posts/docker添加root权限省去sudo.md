@@ -5,7 +5,7 @@ draft: true
 categories:
   - docker
 ---
-
+<!--more-->
 - 首先使用root权限账户登录系统
 - 首先查看用户组中有没有docker组sudo cat /etc/group | grep docker
 

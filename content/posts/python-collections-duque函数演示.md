@@ -7,7 +7,7 @@ categories:
 tags:
   - 内置函数
 ---
-
+<!--more-->
 - duque函数有一个maxlen参数，当append的时候，如果超过，那么最前面的就会被挤出队列
 
 ```python

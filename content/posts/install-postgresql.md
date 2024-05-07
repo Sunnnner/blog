@@ -5,7 +5,7 @@ draft: true
 categories:
   - postgresql
 ---
-
+<!--more-->
 安装postgres sudo apt install postgresql postgresql-contrib
 
 安装完成后，PostgreSQL服务将自动启动。 要验证安装，我们将使用psql实用程序连接到PostgreSQL数据库服务器并打印服务器版本：sudo -u postgres

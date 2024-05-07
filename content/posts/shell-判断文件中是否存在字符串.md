@@ -5,7 +5,7 @@ draft: true
 categories:
   - shell
 ---
-
+<!--more-->
 ```shell
 
 if cat xxx.yml | grep "content">/dev/null

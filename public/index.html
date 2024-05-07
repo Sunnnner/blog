@@ -10,7 +10,7 @@
   />
   
     
-      <title> | whiteKBlog</title>
+      <title>学无止境</title>
     
   
   <link rel="stylesheet" href="/css/reset.css"/>
@@ -37,21 +37,24 @@
       />
     </a>
     <div class="text">
-      <a href="https://sunnnner.github.io/"><h1>whiteKBlog</h1></a>
-      <h3>Description about Blog Author</h3>
+      <a href="https://sunnnner.github.io/"><h1>学无止境</h1></a>
+      <h3>少年辛苦终身事,莫向光阴惰寸功。——唐·杜荀鹤《题弟侄书堂》</h3>
     </div>
   </div>
   <nav>
     
       
         
-        <a href="/"><b>Home</b></a>
+        <a href="/posts/"><b>主页</b></a>
       
          | 
-        <a href="/search/"><b>Search</b></a>
+        <a href="/categories/"><b>类别</b></a>
       
          | 
-        <a href="/links/"><b>Links</b></a>
+        <a href="/tags/"><b>标签</b></a>
+      
+         | 
+        <a href="https://rustcc.com.cn"><b>GPT</b></a>
       
     
   </nav>
@@ -63,237 +66,9 @@
 	<main>
 		
 		
-			<article class="summary">
-  <a href="https://sunnnner.github.io/p/pysocket/">
-    <h1 class="title">Pysocket</h1>
-    
-  </a>
-  
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="post-meta">
-  <strong>
-    <span>Posted on</span>
-    <time>2022-03-10 15:46:40</time>
-    
-    
-  </strong>
- <span> • 204 words</span>
- <span> • 1 minute read</span>
-  
-    <div>
-      <span>Tags:</span>
-      
-        <a href="/tags/first">first</a>
-    </div>
-  
-</div>
-
-  <div class="content">
-    <p>2-1 套接字。面向连接的套接字和无连接套接字之间的区别是什么？
-面向连接的套接字 无连接的套接字 在通信之前必须建立连接 在通信之前不需要建立连接 序列化的，可靠的不重复的数据交付 无法保证顺序性，可靠性或重复性，减少以一定的开销 没有记录边界 保存了记录边界 每条信息可以拆分成多个片段，并且每一个消息片段都能确保到达目的地，然后将他么按顺序组合在一起。 消息是以整体发送的。 传输控制协议(TCP) 用户数据协议(UDP) 2-2 客户端/服务器架构。用自己的话描述这个术语的意思，并给出几个例子。 1、服务器就是一系列硬件或软件，为一个或多个客户端（服务的用户）提供所需的“服务”。其存在的目的就是等待客户端的请求，并响应他们（提供服务），然后等待更多的请求。
-2-3 套接字。 TCP 和 UDP 之中，哪种类型的服务器接受连接，并将它们转换到独立的 套接字进行客户端通信？ tcp
-2-4 客户端。更新 TCP（tsTclnt.py）和 UDP（tsUclnt.py）客户端，以使得服务器名称 无须硬编码到应用程序中。此外，应该允许用户指定主机名和端口号，且如果二者 中任何一个或者全部参数丢失，那么应该使用默认值。
-1 2 3 4 5 6 7 8 9 import sys, argparse if __name__ == &#34;__main__&#34;: parser = argparse.ArgumentParser(description=&#34;pls write host port&#34;) parser.add_argument(&#34;--host&#34;, type=str, default=&#39;localhost&#39;) parser.add_argument(&#34;--port&#34;, type=int, default=8000) args = parser.parse_args() host = args.host port = args.port print(args.host, args.port) 2-6 Daytime 服务。使用 socket.</p>
-    
-      <a href="https://sunnnner.github.io/p/pysocket/">Read more...</a>
-    
-  </div>
-</article>
-
-		
-			<article class="summary">
-  <a href="https://sunnnner.github.io/p/djangoupgrade/">
-    <h1 class="title">Djangoupgrade</h1>
-    
-  </a>
-  
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="post-meta">
-  <strong>
-    <span>Posted on</span>
-    <time>2022-03-08 11:06:40</time>
-    
-    
-  </strong>
- <span> • 2 words</span>
- <span> • 1 minute read</span>
-  
-    <div>
-      <span>Tags:</span>
-      
-        <a href="/tags/first">first</a>
-    </div>
-  
-</div>
-
-  <div class="content">
-    <p> python3 中迭代器方法next()已经改变为__next__() </p>
-    
-  </div>
-</article>
-
-		
-			<article class="summary">
-  <a href="https://sunnnner.github.io/p/go%E5%AF%BC%E5%85%A5%E5%A4%96%E9%83%A8%E5%8C%85%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98/">
-    <h1 class="title">Go导入外部包失效问题</h1>
-    
-  </a>
-  
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="post-meta">
-  <strong>
-    <span>Posted on</span>
-    <time>2021-08-26 10:48:36</time>
-    
-    
-  </strong>
- <span> • 40 words</span>
- <span> • 1 minute read</span>
-  
-    <div>
-      <span>Tags:</span>
-      
-        <a href="/tags/first">first</a>
-    </div>
-  
-</div>
-
-  <div class="content">
-    <p> 小记在mac上使用vscode导入redis包失效问题
-解决办法
-1 2 3 4 5 6 7 8 9 10 11 12 13 vim .bash_profile # 环境变量导入当前工作目录 export GOPATH=/Users/xxx/Desktop/go-project cd /Users/xxx/Desktop/go-project go mod init example.com/m/v2 # 自动下载所需的包 go mod tidy # 项目源代码放置处 mkdir src cd src # 可以开始编写了 </p>
-    
-  </div>
-</article>
-
-		
-			<article class="summary">
-  <a href="https://sunnnner.github.io/p/django-admin-permissions%E6%8E%A7%E5%88%B6/">
-    <h1 class="title">Django Admin Permissions控制</h1>
-    
-  </a>
-  
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="post-meta">
-  <strong>
-    <span>Posted on</span>
-    <time>2021-08-24 09:26:52</time>
-    
-    
-  </strong>
- <span> • 515 words</span>
- <span> • 3 minute read</span>
-  
-    <div>
-      <span>Tags:</span>
-      
-        <a href="/tags/first">first</a>
-    </div>
-  
-</div>
-
-  <div class="content">
-    <p>is_staff bool 指定此用户是否可以访问管理站点 控制用户操作admin的权限由 django.contrib.auth.backends.ModelBackend 进行控制，它也进行控制用户的登录认证行为 ModelBackend源码解析 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 class ModelBackend: &#34;&#34;&#34; Authenticates against settings.</p>
-    
-      <a href="https://sunnnner.github.io/p/django-admin-permissions%E6%8E%A7%E5%88%B6/">Read more...</a>
-    
-  </div>
-</article>
-
-		
-			<article class="summary">
-  <a href="https://sunnnner.github.io/p/go%E8%AF%8D%E6%B3%95%E5%8D%95%E5%85%83/">
-    <h1 class="title">Go词法单元</h1>
-    
-  </a>
-  
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="post-meta">
-  <strong>
-    <span>Posted on</span>
-    <time>2021-08-17 10:10:49</time>
-    
-    
-  </strong>
- <span> • 6 words</span>
- <span> • 1 minute read</span>
-  
-    <div>
-      <span>Tags:</span>
-      
-        <a href="/tags/first">first</a>
-    </div>
-  
-</div>
-
-  <div class="content">
-    <p>高级语言源程序内部的几个概念 token、关键字、标识符、操作符、分隔符和字面量 token token 是构成源程序的基本不可再分割的单元，编译器编译程序的第一步就是将源程序分割为一个个独立的token，这个过程就是词法分析
-go语言的token可以分为关键字、标识符、操作符、分隔符和字面常量等</p>
-    
-  </div>
-</article>
-
-		
 		<div>
   
-  1 of 16
-  
-    <a href="/page/2/">Next Page</a>
+  1 of 0
   
 </div>
 

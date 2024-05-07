@@ -6,7 +6,7 @@ categories:
   - django
 
 ---
-
+<!--more-->
 
 - `is_staff` bool 指定此用户是否可以访问管理站点
 - 控制用户操作admin的权限由 `django.contrib.auth.backends.ModelBackend` 进行控制，它也进行控制用户的登录认证行为

@@ -7,7 +7,7 @@ categories:
 tags:
   - pyenv
 ---
-
+<!--more-->
 - pipenv 是一个包的版本控制软件，与我之前用过的rust语言中的cargo类似，与go的包管理器也类似，它能够锁定当前包的依赖项
 
 - Ubuntu中可以使用`sudo apt install pipenv`

@@ -5,7 +5,7 @@ draft: true
 categories:
   - shell
 ---
-
+<!--more-->
 ```shell
 #! /bin/bash
 # input your comments here

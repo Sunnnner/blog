@@ -5,7 +5,7 @@ draft: true
 categories:
   - python
 ---
-
+<!--more-->
 ## 让python2支持中文
 
 ```python

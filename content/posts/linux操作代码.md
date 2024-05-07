@@ -6,7 +6,7 @@ draft: true
 categories:
   - linux
 ---
-
+<!--more-->
 - `pwd`显示当前目录 全称Print Working Directory
 - `ctrl+l`清屏假的清屏
 - ``

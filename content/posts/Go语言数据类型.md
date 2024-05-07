@@ -5,7 +5,7 @@ draft: true
 categories:
   - go
 ---
-
+<!--more-->
 ## 派生
     包括：
         指针类型(Pointer)

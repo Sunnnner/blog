@@ -8,6 +8,7 @@ categories:
 ---
 
 ----
+<!--more-->
 # 安装数据库
 - `sudo apt-get install mysql-server `
 - `show databases` 查看数据

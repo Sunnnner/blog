@@ -5,7 +5,7 @@ draft: true
 categories:
   - shell
 ---
-
+<!--more-->
 ```shell
 ! /bin/bash
 this is an example of a if -then

@@ -5,7 +5,7 @@ draft: true
 categories:
   - go
 ---
-
+<!--more-->
 
 ## 高级语言源程序内部的几个概念
 

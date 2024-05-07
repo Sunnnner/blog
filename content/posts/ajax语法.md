@@ -5,7 +5,7 @@ draft: true
 categories:
   - ajax
 ---
-
+<!--more-->
 # Ajax语法
 
 - 现在写ajax写的我很难受下面就是我在搜索的时候遇到的标签的意思

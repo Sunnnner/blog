@@ -7,7 +7,7 @@ categories:
 tags:
   - 设计模式
 ---
-
+<!--more-->
 ## 介绍一下工厂模式
 
 ```text

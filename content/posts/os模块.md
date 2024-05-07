@@ -7,7 +7,7 @@ categories:
 tags:
   - 内置函数
 ---
-
+<!--more-->
 `os .path.dirname(path)` 获取路径名
 
 `os.path.basename(path)` 获取文件名

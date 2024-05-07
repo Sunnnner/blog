@@ -6,8 +6,8 @@ categories:
   - redis
 
 ---
-
-```yml
+<!--more-->
+```yaml
 1) 绑定IP地址,看业务开放
 bind 0.0.0.0
 
