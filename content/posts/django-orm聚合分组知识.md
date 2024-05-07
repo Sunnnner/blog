@@ -1,7 +1,7 @@
 ---
 title: "Django Orm聚合分组知识"
 date: 2021-08-12T16:19:36+08:00
-draft: true
+draft: false
 categories:
   - django
 tags:

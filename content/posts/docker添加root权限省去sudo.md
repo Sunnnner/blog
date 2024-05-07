@@ -1,7 +1,7 @@
 ---
 title: "Docker添加root权限省去sudo"
 date: 2019-11-01T15:35:30+08:00
-draft: true
+draft: false
 categories:
   - docker
 ---

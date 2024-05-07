@@ -1,7 +1,7 @@
 ---
 title: "Mysql查询结果输出到文件"
 date: 2019-10-03T14:13:04+08:00
-draft: true
+draft: false
 categories:
   - mysql
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Django Admin Permissions控制"
 date: 2021-08-24T09:26:52+08:00
-draft: true
+draft: false
 categories:
   - django
 

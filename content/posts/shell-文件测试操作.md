@@ -1,7 +1,7 @@
 ---
 title: "Shell 文件测试操作"
 date: 2019-08-20T11:22:13+08:00
-draft: true
+draft: false
 categories:
   - shell
 ---

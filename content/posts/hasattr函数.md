@@ -1,7 +1,7 @@
 ---
 title: "Hasattr函数"
 date: 2019-10-13T15:30:12+08:00
-draft: true
+draft: false
 categories:
   - python
 tags:

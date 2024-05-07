@@ -1,7 +1,7 @@
 ---
 title: "Python工厂模式"
 date: 2018-09-06T10:34:03+08:00
-draft: true
+draft: false
 categories:
   - python
 tags:

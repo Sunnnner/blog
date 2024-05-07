@@ -1,7 +1,7 @@
 ---
 title: "Celery任务队列"
 date: 2018-09-02T10:29:21+08:00
-draft: true
+draft: false
 categories:
   - django
 tags:

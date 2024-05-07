@@ -1,7 +1,7 @@
 ---
 title: "Git加速"
 date: 2019-10-12T15:29:07+08:00
-draft: true
+draft: false
 categories:
   - github
 tags:

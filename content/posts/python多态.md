@@ -1,7 +1,7 @@
 ---
 title: "Python多态"
 date: 2018-09-04T10:32:01+08:00
-draft: true
+draft: false
 categories:
   - python
 tags:

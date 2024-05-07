@@ -1,7 +1,7 @@
 ---
 title: "Go学习"
 date: 2020-02-01T15:45:32+08:00
-draft: true
+draft: false
 categories:
   - go
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Python上楼梯问题"
 date: 2018-12-01T10:39:04+08:00
-draft: true
+draft: false
 categories:
   - python
 tags:

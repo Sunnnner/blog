@@ -1,7 +1,7 @@
 ---
 title: "Redis配置"
 date: 2018-05-31T18:53:17+08:00
-draft: true
+draft: false
 categories:
   - redis
 

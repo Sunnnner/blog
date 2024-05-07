@@ -1,7 +1,7 @@
 ---
 title: "Shell 如何传参"
 date: 2019-08-18T11:21:09+08:00
-draft: true
+draft: false
 categories:
   - shell
 ---

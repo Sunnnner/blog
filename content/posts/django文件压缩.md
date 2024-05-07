@@ -1,7 +1,7 @@
 ---
 title: "Django文件压缩"
 date: 2019-10-11T15:28:02+08:00
-draft: true
+draft: false
 categories:
   - django
 tags:

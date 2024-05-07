@@ -1,7 +1,7 @@
 ---
 title: "Python链表"
 date: 2018-10-02T10:37:28+08:00
-draft: true
+draft: false
 categories:
   - python
 tags:

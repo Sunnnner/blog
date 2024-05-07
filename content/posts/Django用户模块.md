@@ -1,7 +1,7 @@
 ---
 title: "Django用户模块"
 date: 2018-06-01T10:15:16+08:00
-draft: true
+draft: false
 categories:
   - django
 ---

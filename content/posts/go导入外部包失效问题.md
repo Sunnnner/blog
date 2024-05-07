@@ -1,7 +1,7 @@
 ---
 title: "Go导入外部包失效问题"
 date: 2021-08-26T10:48:36+08:00
-draft: true
+draft: false
 categories:
   - go
 

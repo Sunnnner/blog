@@ -1,7 +1,7 @@
 ---
 title: "Divmod函数"
 date: 2019-12-01T15:39:29+08:00
-draft: true
+draft: false
 categories:
   - python
 tags:

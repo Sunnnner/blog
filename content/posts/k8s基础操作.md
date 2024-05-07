@@ -1,7 +1,7 @@
 ---
 title: "K8s基础操作"
 date: 2019-11-02T15:36:16+08:00
-draft: true
+draft: false
 categories:
   - k8s
 ---

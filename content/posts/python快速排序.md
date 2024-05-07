@@ -1,7 +1,7 @@
 ---
 title: "Python快速排序"
 date: 2018-11-01T10:38:06+08:00
-draft: true
+draft: false
 categories:
   - python
 tags:

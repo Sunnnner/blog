@@ -1,7 +1,7 @@
 ---
 title: "Python冒泡算法"
 date: 2018-09-08T10:36:08+08:00
-draft: true
+draft: false
 categories:
   - python
 tags:

@@ -1,7 +1,7 @@
 ---
 title: "Go语言数据类型"
 date: 2020-02-02T15:52:00+08:00
-draft: true
+draft: false
 categories:
   - go
 ---

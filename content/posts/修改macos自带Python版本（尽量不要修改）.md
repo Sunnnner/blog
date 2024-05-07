@@ -1,7 +1,7 @@
 ---
 title: "修改macos自带Python版本（尽量不要修改）"
 date: 2019-09-02T11:24:14+08:00
-draft: true
+draft: false
 categories:
   - python
 tags:

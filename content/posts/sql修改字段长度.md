@@ -1,7 +1,7 @@
 ---
 title: "Sql修改字段长度"
 date: 2019-09-10T11:41:14+08:00
-draft: true
+draft: false
 categories:
   - sql
 ---

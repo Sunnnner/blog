@@ -1,7 +1,7 @@
 ---
 title: "Python虚拟环境pipenv使用"
 date: 2022-07-07T10:08:33+08:00
-draft: true
+draft: false
 categories:
   - python
 tags:

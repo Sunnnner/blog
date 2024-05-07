@@ -1,7 +1,7 @@
 ---
 title: "Shell 获取用户输入"
 date: 2019-08-17T11:20:41+08:00
-draft: true
+draft: false
 categories:
   - shell
 ---

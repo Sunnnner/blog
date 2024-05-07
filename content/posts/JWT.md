@@ -1,7 +1,7 @@
 ---
 title: "JWT"
 date: 2019-10-02T14:08:17+08:00
-draft: true
+draft: false
 categories:
   - django
 tags:

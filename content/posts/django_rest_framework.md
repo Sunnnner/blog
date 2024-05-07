@@ -1,7 +1,7 @@
 ---
 title: "Django_rest_framework"
 date: 2019-09-08T11:37:47+08:00
-draft: true
+draft: false
 categories:
   - django
 tags:

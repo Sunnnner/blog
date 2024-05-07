@@ -1,7 +1,7 @@
 ---
 title: "使用itertools处理python嵌套列表问题"
 date: 2022-05-13T13:39:13+08:00
-draft: true
+draft: false
 categories:
   - python
 tags:

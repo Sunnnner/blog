@@ -1,7 +1,7 @@
 ---
 title: "页面开发"
 date: 2018-05-31T18:47:29+08:00
-draft: true
+draft: false
 categories:
   - django
 tags:

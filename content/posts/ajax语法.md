@@ -1,7 +1,7 @@
 ---
 title: "Ajax语法"
 date: 2018-06-02T10:21:32+08:00
-draft: true
+draft: false
 categories:
   - ajax
 ---

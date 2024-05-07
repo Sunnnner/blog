@@ -1,7 +1,7 @@
 ---
 title: "Django定义USER四中方式"
 date: 2018-09-03T10:30:05+08:00
-draft: true
+draft: false
 categories:
   - django
 ---

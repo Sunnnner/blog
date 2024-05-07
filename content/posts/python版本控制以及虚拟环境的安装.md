@@ -1,7 +1,7 @@
 ---
 title: "Python版本控制以及虚拟环境的安装"
 date: 2019-09-01T11:22:47+08:00
-draft: true
+draft: false
 categories:
   - python
 tags:

@@ -1,7 +1,7 @@
 ---
 title: "Getattr函数"
 date: 2019-10-14T15:31:31+08:00
-draft: true
+draft: false
 categories:
   - python
 tags:

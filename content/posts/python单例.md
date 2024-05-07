@@ -1,7 +1,7 @@
 ---
 title: "Python单例"
 date: 2018-09-05T10:32:39+08:00
-draft: true
+draft: false
 categories:
   - python
 tags:

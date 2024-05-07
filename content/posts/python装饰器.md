@@ -1,7 +1,7 @@
 ---
 title: "Python装饰器"
 date: 2018-09-07T10:35:21+08:00
-draft: true
+draft: false
 categories:
   - python
 tags:

@@ -2,7 +2,7 @@
 title: "liunx基础"
 description: 
 date: 2021-07-12T14:37:29+08:00
-draft: true
+draft: false
 categories:
   - liunx
 ---

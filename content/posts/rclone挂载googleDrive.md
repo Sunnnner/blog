@@ -1,7 +1,7 @@
 ---
 title: "Rclone挂载googleDrive"
 date: 2019-09-04T11:30:51+08:00
-draft: true
+draft: false
 categories:
   - linux
 tags:

@@ -1,7 +1,7 @@
 ---
 title: "Shell if Then语句"
 date: 2019-08-19T11:21:38+08:00
-draft: true
+draft: false
 categories:
   - shell
 ---

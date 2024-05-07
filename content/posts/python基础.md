@@ -1,7 +1,7 @@
 ---
 title: "Python基础"
 date: 2018-06-03T10:22:36+08:00
-draft: true
+draft: false
 categories:
   - python
 ---

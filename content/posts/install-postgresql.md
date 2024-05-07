@@ -1,7 +1,7 @@
 ---
 title: "Install Postgresql"
 date: 2019-11-04T15:37:26+08:00
-draft: true
+draft: false
 categories:
   - postgresql
 ---

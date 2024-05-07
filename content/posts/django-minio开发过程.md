@@ -1,7 +1,7 @@
 ---
 title: "Django Minio开发过程"
 date: 2019-10-06T14:17:12+08:00
-draft: true
+draft: false
 categories:
   - django
 tags:

@@ -2,7 +2,7 @@
 title: "免费的gpt服务器"
 description: 
 date: 2024-03-13T14:40:46+08:00
-draft: true
+draft: false
 categories:
   - chatgpt
 ---

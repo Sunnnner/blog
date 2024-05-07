@@ -1,7 +1,7 @@
 ---
 title: "使用minikube创建集群"
 date: 2019-11-11T15:38:29+08:00
-draft: true
+draft: false
 categories:
   - k8s
 tags:

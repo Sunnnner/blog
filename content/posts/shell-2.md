@@ -1,7 +1,7 @@
 ---
 title: "Shell 2"
 date: 2019-08-16T11:19:55+08:00
-draft: true
+draft: false
 categories:
   - shell
 ---

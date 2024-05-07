@@ -1,7 +1,7 @@
 ---
 title: "Ubuntu20.04 LTS编译python3.7"
 date: 2021-08-06T19:29:05+08:00
-draft: true
+draft: false
 categories:
   - python
 ---

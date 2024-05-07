@@ -1,7 +1,7 @@
 ---
 title: "Django中的FBV和CBV"
 date: 2019-09-05T11:34:25+08:00
-draft: true
+draft: false
 categories:
   - django
 ---
