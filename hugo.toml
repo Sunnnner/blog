@@ -2,6 +2,13 @@ baseURL = 'https://sunnnner.github.io/'
 languageCode = 'en-us'
 theme = 'smigle'
 title = '学无止境'
+buildDrafts = false
+paginate = 5
+enableRobotsTXT = true
+enableGitInfo = true
+enableEmoji = true
+enableInlineShortcodes = true
+googleAnalytics = "G-PPPPPPPPP"
 
 # Parameters
 [params]
@@ -49,3 +56,12 @@ weight = 2
 name = "Imprint"
 url = "/imprint"
 weight = 3
+
+[build]
+noJSConfigInAssets = false
+useResourceCacheWhen = 'fallback'
+[build.buildStats]
+disableClasses = false
+disableIDs = false
+disableTags = false
+enable = false
