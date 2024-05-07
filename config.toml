@@ -1,0 +1,51 @@
+baseURL = 'https://sunnnner.github.io/'
+languageCode = 'en-us'
+theme = 'smigle'
+title = '学无止境'
+
+# Parameters
+[params]
+subtitle = "少年辛苦终身事,莫向光阴惰寸功。——唐·杜荀鹤《题弟侄书堂》"
+dateFmt = "02.01.2006"
+
+# Header
+[menu]
+[[menu.main]]
+identifier = "posts"
+name = "主页"
+url = "/posts/"
+weight = 1
+
+[[menu.main]]
+identifier = "categories"
+name = "类别"
+url = "/categories/"
+weight = 2
+
+[[menu.main]]
+identifier = "tags"
+name = "标签"
+url = "/tags/"
+weight = 3
+
+[[menu.main]]
+identifier = "GPT"
+name = "GPT"
+url = "https://rustcc.com.cn"
+weight = 4
+
+# Footer
+[[menu.footer]]
+name = "Github"
+url = "https://github.com/Sunnnner"
+weight = 1
+
+[[menu.footer]]
+name = "StackOverflow"
+url = "https://stackoverflow.com"
+weight = 2
+
+[[menu.footer]]
+name = "Imprint"
+url = "/imprint"
+weight = 3

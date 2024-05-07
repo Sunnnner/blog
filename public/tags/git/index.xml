@@ -41,7 +41,7 @@
       <pubDate>Sat, 12 Oct 2019 15:29:07 +0800</pubDate>
       
       <guid>https://sunnnner.github.io/git%E5%8A%A0%E9%80%9F/</guid>
-      <description>全局代理，写入配置 git config --global http.proxy &#39;socks5://127.0.0.1:1080&#39; git config --global https.proxy &#39;socks5://127.0.0.1:1080&#39;  清除配置 git config --global --unset http.proxy git config --global --unset https.proxy  临时代理 ALL_PROXY=socks5://127.0.0.1:1080 git clone xxx </description>
+      <description>全局代理，写入配置 git config --global http.proxy &#39;socks5://127.0.0.1:1080&#39; git config --global https.proxy &#39;socks5://127.0.0.1:1080&#39; 清除配置 git config --global --unset http.proxy git config --global --unset https.proxy 临时代理 ALL_PROXY=socks5://127.0.0.1:1080 git clone xxx </description>
     </item>
     
     <item>
@@ -50,7 +50,7 @@
       <pubDate>Sat, 12 Oct 2019 15:29:07 +0800</pubDate>
       
       <guid>https://sunnnner.github.io/p/git%E5%8A%A0%E9%80%9F/</guid>
-      <description>全局代理，写入配置 git config --global http.proxy &#39;socks5://127.0.0.1:1080&#39; git config --global https.proxy &#39;socks5://127.0.0.1:1080&#39;  清除配置 git config --global --unset http.proxy git config --global --unset https.proxy  临时代理 ALL_PROXY=socks5://127.0.0.1:1080 git clone xxx </description>
+      <description>全局代理，写入配置 git config --global http.proxy &#39;socks5://127.0.0.1:1080&#39; git config --global https.proxy &#39;socks5://127.0.0.1:1080&#39; 清除配置 git config --global --unset http.proxy git config --global --unset https.proxy 临时代理 ALL_PROXY=socks5://127.0.0.1:1080 git clone xxx </description>
     </item>
     
   </channel>

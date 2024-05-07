@@ -13,7 +13,7 @@
       <pubDate>Fri, 01 Nov 2019 15:35:30 +0800</pubDate>
       
       <guid>https://sunnnner.github.io/docker%E6%B7%BB%E5%8A%A0root%E6%9D%83%E9%99%90%E7%9C%81%E5%8E%BBsudo/</guid>
-      <description>首先使用root权限账户登录系统 首先查看用户组中有没有docker组sudo cat /etc/group | grep docker  创建docker分组，并将相应的用户添加到这个分组里面
+      <description>首先使用root权限账户登录系统 首先查看用户组中有没有docker组sudo cat /etc/group | grep docker 创建docker分组，并将相应的用户添加到这个分组里面
 sudo groupadd -g 999 docker
 -g 999为组ID 也可以不指定
 sudo usermod -aG dockerroot username
@@ -32,7 +32,7 @@ sudo chmod a+rw /var/run/docker.sock</description>
       <pubDate>Fri, 01 Nov 2019 15:35:30 +0800</pubDate>
       
       <guid>https://sunnnner.github.io/p/docker%E6%B7%BB%E5%8A%A0root%E6%9D%83%E9%99%90%E7%9C%81%E5%8E%BBsudo/</guid>
-      <description>首先使用root权限账户登录系统 首先查看用户组中有没有docker组sudo cat /etc/group | grep docker  创建docker分组，并将相应的用户添加到这个分组里面
+      <description>首先使用root权限账户登录系统 首先查看用户组中有没有docker组sudo cat /etc/group | grep docker 创建docker分组，并将相应的用户添加到这个分组里面
 sudo groupadd -g 999 docker
 -g 999为组ID 也可以不指定
 sudo usermod -aG dockerroot username
@@ -58,7 +58,7 @@ docker-compose down 强制停止docker运行的所有项目
 2、删除所有镜像d ocker rmi docker images -q
 3、按条件删除镜像 没有打标签docker rmi docker images -q | awk &#39;/^&amp;lt;none&amp;gt;/ { print $3 }&#39;
 镜像名包含关键字docker rmi &amp;ndash;force docker images | grep doss-api | awk &#39;{print $3}&#39; //其中doss-api为关键字
-　docker-compose.yml
+docker-compose.yml
 service 项目
 image docker镜像名字，若本地没有会尝试在docker服务器拉取
 restart 是否stop后重启
@@ -82,7 +82,7 @@ docker-compose down 强制停止docker运行的所有项目
 2、删除所有镜像d ocker rmi docker images -q
 3、按条件删除镜像 没有打标签docker rmi docker images -q | awk &#39;/^&amp;lt;none&amp;gt;/ { print $3 }&#39;
 镜像名包含关键字docker rmi &amp;ndash;force docker images | grep doss-api | awk &#39;{print $3}&#39; //其中doss-api为关键字
-　docker-compose.yml
+docker-compose.yml
 service 项目
 image docker镜像名字，若本地没有会尝试在docker服务器拉取
 restart 是否stop后重启
