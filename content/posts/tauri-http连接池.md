@@ -78,7 +78,7 @@ fn main() {
 ```
 
 - 测试结果显示的确是使用了连接池，速度明显提高了。只创建了一个连接，后续请求都是复用这个连接。
-![alt text](../../images/tauri-http.png)
+![alt text](/images/tauri-http.png)
 
 ## 参考
 - [Tauri Http 简介](https://docs.rs/tauri/latest/tauri/api/http/index.html)

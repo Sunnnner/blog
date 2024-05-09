@@ -62,4 +62,4 @@ nil	| int32	| new
 | -	| string |	-
 | -	| error	| -
 
-![xx](/static/go.jpg)
+![xx](/images/go.jpg)
