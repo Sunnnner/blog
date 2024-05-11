@@ -9,6 +9,8 @@ tags:
   - desktop
 ---
 
+<!--more-->
+
 - 使用`docker run --rm --entrypoint /usr/bin/rustdesk-utils  rustdesk/rustdesk-server-s6:latest genkeypair` 生成秘钥
 
 - docker-compose.yml
