@@ -14,6 +14,8 @@ googleAnalytics = "G-PPPPPPPPP"
 [params]
 subtitle = "少年辛苦终身事,莫向光阴惰寸功。——唐·杜荀鹤《题弟侄书堂》"
 dateFmt = "02.01.2006"
+description = "学无止境,hugo,python,go,java,linux,mysql,redis,nginx,git,github,linux,mysql,redis,nginx,git,github,微服务,个人博客"
+keywords = "hugo,python,go,java,linux,mysql,redis,nginx,git,github,linux,mysql,redis,nginx,git,github,微服务,个人博客"
 
 # Header
 [menu]
