@@ -2,7 +2,11 @@
 title: "pygame"
 description: 
 date: 2022-07-12T14:37:29+08:00
-draft: false
+draft: true
+categories:
+  - python
+tags:
+  - pygame
 ---
 
 ---
