@@ -55,6 +55,13 @@ name = "GPT-3"
 url = "https://ai.rustcc.com.cn"
 weight = 6
 
+[[menu.main]]
+identifier = "网站状态"
+name = "网站状态"
+url = "https://status.rustcc.com.cn/status/api"
+weight = 7
+
+
 # Footer
 [[menu.footer]]
 name = "Github"
