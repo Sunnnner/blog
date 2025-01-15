@@ -37,29 +37,29 @@ name = "标签"
 url = "/tags/"
 weight = 3
 
-[[menu.main]]
-identifier = "GPT-1"
-name = "GPT-1"
-url = "https://freegpt.rustcc.com.cn"
-weight = 4
+# [[menu.main]]
+# identifier = "GPT-1"
+# name = "GPT-1"
+# url = "https://freegpt.rustcc.com.cn"
+# weight = 4
 
-[[menu.main]]
-identifier = "GPT-2"
-name = "GPT-2"
-url = "https://vip.rustcc.com.cn"
-weight = 5
+# [[menu.main]]
+# identifier = "GPT-2"
+# name = "GPT-2"
+# url = "https://vip.rustcc.com.cn"
+# weight = 5
 
-[[menu.main]]
-identifier = "GPT-3"
-name = "GPT-3"
-url = "https://ai.rustcc.com.cn"
-weight = 6
+# [[menu.main]]
+# identifier = "GPT-3"
+# name = "GPT-3"
+# url = "https://ai.rustcc.com.cn"
+# weight = 6
 
-[[menu.main]]
-identifier = "网站状态"
-name = "网站状态"
-url = "https://status.rustcc.com.cn/status/api"
-weight = 7
+# [[menu.main]]
+# identifier = "网站状态"
+# name = "网站状态"
+# url = "https://status.rustcc.com.cn/status/api"
+# weight = 7
 
 
 # Footer
