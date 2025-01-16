@@ -29,8 +29,8 @@ poetry add ruff mypy
 ```
 
 ### 2. 项目配置
-#### 创建配置文件
-在项目根目录创建`pyproject.toml`文件，配置代码检查工具。
+#### 编辑配置文件
+编辑`pyproject.toml`文件，配置代码检查工具。
 
 ##### Ruff配置
 ```toml
