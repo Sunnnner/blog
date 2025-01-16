@@ -20,12 +20,12 @@ Git Hook是在Git操作（如commit、push等）执行前后自动运行的脚�
 ### 1. 环境准备
 在开始之前，请确保已安装以下工具：
 - Python 3.11或更高版本
-- pip（Python包管理器）
+- poetry
 - Git
 
 安装所需的Python包：
 ```bash
-pip install ruff mypy
+poetry add ruff mypy
 ```
 
 ### 2. 项目配置
@@ -160,5 +160,3 @@ chmod +x .script/pre-commit.sh
 - 确保所有团队成员都安装了必要的依赖包
 - 建议在项目README中说明代码规范和Hook的使用方法
 - 可根据项目需求调整ruff和mypy的配置规则
-
-这套自动化代码审查机制可以有效提高代码质量，减少代码审查的工作量，推荐在团队开发中使用。
