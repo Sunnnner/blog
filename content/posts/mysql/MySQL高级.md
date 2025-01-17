@@ -1,5 +1,5 @@
 ---
-title: "Mysql高级"
+title: "MySQL关系查询与高级特性指南"
 description: 
 date: 2022-07-12T14:37:29+08:00
 draft: false
@@ -9,148 +9,264 @@ categories:
 
 ----
 <!--more-->
-# 关系
-- 在创建scores表时可以直接创建约束
-- creat table socres ( id int() primary key auto_increament notnull,
-- score decimal(5,2) default 0,
-- stuid int,
-- subid int,
-- foreign key (stuid) references students(id),
-- foreign key (subid) references subjetes(id))charset=utf8;
-- 插入数据到成绩表
-- insert into scores(id,score,stuid,sunid) values(1,90,1,2)
-- 被引用的数据不能够删除
--  外键的级联操作
--  creat table socres ( id int() primary key auto_increament notnull,
-- score decimal(5,2) default 0,
-- stuid int,
-- subid int,
-- foreign key (stuid) references students(id) on delete cascade,
-- foreign key (subid) references subjetes(id) on delete cascade
-- )charset=utf8;
-- ---
-# 连接查询
-- 内连接 (inner join)
-- 姓名(name)  标题(title)  分数（score）
-- 1.这三个字段来自三张表,students.name,subjects.title,scores.score
-- 2.这三张表有什么关系
-- a,scores和学生表scores.stuid = students.id
-- b,scores 和subjects 的关系 scores.subid  = subjects.id
-- 第一种写法
-- select students.name,subjects.title,scores.score from
-- scores inner join students on scores.stuid = students.id
-- inner join subjects on scores.subid = subjects.id;
-- 第二种写法：
-- select students.name,subjects.title,scores.score from students 
-- inner join scores on scores.stuid = students.id
-- inner join subjects on scores.subid = subjects.id;
-- 第三种写法
-- select students.name,subjects.title,scores.score from subjects 
-- inner join scores on scores.subid = subjects.id
-- inner join students on scores.stuid = students.id;
-- 左链接 (left join)
-- select * from students left join scores on students.id =scores.stuid;
-- select * from scores left join students on students.id = scores.subid;
-- 右链接 (rigth join)
--  select * from students right join scores on students.id =scores.stuid;
--  select * from scores right join students on students.id = scores.subid;
--  •	如果多个表中列名不重复可以省略“表名.”部分
--  select name,title,score from scores
--  inner join students on scores.stuid=students.id
--  inner join subjects on scores.subid=subjects.id;
--  •	如果表的名称太长，可以在表名后面使用' as 简写名'或' 简写名'，为表起个临时的简写名称
--  select name ,score  from scores as sco 
--  right join students as stu on stu.id = sco.stuid;
--  •	查询学生的姓名、平均分
--  select students.name as 姓名,avg(scores.score) as 平均分 from scores inner join students on scores.stuid = students.id group by students.name;
--  •	查询男生的姓名、总分
--  select students.name,sum(scores.score) from scores inner join students on students on scores.stuid = students.id where students.gender=1  group by students.name;
--  •	查询科目的名称、平均分
--  select subjects.title,avg(scores.score) from scores inner join subjects on 
--  scores.stuid = sunjects.id where group by subjects.title;
--  •	查询未删除科目的名称、平均分、最高分
--  select subjects.title,avg(scores.score),max(scores.score) from scores inner join subjects on 
--  scores.stuid = sunjects.id where subjects.isdelete=0 group by subjects.title;
--  
 
-----
-# 自关联
-- 1.引入自关联
-- 创建areas地区表 ：
-- create table areas (
-- id int primary key auto_ increment not mull,
-- atitle varchar(40),
-- pid int(11),
-- foreign key(pid) references areas(id)
-- );
-- 
-- 导入数据 
-- 1.把areas.sql文件拷贝到liunx 上，
-- 2.在当前目录进入到Mysql 选择数据库，执行命令:source areas.sql
-- 自关联表的数据的查询：
-- 查询一共有多少个省级单位
-- select * from areas where pid is null;
-- select id,atitle from areas where pid is null;
-- 查询省的名字为""山西省"所有城市
-- 1.列出的城市的inxi:city.*
-- 2.隐含条件，city.pid=province.id 要取别名
-- 3.where provice.atitle = "山西省"
-- 4.总共一张表，有两中数据类型，模拟两张表
-- select city.* from areas as city inner join areas as province on city.pid=province.id where province.atitle = "山西省";
-- 查询市的名称为广州市的所有区县
-- 1.虚拟三张表，provice,city,dis  select dis.*
-- 2.隐含条件，city.pid=province.id ,dis.pid=city.id 要取别名
-- where city.atitle="广州市"
-- select dis*  from areas as dis inner join areas as city on city.id = dis.pid inner join areas as province on procince.id = city.pid where provice.atitle = "广州市";
-- 
+## 1. 表关系与外键约束
 
-----
-# 视图
-- creat view as select...
-- 如果说两张表里面的==字段相同==就不能进行创建视图
-- 删除视图drop view xxx
-- ---
-# 事务
-- 事务的四大特性：（ACID）
-- 原子性（Atomicity）  要么全部完成，要么都不成功
-- 一致性(Consistency)  几个并行执行的事务，其执行结果必须与按照某一舒徐串执行的结果相一致
-- 隔离性(Isolation)   事务的执行不受其他事务的干扰，事务执行的中间结果对其他事务必须市透明的
-- 持久性(Durability)  对于任意已提交事务，系统必须保证该事务对数据库的改变不被丢失，即使数据库出现故障；
-- 要求：表的类型必须市innodb 或bdb类型，才可以对此表使用事务；
-- 数据库引擎是用于存储、处理和保护数据的核心服务，利用数据库引擎可以控制访问权限并快速处理事务，从而满足企业内大多数需要处理大量数据的应用程序的要求。
-- 查看引擎：show engines;
-- 查看表的创建语句： show create table students/xxx;
-- 修改表的字段：alert table "表明" engine=innodb;
-### 使用事务的情况；
-- 开启 begin;
-- 提交： commit
-- 回滚： rollbaack;
-- ----
-# 索引
-- 越小的数据通常更好
-- 简单的数据类型更好
-- 尽量避免null
-- 相关操作
-- show index from xxxx;
-- 创建索引 
-- create index 索引名 on 表(哪一列);
-- 删除索引
-- drop index  索引名 on 表；
-- 开启运行时间检测；
-- set profiling =1;
-- 执行查询语句：
-- 
-- 查看执行时间：
-- show profiles;
-- 为表areas 的atitle创建索引
-- create index 索引名 on areas(atitle(20))
-- 执行查询语句
-- 在看执行时间
-- show profiles;
-- 字符串函数select ascii('a');
-- 拼接字符串select concat(12,34,'ab')
-- 查看字符串长度select length('abbc')
-- 截取字符串select substring("abc123",2,3);
-- select left('1234',2)
-- select right()
-- 去除空格：select trim("  barr  ")
+### 1.1 创建外键约束
+```sql
+CREATE TABLE scores (
+    id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    score DECIMAL(5,2) DEFAULT 0,
+    stu_id INT,
+    sub_id INT,
+    FOREIGN KEY (stu_id) REFERENCES students(id),
+    FOREIGN KEY (sub_id) REFERENCES subjects(id)
+) CHARSET=utf8;
+```
+
+### 1.2 插入关联数据
+```sql
+INSERT INTO scores (id, score, stu_id, sub_id) 
+VALUES (1, 90, 1, 2);
+```
+
+### 1.3 外键级联操作
+```sql
+CREATE TABLE scores (
+    id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    score DECIMAL(5,2) DEFAULT 0,
+    stu_id INT,
+    sub_id INT,
+    FOREIGN KEY (stu_id) REFERENCES students(id) ON DELETE CASCADE,
+    FOREIGN KEY (sub_id) REFERENCES subjects(id) ON DELETE CASCADE
+) CHARSET=utf8;
+```
+
+## 2. 连接查询
+
+### 2.1 内连接（INNER JOIN）
+```sql
+-- 写法1
+SELECT students.name, subjects.title, scores.score
+FROM scores
+INNER JOIN students ON scores.stu_id = students.id
+INNER JOIN subjects ON scores.sub_id = subjects.id;
+
+-- 写法2
+SELECT students.name, subjects.title, scores.score
+FROM students
+INNER JOIN scores ON scores.stu_id = students.id
+INNER JOIN subjects ON scores.sub_id = subjects.id;
+
+-- 写法3
+SELECT students.name, subjects.title, scores.score
+FROM subjects
+INNER JOIN scores ON scores.sub_id = subjects.id
+INNER JOIN students ON scores.stu_id = students.id;
+```
+
+### 2.2 左连接（LEFT JOIN）
+```sql
+SELECT *
+FROM students
+LEFT JOIN scores ON students.id = scores.stu_id;
+
+SELECT *
+FROM scores
+LEFT JOIN students ON students.id = scores.stu_id;
+```
+
+### 2.3 右连接（RIGHT JOIN）
+```sql
+SELECT *
+FROM students
+RIGHT JOIN scores ON students.id = scores.stu_id;
+
+SELECT *
+FROM scores
+RIGHT JOIN students ON students.id = scores.sub_id;
+```
+
+### 2.4 连接查询技巧
+```sql
+-- 省略重复列名的表名前缀
+SELECT name, title, score
+FROM scores
+INNER JOIN students ON scores.stu_id = students.id
+INNER JOIN subjects ON scores.sub_id = subjects.id;
+
+-- 使用表别名简化查询
+SELECT name, score
+FROM scores AS sco
+RIGHT JOIN students AS stu ON stu.id = sco.stu_id;
+```
+
+### 2.5 常见查询示例
+```sql
+-- 查询学生的姓名、平均分
+SELECT students.name AS 姓名, AVG(scores.score) AS 平均分
+FROM scores
+INNER JOIN students ON scores.stu_id = students.id
+GROUP BY students.name;
+
+-- 查询男生的姓名、总分  
+SELECT students.name, SUM(scores.score)
+FROM scores
+INNER JOIN students ON scores.stu_id = students.id
+WHERE students.gender = 1
+GROUP BY students.name;
+
+-- 查询科目的名称、平均分
+SELECT subjects.title, AVG(scores.score)
+FROM scores
+INNER JOIN subjects ON scores.sub_id = subjects.id
+GROUP BY subjects.title;
+
+-- 查询未删除科目的名称、平均分、最高分
+SELECT subjects.title, AVG(scores.score), MAX(scores.score)
+FROM scores
+INNER JOIN subjects ON scores.sub_id = subjects.id
+WHERE subjects.is_deleted = 0
+GROUP BY subjects.title;
+```
+
+## 3. 自关联查询
+
+### 3.1 创建自关联表
+```sql
+CREATE TABLE areas (
+    id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    title VARCHAR(40),
+    pid INT,
+    FOREIGN KEY (pid) REFERENCES areas(id)
+);
+```
+
+### 3.2 导入自关联数据
+```bash
+# 拷贝SQL文件到服务器
+scp areas.sql user@server:/path/to/
+
+# 登录MySQL，选择数据库
+mysql -u root -p
+USE mydb;
+
+# 执行SQL文件
+SOURCE /path/to/areas.sql;
+```
+
+### 3.3 自关联查询示例
+```sql
+-- 查询省级单位数量
+SELECT COUNT(*) FROM areas WHERE pid IS NULL;
+
+-- 查询名为"山西省"的所有城市
+SELECT city.*
+FROM areas AS city
+INNER JOIN areas AS province ON city.pid = province.id
+WHERE province.title = '山西省';
+
+-- 查询名为"广州市"的所有区县
+SELECT district.*
+FROM areas AS district
+INNER JOIN areas AS city ON city.id = district.pid
+INNER JOIN areas AS province ON province.id = city.pid
+WHERE city.title = '广州市';
+```
+
+## 4. 视图
+
+### 4.1 创建视图
+```sql
+CREATE VIEW view_name AS
+SELECT ...
+```
+
+### 4.2 删除视图
+```sql
+DROP VIEW view_name;
+```
+
+## 5. 事务
+
+### 5.1 事务特性（ACID）
+- 原子性（Atomicity）
+- 一致性（Consistency）
+- 隔离性（Isolation）
+- 持久性（Durability）
+
+### 5.2 事务使用
+```sql
+-- 开启事务
+BEGIN;
+
+-- 提交事务
+COMMIT;
+
+-- 回滚事务
+ROLLBACK;
+```
+
+### 5.3 表引擎与事务
+```sql
+-- 查看数据库引擎
+SHOW ENGINES;
+
+-- 查看表的创建语句
+SHOW CREATE TABLE table_name;
+
+-- 修改表引擎为InnoDB  
+ALTER TABLE table_name ENGINE = InnoDB;
+```
+
+## 6. 索引
+
+### 6.1 索引设计原则
+- 选择尽可能小的数据类型
+- 选择简单的数据类型
+- 尽量避免NULL值
+
+### 6.2 索引操作
+```sql
+-- 查看索引
+SHOW INDEX FROM table_name;
+
+-- 创建索引
+CREATE INDEX index_name ON table_name (column_name);
+
+-- 删除索引
+DROP INDEX index_name ON table_name;
+```
+
+### 6.3 性能分析
+```sql
+-- 开启查询分析
+SET profiling = 1;
+
+-- 执行查询语句
+SELECT ...
+
+-- 查看查询耗时
+SHOW PROFILES;
+```
+
+### 6.4 索引使用示例
+```sql
+-- 为areas表的title列创建索引
+CREATE INDEX idx_areas_title ON areas (title(20));
+
+-- 执行查询语句
+SELECT ...
+
+-- 查看查询耗时
+SHOW PROFILES;
+```
+
+## 7. 常用字符串函数
+- `ASCII(str)`：返回字符串第一个字符的ASCII码值
+- `CONCAT(str1, str2, ...)`：拼接多个字符串
+- `LENGTH(str)`：返回字符串的长度
+- `SUBSTRING(str, pos, len)`：截取字符串的子串
+- `LEFT(str, len)`：返回字符串左边指定长度的子串
+- `RIGHT(str, len)`：返回字符串右边指定长度的子串
+- `TRIM(str)`：去除字符串两端的空格

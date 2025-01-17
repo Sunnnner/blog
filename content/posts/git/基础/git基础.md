@@ -1,5 +1,5 @@
 ---
-title: "git基础"
+title: "Git 使用指南"
 description: 
 date: 2021-07-12T14:37:29+08:00
 draft: false
@@ -9,70 +9,190 @@ tags:
   - git
 ---
 <!--more-->
+## 1. 基础命令
 
-# Linux的发行版
-- ubtnutu
-- redhat
-- gebtoo
-- gentoo
+### 1.1 仓库初始化与克隆
+```bash
+# 初始化Git仓库
+git init
 
+# 克隆远程仓库
+git clone <repository_url>
+```
 
+### 1.2 基本操作
+```bash
+# 查看仓库状态
+git status
 
-# linux最最基本的命令
-- `ls`: 列出所在目录的文件
-- `cd`：进入根目录
-- `cd 目录名`：进入目录名/
--  `mkdir 文件夹的名字`: 新建文件夹
-  
+# 添加文件到暂存区
+git add <file>     # 添加指定文件
+git add .          # 添加所有文件
 
-# vi基本命令
--`i`进入编辑模式
--`esc`退出编辑模式
--`：`shift+:进入控制模式
--`wq`:保存退出
--`w`:保存
--`q`:退出
--`dd`:删除一行
+# 提交更改
+git commit -m "提交说明"
 
-# git基本命令
--`git init`初始话一个git仓库
-- `git clone项目地址`
-- `cd项目地址`
-- `vim notes.md`编辑note.md文档
-- `git add *`告诉git把文件添加到仓库
-- `git commit -m"注释"`告诉git把文件提交到仓库
-- `git push`
-- `git diff`：查看提交了些什么
-- `git log`:查看提交历史
-- `git pull`：拉下来最新的代码
-- `git log --pretty=oneline`git log参数简洁显示最近提交的信息
- 
- #  git 时光机总总结
- 
-- `HEAD`指向当前版本
-- `HEAD^`指向前一个版本^^前一个的前一个版本
-- `id`git log 前面的psh
-- `git log`查看当前提交的历史
-- `git log --pretty=oneline`常看当前提交的历史简洁版
-- `git reset --hard commit_id`commit_id代表指向的HEAD^
-- `git reflog`查看命令历史进行回到未来
-- # git 修改总结
-- `git add`第一次修改提交只是储存在暂存区没有进行commit
-- `git add`第二次修改后不进行提交存放在工作区
-- `git add`第三次提交第二次的修改合并第一次的提交
-- `git commit`第四次进行commit
-- # git 的撤销操作
-- `git checkout -- file`回到最后一次编辑位置
-- 
-- `git reset HEAD file`如果你不小心add进入了暂存区你就要用这个回滚到head的地方然后在执行checkout
-- `git rm`用于删除仓库文件
-- # 仓库分布式部署流程
-- `$ ssh-keygen -t rsa -C "youremail@example.com"`创建SSH Key
-- `Create a new repo`创建一个新的仓库
-- `根据页面提示在终端执行一边代码`
-- `$ git remote add origin git@github.com:自己的git用户民/learngit.git`以后推送设置
-- `$ git push -u origin master`推送到git第一次推送使用-u
-- `$ git push origin master`
-- 以后直接推送
-- `git remote add origin git@server-name:path/repo-name.git`要关联一个远程库
-- ``
+# 推送到远程仓库
+git push
+
+# 拉取最新代码
+git pull
+
+# 查看差异
+git diff          # 查看未暂存的更改
+git diff --staged # 查看已暂存的更改
+```
+
+### 1.3 查看历史
+```bash
+# 查看提交历史
+git log
+git log --pretty=oneline  # 简洁模式
+git log --graph          # 图形化显示
+git reflog              # 查看命令历史
+```
+
+## 2. 版本控制
+
+### 2.1 版本回退
+```bash
+# HEAD说明
+HEAD      # 当前版本
+HEAD^     # 上一个版本
+HEAD^^    # 上上个版本
+HEAD~n    # 前n个版本
+
+# 回退版本
+git reset --hard HEAD^
+git reset --hard <commit_id>
+```
+
+### 2.2 工作区和暂存区
+```bash
+# 查看工作区状态
+git status
+
+# 撤销工作区修改
+git checkout -- <file>
+
+# 撤销暂存区修改
+git reset HEAD <file>
+
+# 删除文件
+git rm <file>
+git commit -m "删除文件"
+```
+
+## 3. 远程仓库操作
+
+### 3.1 配置SSH密钥
+```bash
+# 生成SSH密钥
+ssh-keygen -t rsa -C "your_email@example.com"
+
+# 密钥位置
+# Windows: C:\Users\用户名\.ssh\id_rsa.pub
+# Linux/Mac: ~/.ssh/id_rsa.pub
+```
+
+### 3.2 远程仓库管理
+```bash
+# 添加远程仓库
+git remote add origin <repository_url>
+
+# 首次推送
+git push -u origin master
+
+# 后续推送
+git push origin master
+
+# 查看远程仓库信息
+git remote -v
+
+# 删除远程仓库链接
+git remote rm origin
+```
+
+## 4. 分支管理
+
+### 4.1 基本操作
+```bash
+# 创建分支
+git branch <branch_name>
+
+# 切换分支
+git checkout <branch_name>
+# 或使用新命令
+git switch <branch_name>
+
+# 创建并切换分支
+git checkout -b <branch_name>
+# 或使用新命令
+git switch -c <branch_name>
+
+# 查看分支
+git branch
+
+# 合并分支
+git merge <branch_name>
+
+# 删除分支
+git branch -d <branch_name>
+```
+
+### 4.2 冲突解决
+```bash
+# 查看冲突文件
+git status
+
+# 解决冲突后提交
+git add <conflict_file>
+git commit -m "解决冲突"
+```
+
+## 5. 最佳实践
+
+### 5.1 提交规范
+- 使用清晰的提交信息
+- 每次提交专注于一个改动
+- 定期提交代码
+- 避免提交临时文件
+
+### 5.2 分支策略
+- master/main: 主分支，保持稳定
+- develop: 开发分支
+- feature/*: 功能分支
+- hotfix/*: 紧急修复分支
+
+### 5.3 安全建议
+1. 定期备份仓库
+2. 保护好SSH密钥
+3. 谨慎使用force push
+4. 及时更新Git客户端
+
+## 6. 常见问题解决
+
+### 6.1 撤销操作
+```bash
+# 撤销最后一次提交
+git reset --soft HEAD^
+
+# 撤销所有本地改动
+git reset --hard HEAD
+git clean -fd
+
+# 撤销某次提交
+git revert <commit_id>
+```
+
+### 6.2 临时保存
+```bash
+# 保存当前工作进度
+git stash
+
+# 查看保存的进度
+git stash list
+
+# 恢复进度
+git stash pop
+```

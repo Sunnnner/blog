@@ -8,76 +8,171 @@ categories:
 tags:
   - socket
 ---
-# 什么网络通信
----
-- 网络的定义
-- 在电的系统中，由若干元件组成的用来使电信号按一定要求传输的电路或这种电路的部分，叫网络。
-- 现在一般指“三网”：电信网络、有线电视网络、计算机网络。狭义的含义即因特网。抽象意义上的网络。比如城市网络、交通网络、交际网络等。
--  ⽹际层也称为：⽹络层 
--  ⽹络接⼝层也称为：链路层
-<!--more-->
-- ---
-- # 端口
-- ---
-- python2 中开启端口
-- python -m SimpleHTTPServer 8080
-- 浏览器打开访问
-- http://127.0.0.1:8080
-- 127.0.0.1永远是本机地址
-- 
----
-# sockt简介
----
-- ### 本地的进程间通信的方式
-- sockt简称套接字 
-- 创建sockt
--     import socket
--     socket.socket(socket.AF_UNIX)
--     
--   ==UNIX：同一台电脑见的通信==
--   socket.AF_INET:互联网
--   sovket.SOCK_DGRAM(Dategram/数据报)--->UDP
--   socket.SOCK_STREAM----》TCP
--   ----
--   # udp
--   ----
--   udp=---用户数据包协议，是一个无连接的简单的面向数据包的传输层协议
--   创建一个套接字
--   udp_socket = socket(AF_INET,SOCK_DGRAM)
-- 绑定目标主机
-- send_address = ("目标主机ip",目标端口)
-- b解码2进制
-- encode()解码utf-8或者gb2312
-- 套接字.sendo(内容.encode("utf-8或者gb2312"),目标主机)
-- close()关闭
-- udp特点
-- UDP是面向无连接的通讯协议，UDP数据包括目的端口号和源端口号信息，由于通讯不需要连接，所以可以实现广播发送。
-- UDP传输数据时有大小限制，每个被传输的数据报必须限定在64KB之内。 
-- UDP是一个不可靠的协议，发送方所发送的数据报并不一定以相同的次序到达接收方。
-- ---
-- # udp网络程序-端口会变化
-- ---
-- 端口号会变化
-- 个网络程序在运行的过程中，这个就唯一标识这个程序，所以如果其他电脑上的网络程序如果想要向此程序发送数据，那么就需要向这个数字（即端口）标识的程序发送即可。
-- 同一个端口不能被两个软件同时使用，否则会有问题。
-- 
---- 
-# udp绑定端口信息
----
--  为什么要绑定端口
--  百度默认绑定的是80www.baidu.com:80
--  ### 分别在发送方和接收方绑定端口
--  ==发送方绑定端口,第一个参数写""，==
--  recv_message = cok.recvfrom(1024)接受书库，1024代表本次接受的最大字节数
--  recv_message是个元组（数据，IP地址端口号）
--  所以取得时候要取0位置的然后进行解码decode()
--  
----
-# udp网络程序--发送、接收数据
----
-- 单工（相当于收广播）、半双工（相当于对讲机）、全双工（相当于电话） 
-- 单工数据传输只支持数据在一个方向上传输；
-- 半双工数据传输允许数据在两个方向上传输，但是，在某一时刻，只允许数据在一个方向上传输，它实际上是一种切换方向的单工通信；
-- 全双工数据通信允许数据同时在两个方向上传输，因此，全双工通信是两个单工通信方式的结合，它要求发送设备和接收设备都有独立的接收和发送能力。 
--     decode解码
--     encode编码
+
+## 1. 网络基础概念
+
+### 1.1 网络定义
+- 电路网络：由电子元件组成的信号传输系统
+- 三大网络：
+  1. 电信网络
+  2. 有线电视网络
+  3. 计算机网络（互联网）
+
+### 1.2 网络层次
+```
+
+网络体系结构：
+- 应用层
+- 传输层
+- 网际层（网络层）
+- 网络接口层（链路层）
+```
+
+## 2. 本地服务器配置
+
+### 2.1 快速启动HTTP服务
+```
+
+# Python 2
+python -m SimpleHTTPServer 8080
+
+# Python 3
+python -m http.server 8080
+
+# 访问地址
+http://127.0.0.1:8080  # 本机回环地址
+http://localhost:8080   # 本机域名
+```
+
+## 3. Socket编程基础
+
+### 3.1 Socket类型
+```
+
+import socket
+
+# 创建Socket对象
+# 本地进程通信
+unix_socket = socket.socket(socket.AF_UNIX)
+
+# 网络通信
+inet_socket = socket.socket(socket.AF_INET)
+
+# 协议类型
+tcp_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  # TCP协议
+udp_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)   # UDP协议
+```
+
+### 3.2 Socket地址族
+| 地址族 | 说明 | 用途 |
+|--------|------|------|
+| AF_UNIX | 本地通信 | 同一台计算机进程间通信 |
+| AF_INET | IPv4网络 | 互联网通信 |
+| AF_INET6 | IPv6网络 | 下一代互联网通信 |
+
+## 4. UDP通信
+
+### 4.1 UDP特点
+1. 无连接通信协议
+2. 支持广播发送
+3. 数据包大小限制（64KB）
+4. 不保证可靠传输
+5. 不保证数据顺序
+
+### 4.2 基本UDP通信示例
+```
+
+import socket
+
+# 创建UDP Socket
+udp_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+
+# 绑定本地地址和端口
+local_addr = ('', 8888)  # 空字符串表示本机所有IP
+udp_socket.bind(local_addr)
+
+# 发送数据
+target_addr = ('192.168.1.100', 8888)
+message = "Hello, UDP!"
+udp_socket.sendto(message.encode('utf-8'), target_addr)
+
+# 接收数据
+while True:
+    data, addr = udp_socket.recvfrom(1024)  # 缓冲区大小1024字节
+    print(f"从{addr}接收到: {data.decode('utf-8')}")
+
+# 关闭Socket
+udp_socket.close()
+```
+
+### 4.3 端口绑定
+```
+
+# 服务端绑定固定端口
+server_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+server_socket.bind(('', 80))  # 绑定80端口
+
+# 客户端使用随机端口
+client_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+# 系统自动分配端口
+```
+
+## 5. 通信模式
+
+### 5.1 通信方式对比
+| 模式 | 特点 | 类比 |
+|------|------|------|
+| 单工 | 单向传输 | 广播 |
+| 半双工 | 双向交替传输 | 对讲机 |
+| 全双工 | 双向同时传输 | 电话 |
+
+### 5.2 数据编解码
+```
+
+# 发送数据编码
+message = "你好"
+encoded_data = message.encode('utf-8')
+
+# 接收数据解码
+decoded_data = received_data.decode('utf-8')
+
+# 支持的编码
+encodings = ['utf-8', 'gb2312', 'ascii']
+```
+
+## 6. 最佳实践
+
+### 6.1 Socket编程建议
+1. 始终使用 with 语句管理socket
+2. 设置适当的超时时间
+3. 正确处理异常
+4. 及时关闭不用的socket
+
+### 6.2 示例代码
+```
+
+import socket
+
+def create_udp_server(host='', port=8888):
+    with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as server:
+        server.bind((host, port))
+        server.settimeout(60)  # 60秒超时
+        try:
+            while True:
+                data, addr = server.recvfrom(1024)
+                if not data:
+                    break
+                # 处理数据
+                process_data(data, addr)
+        except socket.timeout:
+            print("服务器超时")
+        except Exception as e:
+            print(f"发生错误: {e}")
+```
+
+### 6.3 安全建议
+1. 验证数据来源
+2. 限制数据包大小
+3. 实现超时机制
+4. 做好错误处理
+5. 考虑加密传输

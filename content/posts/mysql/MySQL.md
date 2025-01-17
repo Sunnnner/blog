@@ -1,5 +1,5 @@
 ---
-title: "Mysql安装"
+title: "MySQL数据库管理指南"
 description: 
 date: 2022-07-12T14:37:29+08:00
 draft: false
@@ -9,107 +9,185 @@ categories:
 
 ----
 <!--more-->
-# 安装数据库
-- `sudo apt-get install mysql-server `
-- `show databases` 查看数据
-- 安装mysql-client
-- `sudo apt -get install mysql-client`
+## 1. 安装与基本配置
 
-- 如无法下载
-- `sudo apt-get install updata`
+### 1.1 安装MySQL
+```bash
+# 安装服务器
+sudo apt-get update
+sudo apt-get install mysql-server
 
-- 检查书否安装成功
-- `dudo netstat -tap | grap mysql `
-- 登陆
-- `mysql -u root -p`
-- 或者直接跟密码`mysql -u roo -p12345`
-- 启动
-- `service mysql start` 
-- `sudo /etc/init.d/mysql start`
-- 关闭
-- `service mysql stop`或者  `mysqladmin -u root -p shutdown`
-- `sudo netstat -tap | grep mysql `
-- 重启
-- `service mysql restart`或者 `sudo /etc/init.d/ mysql restart`
-- 进入数据库
-- `mysql -u root -p`
-- 推出mysql 
-- `quit;quit exit;exit ctrl+d`
-- ----
-- # 使用Navicat for Mysql连接mysql服务器
-- 使用mysql这个数据库选择数据库`use+数据库名字`  `use mysql;`
-- 查看mysql 的数据库  `show databases`
-- 把当前数据库所有的标列出来`show tables`
-- 查看某个表的结构`desc xx`
-- 查看某个表的所有数据`select * from xxx`
-- 查看某一天数据的信息 :`select * from xxx where id/name/xxx/=xx`
-- 
-- 在mysql这个数据库中查找user这个表中的user和host字段`select user,host from user;`
-- 创建用户`grant all privileges on *.* to 用户名@"%" identified by "密码" with grant option`
-- `grant all privileges on *.* to white@"%" identified by "12345" with grant option;
-`
-- grant是授权命令，其中afu是我们连接用的用户名、”123456″是连接密码，用户名后面的“%”通用符表示允许各host操作。
-- 查询select user,host from user;
-- 刷新数据库账户权限 `flush privileges;`
-- 重新查询 `select user,host from user;`
-- 删除id 为13的student的信息  `delent from student where id = 13`
-- 删除用户：`delete from user where user = "用户名"and host = "xxx" `
-- 修改id 为1的数据的名字为郭靖:`update student set name = '郭靖' where id = 1;`
-- 增加一条数据`insert into student(id,name) values(0,王迪);`id=0默认最后
-- 重新查询：`select user,host from user`
-- 
-- ----
-- ### 表的操作
-- 使用某个数据库 use xxx
-- 列出所有标show tables
-- 创建数据表create table tab_name(
-id int(10)  auto_increment primary key not null,
-name varchar(40),
-pwd varchar(40)
-) charset=utf8;
-- 
-- 删除数据表 drop table xxx
-- 查看当前使用的数据库：select database();
-- 显示数据表的结构   desc xxx或者 describe xxx  或者 show colu
-- ---
-- # 数据库操作
-- 显示那些数据库  show databases;
-- 切换数据库 use xxx;
-- 显示数据库中所有的表 show tables 
-- 列出表的结构 desc xxx
-- 查看当前选择选中的数据库：select database();
-- 删除数据库 drop database xxx
-- 创建新的数据库 create database xxx  指定编码charset=utf8
-- 修改密码mysqladmin -u 用户名 -p旧密码 password 新密码;
-- 1.推出数据库
-- 2.执行Linux命令：mysqladmin -u 用户名 -p旧密码 password 新密码
-- ---
-- # 表的操作
-- 创建数据表
-- create table student(
-- id int(11) auto_increment primary key not null,
-- name varchar(40) default null,
-- idDelete bit(1) default 0
-- )charset=utf8
-- 删除表  drop table xxx
-- 显示表的结构 desc xxx
-- 查询表的里面所有的数据  select * from xxx
-- 插入数据：insert into xxx() vslues(),(0,""),(0,"")
-- 删除名字为“张三"delete from students where name = "张三"
-- 删除所有数据 delete from students;
-- 在表中添加一个字段 alter table tab_name add address varchar(20);
-- 删除表中的字段: alter table tab_name drop address;
-- (了解)把某一列设为主键：
-- alter table tab_name change id id int(10);
-- alter table tab_name drop primary key;
-- ALTER TABLE tab_name ADD PRIMARY KEY (col_name) ;
-- alter table tab_name add primary key(id);
-- alter table tab_name change id id int(10) not null auto_increment~~~~~~;~~~~~~
-- ----
-- # 数据库备份
-- cd / var/lib/
-- sudo -s
-- cd musql
-- mysqldump -uroot -p 数据库名 > ~ /Desktop/备份文件.sql;
-- 数据恢复：
-- mysql -uroot -p xxx< xxx.sql;
+# 安装客户端
+sudo apt-get install mysql-client
+
+# 检查安装状态
+sudo netstat -tap | grep mysql
+```
+
+### 1.2 服务管理
+```bash
+# 启动服务
+sudo service mysql start
+# 或
+sudo /etc/init.d/mysql start
+
+# 停止服务
+sudo service mysql stop
+# 或
+sudo mysqladmin -u root -p shutdown
+
+# 重启服务
+sudo service mysql restart
+```
+
+### 1.3 登录与退出
+```bash
+# 登录（交互式输入密码）
+mysql -u root -p
+
+# 登录（命令行直接提供密码，不推荐）
+mysql -u root -p12345
+
+# 退出
+quit;
+# 或
+exit;
+```
+
+## 2. 用户管理
+
+### 2.1 用户操作
+```sql
+-- 查看用户列表
+SELECT user, host FROM mysql.user;
+
+-- 创建用户并授权
+GRANT ALL PRIVILEGES ON *.* TO 'username'@'%' 
+IDENTIFIED BY 'password' 
+WITH GRANT OPTION;
+
+-- 刷新权限
+FLUSH PRIVILEGES;
+
+-- 删除用户
+DELETE FROM mysql.user 
+WHERE user = 'username' AND host = 'hostname';
+```
+
+### 2.2 修改密码
+```bash
+# 命令行修改密码
+mysqladmin -u username -p'oldpassword' password 'newpassword'
+```
+
+## 3. 数据库操作
+
+### 3.1 基本操作
+```sql
+-- 显示所有数据库
+SHOW DATABASES;
+
+-- 创建数据库
+CREATE DATABASE dbname CHARACTER SET utf8;
+
+-- 选择数据库
+USE dbname;
+
+-- 显示当前数据库
+SELECT DATABASE();
+
+-- 删除数据库
+DROP DATABASE dbname;
+```
+
+### 3.2 表操作
+```sql
+-- 创建表
+CREATE TABLE tablename (
+    id INT(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    name VARCHAR(40) DEFAULT NULL,
+    is_deleted BIT(1) DEFAULT 0
+) CHARSET=utf8;
+
+-- 显示所有表
+SHOW TABLES;
+
+-- 显示表结构
+DESC tablename;
+-- 或
+DESCRIBE tablename;
+
+-- 删除表
+DROP TABLE tablename;
+```
+
+### 3.3 数据操作
+```sql
+-- 插入数据
+INSERT INTO tablename (column1, column2) 
+VALUES (value1, value2);
+
+-- 查询数据
+SELECT * FROM tablename;
+SELECT column1, column2 FROM tablename WHERE condition;
+
+-- 更新数据
+UPDATE tablename 
+SET column1 = value1 
+WHERE condition;
+
+-- 删除数据
+DELETE FROM tablename WHERE condition;
+```
+
+### 3.4 表结构修改
+```sql
+-- 添加字段
+ALTER TABLE tablename 
+ADD COLUMN columnname VARCHAR(20);
+
+-- 删除字段
+ALTER TABLE tablename 
+DROP COLUMN columnname;
+
+-- 修改主键
+ALTER TABLE tablename 
+ADD PRIMARY KEY (columnname);
+```
+
+## 4. 数据备份与恢复
+
+### 4.1 备份数据库
+```bash
+# 备份整个数据库
+mysqldump -u root -p dbname > backup.sql
+
+# 备份特定表
+mysqldump -u root -p dbname tablename > backup.sql
+```
+
+### 4.2 恢复数据库
+```bash
+# 恢复数据库
+mysql -u root -p dbname < backup.sql
+```
+
+## 5. 最佳实践
+
+### 5.1 安全建议
+1. 不要在命令行中直接输入密码
+2. 定期更改密码
+3. 及时删除不用的用户
+4. 最小权限原则授权
+
+### 5.2 性能优化
+1. 合理使用索引
+2. 定期备份数据
+3. 及时清理不需要的数据
+4. 优化查询语句
+
+### 5.3 编码注意事项
+1. 始终指定字符集为UTF-8
+2. 使用预处理语句防止SQL注入
+3. 使用事务确保数据一致性
+4. 正确处理NULL值
